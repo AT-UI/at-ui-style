@@ -1,0 +1,58 @@
+/**
+ * Badge Style
+ */
+
+.at-badge {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+
+  /* element */
+  &__content {
+    display: inline-block;
+    height: $badge-height;
+    padding: 0 $badge-padding;
+    color: $color-white;
+    font-size: $badge-font-size;
+    text-align: center;
+    white-space: nowrap;
+    line-height: $badge-height;
+    background-color: $badge-bg-color;
+    border: 1px solid $color-white;
+    border-radius: $badge-border-radius;
+  }
+
+  /* modifier */
+  &--alone {
+    .at-badge__content {
+      top: 0;
+    }
+  }
+  &--corner {
+    position: absolute;
+    top: $badge-height / 2 + 1;
+    right: 0;
+    transform: translateX(50%);
+  }
+  &--dot {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    top: -5px;
+  }
+  &--success {
+    .at-badge__content {
+      background-color: $badge-bg-color-success;
+    }
+  }
+  &--warning {
+    .at-badge__content {
+      background-color: $badge-bg-color-warning;
+    }
+  }
+  &--info {
+    .at-badge__content {
+      background-color: $badge-bg-color-info;
+    }
+  }
+}

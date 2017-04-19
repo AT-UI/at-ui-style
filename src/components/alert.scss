@@ -1,0 +1,82 @@
+/**
+ * Alert Style
+ */
+
+.at-alert {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: $alert-padding;
+  border-radius: $alert-border-radius;
+  overflow: hidden;
+  color: $color-white;
+  opacity: 1;
+  transition: opacity .3s;
+
+  /* element */
+  &__icon {
+    color: $alert-icon-color;
+    font-size: $alert-icon-font-size;
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+  &__content {
+    padding-right: 8px;
+    flex: 1;
+
+    p {
+      padding: 0;
+    }
+  }
+  &__message {
+    font-size: $alert-message-font-size;
+    line-height: 1.2;
+    color: $color-white;
+  }
+  &__description {
+    font-size: $alert-description-font-size;
+    margin-top: 5px;
+    color: $color-white;
+  }
+  &__close {
+    color: $alert-icon-color;
+    font-size: $alert-close-font-size;
+    opacity: 1;
+    cursor: pointer;
+    margin-top: 2px;
+  }
+
+  /* modifier */
+  &--success {
+    background-color: $alert-bg-color-success;
+  }
+  &--error {
+    background-color: $alert-bg-color-error;
+  }
+  &--warning {
+    background-color: $alert-bg-color-warning;
+  }
+  &--info {
+    background-color: $alert-bg-color-info;
+  }
+  &--with-description {
+    padding: 14px 16px;
+
+    .at-alert__icon {
+      font-size: 24px;
+    }
+    .at-alert__message {
+      font-weight: bold;
+      line-height: 1.3;
+    }
+    .at-alert__description {
+      line-height: 1.5;
+    }
+  }
+
+  &.at-alert-fade-enter,
+  &.at-alert-fade-leave-active {
+    opacity: 0;
+  }
+}

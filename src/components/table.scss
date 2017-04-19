@@ -1,0 +1,53 @@
+/**
+ * Table Style
+ */
+
+.at-table {
+  position: relative;
+  overflow: hidden;
+  color: $text-color;
+  font-size: $font-size-base;
+  border-radius: $border-radius-base $border-radius-base 0 0;
+
+  table {
+    min-width: 100%;
+    width: auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    text-align: left;
+    border-radius: $border-radius-base $border-radius-base 0 0;
+    overflow: hidden;
+
+    th, td {
+      min-width: 0;
+      height: 48px;
+      text-align: left;
+      text-overflow: ellipsis;
+      vertical-align: middle;
+    }
+  }
+
+  &__thead {
+    & > tr > th {
+      background-color: $bg-color-light;
+      font-weight: bold;
+      text-align: left;
+      white-space: nowrap;
+    }
+  }
+  &__tbody {
+    & > tr {
+      transition: all .3s;
+
+      &:hover {
+        background-color: $bg-color-base;
+      }
+    }
+    & > tr > td {
+      border-bottom: 1px solid $border-color-lighter;
+    }
+  }
+  &__cell {
+    padding: 0 18px;
+  }
+}

@@ -1,0 +1,136 @@
+/**
+ * InputNumber Style
+ */
+
+.at-input-number {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  width: $inputnumber-width;
+  border: 1px solid $inputnumber-border-color;
+  border-radius: $inputnumber-border-radius;
+  transition: border .2s;
+
+  /* status */
+  &:hover {
+    border-color: $inputnumber-border-color-hover;
+
+    .at-input-number__handler {
+      opacity: 1;
+    }
+  }
+
+  /* element */
+  &__input {
+    width: 100%;
+  }
+  &__original {
+    display: block;
+    width: 100%;
+    height: $inputnumber-height;
+    outline: none;
+    color: $inputnumber-font-color;
+    background-color: $inputnumber-bg-color;
+    padding: $inputnumber-padding;
+    border: 1px solid transparent;
+    border-radius: $inputnumber-border-radius;
+  }
+  input[type=number] {
+    -moz-appearance: textfield;
+    background-color: transparent;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      margin: 0;
+      -webkit-appearance: none;
+    }
+  }
+  &__handler {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: $inputnumber-handler-width;
+    height: 100%;
+    border-left: 1px solid $inputnumber-handler-border-color;
+    border-radius: 0 $inputnumber-border-radius $inputnumber-border-radius 0;
+    transition: opacity .3s;;
+
+    opacity: 0
+  }
+  &__up,
+  &__down {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: $inputnumber-handler-ele-height;
+    text-align: center;
+    color: $inputnumber-handler-font-color;
+    font-size: $inputnumber-handler-font-size;
+    transition: all .3s;
+    cursor: pointer;
+
+    &:hover {
+      height: $inputnumber-handler-ele-height-hover;
+    }
+    &--disabled {
+      cursor: $cursor-disabled;
+      color: $inputnumber-handler-ele-font-color-disabled;
+    }
+  }
+  &__down {
+    border-top: 1px solid $inputnumber-handler-border-color;
+
+    &:hover {
+      margin-top: -2px;
+    }
+  }
+
+  /* modifier */
+  &--disabled {
+    background-color: $inputnumber-bg-color-disabled;
+    border-color: $inputnumber-border-color-disabled;
+    color: $input-font-color-disabled;
+    cursor: $cursor-disabled;
+
+    &:hover {
+      border-color: $inputnumber-border-color-disabled;
+    }
+    .at-input-number__original {
+      color: $input-font-color-disabled;
+      cursor: $cursor-disabled;
+    }
+    .at-input-number__handler {
+      display: none;
+    }
+  }
+  &--small {
+    .at-input-number__original {
+      height: $inputnumber-height-sm;
+    }
+    .at-input-number__up,
+    .at-input-number__down {
+      height: $inputnumber-handler-ele-height-sm;
+      font-size: $inputnumber-handler-font-size-sm;
+
+      &:hover {
+        height: $inputnumber-handler-ele-height-sm-hover;
+      }
+    }
+  }
+  &--smaller {
+    .at-input-number__original {
+      height: $inputnumber-height-smer;
+    }
+    .at-input-number__up,
+    .at-input-number__down {
+      height: $inputnumber-handler-ele-height-smer;
+      font-size: $inputnumber-handler-font-size-smer;
+
+      &:hover {
+        height: $inputnumber-handler-ele-height-smer-hover;
+      }
+    }
+  }
+}

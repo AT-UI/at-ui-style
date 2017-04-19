@@ -1,0 +1,139 @@
+/**
+ * Button Style
+ */
+
+$btn-hover-tint-percent: 20%;
+$btn-active-shade-percent: 10%;
+
+@mixin button-status($border-color, $background-color) {
+  border-color: $border-color;
+  background-color: $background-color;
+
+  &:hover {
+    background-color: lighten($background-color, $btn-hover-tint-percent);
+    border-color: lighten($background-color, $btn-hover-tint-percent);
+  }
+  &:active {
+    background-color: darken($background-color, $btn-active-shade-percent);
+    border-color: darken($background-color, $btn-active-shade-percent);
+  }
+}
+
+@mixin button-hollow-status($text-color, $border-color) {
+  background: none;
+  color: $text-color;
+
+  &:hover {
+    background: none;
+    color: lighten($text-color, $btn-hover-tint-percent);
+    border-color: lighten($border-color, $btn-hover-tint-percent);
+  }
+  &:active {
+    background: none;
+    color: lighten($text-color, $btn-active-shade-percent);
+    border-color: lighten($border-color, $btn-active-shade-percent);
+  }
+}
+
+.at-btn {
+  display: inline-block;
+  line-height: 1;
+  padding: $btn-padding-md;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  border: 1px solid $btn-default-border;
+  border-radius: $border-radius-base;
+  background-color: #fff;
+  outline: 0;
+  transition: background 0.1s;
+  user-select: none;
+  font-size: $font-size-normal;
+
+  &:hover {
+    background-color: lighten($btn-default-border, 80%);
+  }
+  &:active {
+    background-color: lighten($btn-default-border, 50%);
+  }
+
+  /* modifier */
+  &--primary,
+  &--success,
+  &--error,
+  &--warning,
+  &--info {
+    color: $color-white;
+  }
+  &--default {
+    &--hollow {
+      @include button-hollow-status($text-color, $btn-default-border);
+    }
+  }
+  &--primary {
+    @include button-status($btn-primary-border, $btn-primary-bg);
+
+    &--hollow {
+      @include button-hollow-status($color-primary, $btn-primary-border);
+    }
+  }
+  &--success {
+    @include button-status($btn-success-border, $btn-success-bg);
+
+    &--hollow {
+      @include button-hollow-status($color-success, $btn-success-border);
+    }
+  }
+  &--error {
+    @include button-status($btn-error-border, $btn-error-bg);
+
+    &--hollow {
+      @include button-hollow-status($color-error, $btn-error-border);
+    }
+  }
+  &--warning {
+    @include button-status($btn-warning-border, $btn-warning-bg);
+
+    &--hollow {
+      @include button-hollow-status($color-warning, $btn-warning-border);
+    }
+  }
+  &--info {
+    @include button-status($btn-info-border, $btn-info-bg);
+
+    &--hollow {
+      @include button-hollow-status($color-info, $btn-info-border);
+    }
+  }
+  &--large {
+    font-size: $font-size-normal;
+    padding: $btn-padding-lg;
+  }
+  &--small {
+    font-size: $font-size-sm;
+    padding: $btn-padding-sm;
+  }
+  &--smaller {
+    font-size: $font-size-smer;
+    padding: $btn-padding-smer;
+  }
+}
+
+.at-btn-group {
+  font-size: 0;
+  display: inline-block;
+
+  > .at-btn {
+    border-radius: 0;
+
+    &:not(:last-child) {
+      margin-right: -1px;
+    }
+    &:first-child {
+      border-radius: $border-radius-base 0 0 $border-radius-base;
+    }
+    &:last-child {
+      border-radius: 0 $border-radius-base $border-radius-base 0;
+    }
+  }
+}

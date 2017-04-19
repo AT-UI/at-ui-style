@@ -1,0 +1,88 @@
+/**
+ * Slider Style
+ */
+
+.at-slider {
+  /* element */
+  &__input {
+    float: right;
+    margin-top: 3px;
+  }
+  &__track {
+    position: relative;
+    width: 100%;
+    height: $slider-height;
+    vertical-align: middle;
+    cursor: pointer;
+    margin: $slider-margin;
+    background-color: $slider-track-bg-color;
+    border-radius: $slider-border-radius;
+  }
+  &__bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: $slider-height;
+    background-color: $slider-bar-bg-color;
+    border-radius: $slider-border-radius 0 0 $slider-border-radius;
+  }
+  &__dot-wrapper {
+    position: absolute;
+    top: $slider-dot-wrapper-offset;
+    width: $slider-dot-wrapper-size;
+    height: $slider-dot-wrapper-size;
+    background-color: transparent;
+    text-align: center;
+    transform: translateX(-50%);
+    user-select: none;
+
+    &:hover,
+    &.at-slider__dot-wrapper--hover {
+      cursor: grab;
+    }
+    &.at-slider__dot-wrapper--drag {
+      cursor: grabbing;
+    }
+    /* tooltip */
+    .at-tooltip {
+      display: block;
+      height: 100%;
+      line-height: 1;
+
+      &::after {
+        display: inline-block;
+        content: '';
+        width: 0;
+        height: 100%;
+        vertical-align: middle;
+      }
+    }
+    .at-tooltip__trigger {
+      vertical-align: middle;
+    }
+
+  }
+  &__dot {
+    width: $slider-dot-size;
+    height: $slider-dot-size;
+    background-color: $slider-dot-color;
+    border-radius: 50%;
+    transition: all .3s;
+
+    &:hover,
+    &--hover,
+    &--drag {
+      background-color: $slider-dot-color-hover;
+      transform: scale(1.5);
+    }
+
+    &:hover,
+    &--hover {
+      cursor: grab;
+    }
+
+    &--drag {
+      cursor: grabbing;
+    }
+  }
+}

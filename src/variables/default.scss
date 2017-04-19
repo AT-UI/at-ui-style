@@ -1,0 +1,383 @@
+/**
+ * Default Variables
+ */
+
+ /* Prefix */
+$css-prefix: at;
+
+/* The Color of O2Team Brand */
+$brand-color                : #6180E8;
+$brand-color-light          : #78A4F4;
+$brand-color-dark           : #346FC2;
+
+/* Color */
+$color-normal               : #6180E8;
+$color-primary              : #6190E8;
+$color-success              : #13CE66;
+$color-error                : #FF4949;
+$color-warning              : #FFC82C;
+$color-info                 : #78A4FA;
+$color-white                : #FFF;
+
+$text-color                 : #3F536E;
+$title-color                : #2C405A;
+
+$border-color-gray          : #CCC;
+$border-color-base          : #C5D9E8;
+$border-color-lightest      : lighten($border-color-base, 70%);
+$border-color-lighter       : lighten($border-color-base, 50%);
+$border-color-light         : lighten($border-color-base, 30%);
+$border-color-split         : lighten($border-color-base, 20%);
+
+$bg-color                   : $color-white;
+$bg-color-base              : #FAFBFC;
+$bg-color-light             : #ECF5FD;
+$bg-color-gray              : #f7f7f7;
+
+/* Assistant Color */
+$roof-color                 : #C2ABC7;
+$curtain-color              : #F0D0D5;
+$door-color                 : #F1E4ED;
+$wall-color                 : #EEF0F0;
+
+/* Border */
+$border-radius-base         : 4px;
+$border-radius-sm           : 4px;
+
+/* Font */
+$font-family                : "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial,sans-serif;
+$code-family                : Consolas, Menlo, Courier, monospace;
+
+$font-size-smest            : 10px;
+$font-size-smer             : 12px;
+$font-size-sm               : 13px;
+$font-size-base             : 14px;
+$font-size-normal           : 16px;
+$font-size-lg               : 18px;
+$font-size-lger             : 20px;
+
+$line-height-base           : 1.5;
+$line-height-computed       : floor($font-size-base * $line-height-base);
+
+/* Link */
+$link-color                 : $brand-color;
+$link-hover-color           : lighten($link-color, 20%);
+$link-active-color          : darken($link-color, 5%);
+$link-disabled-color        : $roof-color;
+$link-hover-decoration      : none;
+
+/* Disabled cursor */
+$cursor-disabled            : not-allowed;
+
+/* Shadow */
+$shadow-color               : rgba(100, 100, 100, .2);
+$shadow-1px-up              : 0 -1px 6px $shadow-color;
+$shadow-1px-down            : 0 1px 6px $shadow-color;
+$shadow-1px-left            : -1px 0 6px $shadow-color;
+$shadow-1px-right           : 1px 0 6px $shadow-color;
+
+/* Button */
+$btn-default-color          : $text-color;
+$btn-default-bg             : $color-white;
+$btn-default-border         : $border-color-base;
+
+$btn-primary-bg             : $color-primary;
+$btn-primary-border         : $color-primary;
+
+$btn-success-bg             : $color-success;
+$btn-success-border         : $color-success;
+
+$btn-error-bg               : $color-error;
+$btn-error-border           : $color-error;
+
+$btn-warning-bg             : $color-warning;
+$btn-warning-border         : $color-warning;
+
+$btn-info-bg                : $color-info;
+$btn-info-border            : $color-info;
+
+$btn-disabled-color         : $border-color-base;
+$btn-disabled-bg            : #F2F9FF;
+$btn-disabled-border        : #D9EEFF;
+
+$btn-font-weight            : 500;
+
+$btn-font-size-smer         : 10px;
+$btn-font-size-sm           : 12px;
+$btn-font-size              : 14px;
+$btn-font-size-md           : 14px;
+$btn-font-size-lg           : 16px;
+
+$btn-padding-smer           : 6px 10px;
+$btn-padding-sm             : 8px 12px;
+$btn-padding-base           : 4px 16px;
+$btn-padding-md             : 10px 14px;
+$btn-padding-lg             : 12px 16px;
+
+/* Input */
+$input-width                : 140px;
+$input-height-sm            : 30px;
+$input-height               : 36px;
+$input-height-lg            : 42px;
+
+$input-font-size-sm         : 13px;
+$input-font-size            : $font-size-base;
+$input-font-size-lg         : 16px;
+
+$input-font-color           : $text-color;
+$input-font-color-disabled  : $roof-color;
+
+$input-border-color          : $border-color-base;
+$input-border-color-hover    : $brand-color-light;
+$input-border-color-focus    : $brand-color-light;
+$input-border-color-disabled : lighten($border-color-base, 20%);
+$input-border-color-success  : $color-success;
+$input-border-color-error    : $color-error;
+$input-border-color-warning  : $color-warning;
+$input-border-color-info     : $color-info;
+
+$input-border-radius        : $border-radius-base;
+
+$input-bg-color             : $color-white;
+$input-bg-color-disabled    : lighten($border-color-base, 70%);
+
+$input-icon-color           : $border-color-base;
+$input-icon-font-size       : $font-size-normal;
+
+$input-placeholder-color          : #99a9bf;
+$input-placeholder-color-disabled : lighten($input-placeholder-color, 20%);
+
+$input-group-font-color     : #99a9bf;
+$input-group-bg-color       : #f9fafc;
+
+/* Badge */
+$badge-height               : 18px;
+$badge-font-size            : $font-size-smer;
+$badge-padding              : 6px;
+$badge-border-radius        : 10px;
+
+$badge-bg-color             : $color-error;
+$badge-bg-color-success     : $color-success;
+$badge-bg-color-warning     : $color-warning;
+$badge-bg-color-info        : $color-info;
+
+/* Switch */
+$switch-min-width-sm        : 28px;
+$switch-min-width           : 44px;
+$switch-height-sm           : 14px;
+$switch-height              : 22px;
+
+$switch-border-radius         : 20px;
+$switch-border-color          : $border-color-gray;
+$switch-border-color-checked  : $brand-color-light;
+$switch-border-color-disabled : lighten($border-color-gray, 70%);
+
+$switch-bg-color            : $border-color-gray;
+$switch-bg-color-checked    : $brand-color-light;
+$switch-bg-color-disabled   : lighten($border-color-gray, 70%);
+
+$switch-font-color          : $color-white;
+$switch-font-size           : $font-size-smer;
+$switch-font-size-sm        : $font-size-smest;
+
+$switch-circle-size               : 18px;
+$switch-circle-size-sm            : 12px;
+$switch-circle-bg-color           : $color-white;
+$switch-circle-bg-color-disabled  : $border-color-gray;
+
+/* InputNumber */
+$inputnumber-width          : 100px;
+$inputnumber-height-smer    : 28px;
+$inputnumber-height-sm      : 32px;
+$inputnumber-height         : 36px;
+
+$inputnumber-font-color     : $input-font-color;
+
+$inputnumber-bg-color           : $input-bg-color;
+$inputnumber-bg-color-disabled  : $input-bg-color-disabled;
+
+$inputnumber-border-radius          : $input-border-radius;
+$inputnumber-border-color           : $input-border-color;
+$inputnumber-border-color-hover     : $input-border-color-hover;
+$inputnumber-border-color-disabled  : $input-border-color-disabled;
+
+$inputnumber-padding        : 0 10px;
+
+$inputnumber-handler-width        : 22px;
+$inputnumber-handler-border-color : #d9d9d9;
+
+$inputnumber-handler-font-color     : #999;
+$inputnumber-handler-font-size-smer : 8px;
+$inputnumber-handler-font-size-sm   : 9px;
+$inputnumber-handler-font-size      : 10px;
+
+$inputnumber-handler-ele-height-smer  : 14px;
+$inputnumber-handler-ele-height-sm    : 16px;
+$inputnumber-handler-ele-height       : 18px;
+
+$inputnumber-handler-ele-height-smer-hover  : 16px;
+$inputnumber-handler-ele-height-sm-hover    : 18px;
+$inputnumber-handler-ele-height-hover       : 20px;
+
+$inputnumber-handler-ele-font-color-disabled: $input-border-color-disabled;
+
+/* Select */
+$select-font-size-sm        : $font-size-smest;
+$select-font-size           : $font-size-smer;
+$select-font-size-lg        : $font-size-sm;
+
+$select-bg-color            : $color-white;
+$select-font-color          : $input-font-color;
+
+$select-border-radius         : $input-border-radius;
+$select-border-color          : $input-border-color;
+$select-border-color-disabled : lighten($border-color-base, 20%);
+
+$select-selection-bg-color          : $color-white;
+$select-selection-bg-color-disabled : lighten($border-color-base, 70%);
+
+$select-selection-height-sm : 24px;
+$select-selection-height    : 26px;
+$select-selection-height-lg : 30px;
+
+/* Select Dropdown */
+$select-dropdown-font-size-sm : $font-size-smest;
+$select-dropdown-font-size    : $font-size-smer;
+$select-dropdown-font-size-lg : $font-size-sm;
+
+$select-dropdown-bg-color       : $color-white;
+$select-dropdown-border-radius  : $input-border-radius;
+
+/* Slider */
+$slider-height              : 4px;
+$slider-margin              : 16px 0;
+
+$slider-bar-bg-color        : $brand-color-light;
+$slider-track-bg-color      : #e5e9f2;
+$slider-border-radius       : 3px;
+
+$slider-dot-color           : $brand-color-light;
+$slider-dot-color-hover     : darken($brand-color-light, 10%);
+$slider-dot-size            : 12px;
+$slider-dot-wrapper-size    : 12px;
+$slider-dot-wrapper-offset  : -6px;
+
+/* Progress */
+$progress-height            : 10px;
+$progress-border-radius     : 50px;
+$progress-font-color        : $text-color;
+$progress-font-size         : $font-size-smer;
+
+$progress-bar-bg-color      : $brand-color-light;
+$progress-track-bg-color    : #e5e9f2;
+
+/* Tooltip */
+$tooltip-font-color         : $color-white;
+$tooltip-font-size          : $font-size-smer;
+$tooltip-bg-color           : #333;
+$tooltip-border-color       : #333;
+$tooltip-padding            : 5px 10px;
+$tooltip-arrow-size         : 6px;
+
+/* Popover */
+$popover-font-size          : var($font-size-smer);
+$popover-bg-color           : #fff;
+$popover-border-color       : rgba(0,0,0,.1);
+$popover-padding            : 5px 10px;
+
+$popover-arrow-size         : 10px;
+$popover-arrow-bg-color     : #fff;
+$popover-title-padding      : 8px 12px;
+$popover-content-padding    : 10px 12px;
+
+/* Alert */
+$alert-padding                : 10px 16px;
+$alert-border-radius          : $border-radius-base;
+$alert-message-font-size      : $font-size-sm;
+$alert-description-font-size  : $font-size-smer;
+$alert-close-font-size        : $font-size-smest;
+
+$alert-icon-color             : $color-white;
+$alert-icon-font-size         : 16px;
+$alert-icon-font-size-lg      : 28px;
+
+$alert-bg-color-success     : lighten($color-success, 26%);
+$alert-bg-color-error       : lighten($color-error, 26%);
+$alert-bg-color-warning     : lighten($color-warning, 26%);
+$alert-bg-color-info        : lighten($color-info, 26%);
+
+/* Notification */
+$notification-width             : 330px;
+$notification-padding           : 10px 16px;
+$notification-border-radius     : $border-radius-base;
+$notification-shadow            : 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+$notification-title-font-size   : $font-size-sm;
+$notification-message-font-size : $font-size-smest;
+$notification-icon-color        : $color-white;
+$notification-icon-font-size    : 16px;
+$notification-close-font-size   : 12px;
+$notification-font-size-lg      : 28px;
+
+$notification-bg-color-success  : lighten($color-success, 26%);
+$notification-bg-color-error    : lighten($color-error, 26%);
+$notification-bg-color-warning  : lighten($color-warning, 26%);
+$notification-bg-color-info     : lighten($color-info, 26%);
+
+/* Loading Bar */
+$loading-bar-bg-color-success   : $color-primary;
+$loading-bar-bg-color-error     : $color-error;
+
+/* Pagination */
+$pagination-item-size-sm            : 20px;
+$pagination-item-size               : 28px;
+$pagination-item-text-color         : lighten($text-color, 20%);
+$pagination-item-bg-color           : $color-white;
+$pagination-item-border-radius      : $border-radius-base;
+$pagination-item-border-color       : $border-color-base;
+$pagination-item-border-color-hover : $color-primary;
+
+/**
+ * Media queries
+ */
+/* Extra small screen / Mobile */
+$screen-xs                  : 480px;
+$screen-xs-min              : $screen-xs;
+$screen-xs-max              : $screen-xs-min - 1;
+
+/* Small screen / Tablet */
+$screen-sm                  : 768px;
+$screen-sm-min              : $screen-sm;
+$screen-sm-max              : $screen-sm-min - 1;
+
+/* Medium screen / Desktop */
+$screen-md                  : 992px;
+$screen-md-min              : $screen-md;
+$screen-md-max              : $screen-md-min - 1;
+
+/* Large screen / Wide Desktop */
+$screen-lg                  : 1200px;
+$screen-lg-min              : $screen-lg;
+$screen-lg-max              : $screen-lg-min - 1;
+
+/**
+ * Grid system
+ */
+$grid-columns               : 24;
+$grid-gutter-width          : 0;
+
+/* Container sizes */
+$container-sm               : 720px + $grid-gutter-width;
+$container-md               : 940px + $grid-gutter-width;
+$container-lg               : 1140px + $grid-gutter-width;
+
+/* z-index list */
+$zindex-affix               : 10;
+$zindex-modal-mask          : 1000;
+$zindex-modal               : 1000;
+$zindex-notification        : 1010;
+$zindex-message             : 1010;
+$zindex-popover             : 1030;
+$zindex-picker              : 1050;
+$zindex-dropdown            : 1050;
+$zindex-tooltip             : 1060;
+$zindex-loading-bar         : 1070;

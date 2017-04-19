@@ -1,0 +1,36 @@
+{
+  "name": "at-ui-style",
+  "version": "0.1.0",
+  "description": "The StyleSheet for AT-UI",
+  "main": "src/index.scss",
+  "style": "css/at.css",
+  "scripts": {
+    "build": "npm run build-clean && npm run build-scss && npm run build-scss-minify && npm run build-autoprefix",
+    "build-clean": "rimraf css",
+    "build-scss": "node-sass --output-style expanded --source-map true src/index.scss css/at.css",
+    "build-scss-minify": "node-sass --output-style compressed --source-map true src/index.scss css/at.min.css",
+    "build-autoprefix": "postcss --use autoprefixer -c postcss.json css/*.css -d css/",
+    "prepublish": "npm run build",
+    "start": "npm run build-scss -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.jd.com:o2team/at-ui-style.git"
+  },
+  "keywords": [
+    "at",
+    "at-ui",
+    "css",
+    "scss",
+    "framework"
+  ],
+  "author": "Koppt Ho",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "eslint-config-o2team": "^0.1.6",
+    "node-sass": "^4.5.2",
+    "postcss-cli": "^3.1.1",
+    "rimraf": "^2.6.1"
+  }
+}

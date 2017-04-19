@@ -1,0 +1,93 @@
+/**
+ * Switch Style
+ */
+
+.at-switch {
+  position: relative;
+  display: inline-block;
+  min-width: $switch-min-width;
+  height: $switch-height;
+  border-radius: $switch-border-radius;
+  border: 1px solid $switch-border-color;
+  background-color: $switch-bg-color;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  transition: all .3s;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 2px;
+    top: 1px;
+    width: $switch-circle-size;
+    height: $switch-circle-size;
+    border-radius: 50%;
+    background-color: $switch-circle-bg-color;
+    cursor: pointer;
+    transition: all .3s;
+  }
+
+  /* element */
+  &__text {
+    display: block;
+    color: $switch-font-color;
+    font-size: $switch-font-size;
+    padding-left: $switch-circle-size + 6;
+    padding-right: 7px;
+    line-height: $switch-height;
+  }
+  &--checked {
+    border-color: $switch-border-color-checked;
+    background-color: $switch-bg-color-checked;
+
+    &::after {
+      left: 100%;
+      margin-left: -$switch-circle-size - 2;
+    }
+    .at-switch__text {
+      padding-left: 7px;
+      padding-right: $switch-circle-size + 6;
+    }
+  }
+  &--disabled {
+    border-color: $switch-border-color-disabled;
+    background-color: $switch-bg-color-disabled;
+    cursor: $cursor-disabled;
+
+    &::after {
+      background-color: $switch-circle-bg-color-disabled;
+      cursor: $cursor-disabled;
+    }
+  }
+
+  /* modifier */
+  &--small {
+    min-width: $switch-min-width-sm;
+    height: $switch-height-sm;
+
+    &::after {
+      width: $switch-circle-size-sm;
+      height: $switch-circle-size-sm;
+      top: 0;
+      left: 1px;
+    }
+    &.at-switch--checked {
+      &::after {
+        left: 100%;
+        margin-left: -$switch-circle-size-sm - 1;
+      }
+      .at-switch__text {
+        padding-left: 6px;
+        padding-right: $switch-circle-size-sm + 5;
+      }
+    }
+    .at-switch__text {
+      font-size: $switch-font-size-sm;
+      padding-left: $switch-circle-size-sm + 5;
+      padding-right: 6px;
+      line-height: $switch-height-sm;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+/**
+ * Breadcrumb Style
+ */
+
+.at-breadcrumb {
+  @include clearfix;
+  font-size: $font-size-base;
+  line-height: 1;
+
+  /* element */
+  &__separator {
+    margin: 0 8px;
+    color: $roof-color;
+  }
+  &__item {
+    float: left;
+
+    &:last-child {
+      color: $link-disabled-color;
+      cursor: text;
+
+      .at-breadcrumb__separator {
+        display: none;
+      }
+    }
+  }
+  &__link {
+    transition: color .15s linear;
+    color: $link-color;
+
+    &:hover {
+      color: $link-hover-color;
+      cursor: pointer;
+    }
+  }
+}
