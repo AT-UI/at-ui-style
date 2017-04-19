@@ -1,6 +1,7 @@
 /**
  * Input Style
  */
+@import '../variables/index.scss';
 
 .at-input {
   position: relative;
@@ -169,10 +170,10 @@
     align-items: center;
 
     &:hover {
-      background-color: darken($input-group-bg-color, 2%);
+      background-color: shade($input-group-bg-color, 2%);
     }
     &:active {
-      background-color: darken($input-group-bg-color, 4%);
+      background-color: shade($input-group-bg-color, 4%);
     }
   }
 }

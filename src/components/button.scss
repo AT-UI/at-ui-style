@@ -1,6 +1,7 @@
 /**
  * Button Style
  */
+@import '../variables/index.scss';
 
 $btn-hover-tint-percent: 20%;
 $btn-active-shade-percent: 10%;
@@ -10,12 +11,12 @@ $btn-active-shade-percent: 10%;
   background-color: $background-color;
 
   &:hover {
-    background-color: lighten($background-color, $btn-hover-tint-percent);
-    border-color: lighten($background-color, $btn-hover-tint-percent);
+    background-color: tint($background-color, $btn-hover-tint-percent);
+    border-color: tint($background-color, $btn-hover-tint-percent);
   }
   &:active {
-    background-color: darken($background-color, $btn-active-shade-percent);
-    border-color: darken($background-color, $btn-active-shade-percent);
+    background-color: shade($background-color, $btn-active-shade-percent);
+    border-color: shade($background-color, $btn-active-shade-percent);
   }
 }
 
@@ -25,13 +26,13 @@ $btn-active-shade-percent: 10%;
 
   &:hover {
     background: none;
-    color: lighten($text-color, $btn-hover-tint-percent);
-    border-color: lighten($border-color, $btn-hover-tint-percent);
+    color: tint($text-color, $btn-hover-tint-percent);
+    border-color: tint($border-color, $btn-hover-tint-percent);
   }
   &:active {
     background: none;
-    color: lighten($text-color, $btn-active-shade-percent);
-    border-color: lighten($border-color, $btn-active-shade-percent);
+    color: tint($text-color, $btn-active-shade-percent);
+    border-color: tint($border-color, $btn-active-shade-percent);
   }
 }
 
@@ -51,10 +52,10 @@ $btn-active-shade-percent: 10%;
   font-size: $font-size-normal;
 
   &:hover {
-    background-color: lighten($btn-default-border, 80%);
+    background-color: tint($btn-default-border, 80%);
   }
   &:active {
-    background-color: lighten($btn-default-border, 50%);
+    background-color: tint($btn-default-border, 50%);
   }
 
   /* modifier */

@@ -1,7 +1,8 @@
 /**
  * AT-Desktop UI Base Stylesheet
  */
-@import '../mixins/index';
+@import '../variables/index.scss';
+@import '../mixins/index.scss';
 
 * {
   box-sizing: border-box;

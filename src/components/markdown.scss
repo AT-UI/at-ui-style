@@ -1,6 +1,7 @@
 /**
  * Markdown Style
  */
+@import '../variables/index.scss';
 
 .at-markdown {
   pre {
@@ -21,7 +22,7 @@
     border-bottom: 1px solid $border-color-base;
   }
   code {
-    background-color: lighten($bg-color-light, 30%);
+    background-color: tint($bg-color-light, 30%);
     padding: .3em .5em;
     border-radius: $border-radius-base;
     font-size: .9em;

@@ -1,6 +1,8 @@
 /**
  * Dropdown Style
  */
+@import '../variables/index.scss';
+@import '../mixins/index.scss';
 
 .at-dropdown {
   display: inline-block;

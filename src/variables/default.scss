@@ -1,6 +1,7 @@
 /**
  * Default Variables
  */
+@import '../mixins/index.scss';
 
  /* Prefix */
 $css-prefix: at;
@@ -24,10 +25,10 @@ $title-color                : #2C405A;
 
 $border-color-gray          : #CCC;
 $border-color-base          : #C5D9E8;
-$border-color-lightest      : lighten($border-color-base, 70%);
-$border-color-lighter       : lighten($border-color-base, 50%);
-$border-color-light         : lighten($border-color-base, 30%);
-$border-color-split         : lighten($border-color-base, 20%);
+$border-color-lightest      : tint($border-color-base, 70%);
+$border-color-lighter       : tint($border-color-base, 50%);
+$border-color-light         : tint($border-color-base, 30%);
+$border-color-split         : tint($border-color-base, 20%);
 
 $bg-color                   : $color-white;
 $bg-color-base              : #FAFBFC;
@@ -61,8 +62,8 @@ $line-height-computed       : floor($font-size-base * $line-height-base);
 
 /* Link */
 $link-color                 : $brand-color;
-$link-hover-color           : lighten($link-color, 20%);
-$link-active-color          : darken($link-color, 5%);
+$link-hover-color           : tint($link-color, 20%);
+$link-active-color          : shade($link-color, 5%);
 $link-disabled-color        : $roof-color;
 $link-hover-decoration      : none;
 
@@ -130,7 +131,7 @@ $input-font-color-disabled  : $roof-color;
 $input-border-color          : $border-color-base;
 $input-border-color-hover    : $brand-color-light;
 $input-border-color-focus    : $brand-color-light;
-$input-border-color-disabled : lighten($border-color-base, 20%);
+$input-border-color-disabled : tint($border-color-base, 20%);
 $input-border-color-success  : $color-success;
 $input-border-color-error    : $color-error;
 $input-border-color-warning  : $color-warning;
@@ -139,13 +140,13 @@ $input-border-color-info     : $color-info;
 $input-border-radius        : $border-radius-base;
 
 $input-bg-color             : $color-white;
-$input-bg-color-disabled    : lighten($border-color-base, 70%);
+$input-bg-color-disabled    : tint($border-color-base, 70%);
 
 $input-icon-color           : $border-color-base;
 $input-icon-font-size       : $font-size-normal;
 
 $input-placeholder-color          : #99a9bf;
-$input-placeholder-color-disabled : lighten($input-placeholder-color, 20%);
+$input-placeholder-color-disabled : tint($input-placeholder-color, 20%);
 
 $input-group-font-color     : #99a9bf;
 $input-group-bg-color       : #f9fafc;
@@ -170,11 +171,11 @@ $switch-height              : 22px;
 $switch-border-radius         : 20px;
 $switch-border-color          : $border-color-gray;
 $switch-border-color-checked  : $brand-color-light;
-$switch-border-color-disabled : lighten($border-color-gray, 70%);
+$switch-border-color-disabled : tint($border-color-gray, 70%);
 
 $switch-bg-color            : $border-color-gray;
 $switch-bg-color-checked    : $brand-color-light;
-$switch-bg-color-disabled   : lighten($border-color-gray, 70%);
+$switch-bg-color-disabled   : tint($border-color-gray, 70%);
 
 $switch-font-color          : $color-white;
 $switch-font-size           : $font-size-smer;
@@ -231,10 +232,10 @@ $select-font-color          : $input-font-color;
 
 $select-border-radius         : $input-border-radius;
 $select-border-color          : $input-border-color;
-$select-border-color-disabled : lighten($border-color-base, 20%);
+$select-border-color-disabled : tint($border-color-base, 20%);
 
 $select-selection-bg-color          : $color-white;
-$select-selection-bg-color-disabled : lighten($border-color-base, 70%);
+$select-selection-bg-color-disabled : tint($border-color-base, 70%);
 
 $select-selection-height-sm : 24px;
 $select-selection-height    : 26px;
@@ -257,7 +258,7 @@ $slider-track-bg-color      : #e5e9f2;
 $slider-border-radius       : 3px;
 
 $slider-dot-color           : $brand-color-light;
-$slider-dot-color-hover     : darken($brand-color-light, 10%);
+$slider-dot-color-hover     : shade($brand-color-light, 10%);
 $slider-dot-size            : 12px;
 $slider-dot-wrapper-size    : 12px;
 $slider-dot-wrapper-offset  : -6px;
@@ -301,10 +302,10 @@ $alert-icon-color             : $color-white;
 $alert-icon-font-size         : 16px;
 $alert-icon-font-size-lg      : 28px;
 
-$alert-bg-color-success     : lighten($color-success, 26%);
-$alert-bg-color-error       : lighten($color-error, 26%);
-$alert-bg-color-warning     : lighten($color-warning, 26%);
-$alert-bg-color-info        : lighten($color-info, 26%);
+$alert-bg-color-success     : tint($color-success, 26%);
+$alert-bg-color-error       : tint($color-error, 26%);
+$alert-bg-color-warning     : tint($color-warning, 26%);
+$alert-bg-color-info        : tint($color-info, 26%);
 
 /* Notification */
 $notification-width             : 330px;
@@ -318,10 +319,10 @@ $notification-icon-font-size    : 16px;
 $notification-close-font-size   : 12px;
 $notification-font-size-lg      : 28px;
 
-$notification-bg-color-success  : lighten($color-success, 26%);
-$notification-bg-color-error    : lighten($color-error, 26%);
-$notification-bg-color-warning  : lighten($color-warning, 26%);
-$notification-bg-color-info     : lighten($color-info, 26%);
+$notification-bg-color-success  : tint($color-success, 26%);
+$notification-bg-color-error    : tint($color-error, 26%);
+$notification-bg-color-warning  : tint($color-warning, 26%);
+$notification-bg-color-info     : tint($color-info, 26%);
 
 /* Loading Bar */
 $loading-bar-bg-color-success   : $color-primary;
@@ -330,7 +331,7 @@ $loading-bar-bg-color-error     : $color-error;
 /* Pagination */
 $pagination-item-size-sm            : 20px;
 $pagination-item-size               : 28px;
-$pagination-item-text-color         : lighten($text-color, 20%);
+$pagination-item-text-color         : tint($text-color, 20%);
 $pagination-item-bg-color           : $color-white;
 $pagination-item-border-radius      : $border-radius-base;
 $pagination-item-border-color       : $border-color-base;

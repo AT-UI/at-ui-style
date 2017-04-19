@@ -1,6 +1,8 @@
 /**
  * Breadcrumb Style
  */
+@import '../variables/index.scss';
+@import '../mixins/index.scss';
 
 .at-breadcrumb {
   @include clearfix;

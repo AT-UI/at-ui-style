@@ -1,6 +1,8 @@
 /**
  * Pagination Style
  */
+@import '../variables/index.scss';
+@import '../mixins/index.scss';
 
 .at-pagination {
   @include clearfix;

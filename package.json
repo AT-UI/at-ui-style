@@ -5,11 +5,12 @@
   "main": "src/index.scss",
   "style": "css/at.css",
   "scripts": {
-    "build": "npm run build-clean && npm run build-scss && npm run build-scss-minify && npm run build-autoprefix",
+    "build": "npm run build-clean && npm run copy && npm run build-scss && npm run build-scss-minify && npm run build-autoprefix",
     "build-clean": "rimraf css",
     "build-scss": "node-sass --output-style expanded --source-map true src/index.scss css/at.css",
     "build-scss-minify": "node-sass --output-style compressed --source-map true src/index.scss css/at.min.css",
     "build-autoprefix": "postcss --use autoprefixer -c postcss.json css/*.css -d css/",
+    "copy": "copyfiles -f src/fonts/*.* css/fonts/",
     "prepublish": "npm run build",
     "start": "npm run build-scss -- --watch"
   },
@@ -28,6 +29,7 @@
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^6.7.7",
+    "copyfiles": "^1.2.0",
     "eslint-config-o2team": "^0.1.6",
     "node-sass": "^4.5.2",
     "postcss-cli": "^3.1.1",
