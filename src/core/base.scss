@@ -136,11 +136,14 @@ p {
   color: $text-color;
   font-size: $font-size-base;
 }
-.text-small {
-  font-size: $font-size-sm;
+.text-smallest {
+  font-size: $font-size-smest;
 }
 .text-smaller {
   font-size: $font-size-smer;
+}
+.text-small {
+  font-size: $font-size-sm;
 }
 .text-base {
   font-size: $font-size-base;

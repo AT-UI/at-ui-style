@@ -60,8 +60,8 @@ $baseWidth: 4.166667%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-left: $gutter-compensation;
-  margin-right: $gutter-compensation;
+  // margin-left: $gutter-compensation;
+  // margin-right: $gutter-compensation;
 
   &.reverse {
     flex-direction: row-reverse;
@@ -92,6 +92,14 @@ $baseWidth: 4.166667%;
   text-align: end;
 }
 
+.flex-around {
+  justify-content: space-around;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
 .flex-top {
   align-items: flex-start;
 }
@@ -102,14 +110,6 @@ $baseWidth: 4.166667%;
 
 .flex-bottom {
   align-items: flex-end;
-}
-
-.flex-around {
-  justify-content: space-around;
-}
-
-.flex-between {
-  justify-content: space-between;
 }
 
 .flex-first {
