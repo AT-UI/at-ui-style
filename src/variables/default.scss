@@ -7,12 +7,12 @@
 $css-prefix: at;
 
 /* The Color of O2Team Brand */
-$brand-color                : #6180E8;
+$brand-color                : #6190E8;
 $brand-color-light          : #78A4F4;
 $brand-color-dark           : #346FC2;
 
 /* Color */
-$color-normal               : #6180E8;
+$color-normal               : #6190E8;
 $color-primary              : #6190E8;
 $color-success              : #13CE66;
 $color-error                : #FF4949;
@@ -20,15 +20,93 @@ $color-warning              : #FFC82C;
 $color-info                 : #78A4FA;
 $color-white                : #FFF;
 
+/* Color PalettC */
+$brand-blue-50              : #ECF2FC;
+$brand-blue-100             : #D0DEF8;
+$brand-blue-200             : #B0C8F4;
+$brand-blue-300             : #90B1EF;
+$brand-blue-400             : #79A1EB;
+$brand-blue-500             : #6190E8;
+$brand-blue-600             : #5988E5;
+$brand-blue-700             : #4F7DE2;
+$brand-blue-800             : #4573DE;
+$brand-blue-900             : #3361D8;
+
+$green-50                   : #E3F9ED;
+$green-100                  : #B8F0D1;
+$green-200                  : #89E7B3;
+$green-300                  : #5ADD94;
+$green-400                  : #36D57D;
+$green-500                  : #13CE66;
+$green-600                  : #11C95E;
+$green-700                  : #0EC253;
+$green-800                  : #0BBC49;
+$green-900                  : #06B038;
+
+$red-50                     : #FFE9E9;
+$red-100                    : #FFC8C8;
+$red-200                    : #FFA4A4;
+$red-300                    : #FF8080;
+$red-400                    : #FF6464;
+$red-500                    : #FF4949;
+$red-600                    : #FF4242;
+$red-700                    : #FF3939;
+$red-800                    : #FF3131;
+$red-900                    : #FF2121;
+
+$yellow-50                  : #FFF8E6;
+$yellow-100                 : #FFEFC0;
+$yellow-200                 : #FFE496;
+$yellow-300                 : #FFD96B;
+$yellow-400                 : #FFD04C;
+$yellow-500                 : #FFC82C;
+$yellow-600                 : #FFC227;
+$yellow-700                 : #FFBB21;
+$yellow-800                 : #FFB41B;
+$yellow-900                 : #FFA710;
+
+$blue-50                    : #EFF4FE;
+$blue-100                   : #D7E4FE;
+$blue-200                   : #BCD2FD;
+$blue-300                   : #A1BFFC;
+$blue-400                   : #8CB2FB;
+$blue-500                   : #78A4FA;
+$blue-600                   : #709CF9;
+$blue-700                   : #6592F9;
+$blue-800                   : #5B89F8;
+$blue-900                   : #4878F6;
+
+$grey-50                    : #F7F7F7;
+$grey-100                   : #ECECEC;
+$grey-200                   : #DFDFDF;
+$grey-300                   : #D2D2D2;
+$grey-400                   : #C9C9C9;
+$grey-500                   : #BFBFBF;
+$grey-600                   : #B9B9B9;
+$grey-700                   : #B1B1B1;
+$grey-800                   : #A9A9A9;
+$grey-900                   : #9B9B9B;
+
+$black-50                   : #E6E8EB;
+$black-100                  : #C0C6CE;
+$black-200                  : #96A0AD;
+$black-300                  : #6B798C;
+$black-400                  : #4C5D73;
+$black-500                  : #2C405A;
+$black-600                  : #273A52;
+$black-700                  : #213248;
+$black-800                  : #1B2A3F;
+$black-900                  : #101C2E;
+
 $text-color                 : #3F536E;
 $title-color                : #2C405A;
 
 $border-color-gray          : #CCC;
 $border-color-base          : #C5D9E8;
-$border-color-lightest      : tint($border-color-base, 70%);
-$border-color-lighter       : tint($border-color-base, 50%);
-$border-color-light         : tint($border-color-base, 30%);
 $border-color-split         : tint($border-color-base, 20%);
+$border-color-light         : tint($border-color-base, 30%);
+$border-color-lighter       : tint($border-color-base, 50%);
+$border-color-lightest      : tint($border-color-base, 80%);
 
 $bg-color                   : $color-white;
 $bg-color-base              : #FAFBFC;
@@ -46,7 +124,7 @@ $border-radius-base         : 4px;
 $border-radius-sm           : 4px;
 
 /* Font */
-$font-family                : "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial,sans-serif;
+$font-family                : -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
 $code-family                : Consolas, Menlo, Courier, monospace;
 
 $font-size-smest            : 11px;
@@ -80,22 +158,24 @@ $shadow-1px-right           : 1px 0 6px $shadow-color;
 /* Button */
 $btn-default-color          : $text-color;
 $btn-default-bg             : $color-white;
+$btn-default-bg-hover       : $border-color-lightest;
+$btn-default-bg-active      : $border-color-lighter;
 $btn-default-border         : $border-color-base;
 
-$btn-primary-bg             : $color-primary;
-$btn-primary-border         : $color-primary;
+$btn-primary-bg             : $brand-blue-500;
+$btn-primary-border         : $brand-blue-500;
 
-$btn-success-bg             : $color-success;
-$btn-success-border         : $color-success;
+$btn-success-bg             : $green-500;
+$btn-success-border         : $green-500;
 
-$btn-error-bg               : $color-error;
-$btn-error-border           : $color-error;
+$btn-error-bg               : $red-500;
+$btn-error-border           : $red-500;
 
-$btn-warning-bg             : $color-warning;
-$btn-warning-border         : $color-warning;
+$btn-warning-bg             : $yellow-500;
+$btn-warning-border         : $yellow-500;
 
-$btn-info-bg                : $color-info;
-$btn-info-border            : $color-info;
+$btn-info-bg                : $blue-500;
+$btn-info-border            : $blue-500;
 
 $btn-disabled-color         : $border-color-base;
 $btn-disabled-bg            : #F2F9FF;
@@ -104,16 +184,16 @@ $btn-disabled-border        : #D9EEFF;
 $btn-font-weight            : 500;
 
 $btn-font-size-smer         : 10px;
-$btn-font-size-sm           : 12px;
-$btn-font-size              : 14px;
+$btn-font-size-sm           : 11px;
+$btn-font-size-base         : 12px;
 $btn-font-size-md           : 14px;
 $btn-font-size-lg           : 16px;
 
-$btn-padding-smer           : 6px 10px;
-$btn-padding-sm             : 8px 12px;
-$btn-padding-base           : 4px 16px;
-$btn-padding-md             : 10px 14px;
-$btn-padding-lg             : 12px 16px;
+$btn-padding-smer           : 4px 10px;
+$btn-padding-sm             : 6px 12px;
+$btn-padding-base           : 6px 16px;
+$btn-padding-md             : 8px 16px;
+$btn-padding-lg             : 10px 18px;
 
 /* Input */
 $input-width                : 140px;

@@ -3,7 +3,7 @@
  */
 @import '../variables/index.scss';
 
-$btn-hover-tint-percent: 20%;
+$btn-hover-tint-percent: 10%;
 $btn-active-shade-percent: 10%;
 
 @mixin button-status($border-color, $background-color) {
@@ -38,24 +38,24 @@ $btn-active-shade-percent: 10%;
 
 .at-btn {
   display: inline-block;
-  line-height: 1;
-  padding: $btn-padding-md;
+  padding: $btn-padding-base;
+  font-size: $btn-font-size-base;
+  outline: 0;
+  line-height: 1.5;
   text-align: center;
   white-space: nowrap;
-  cursor: pointer;
   border: 1px solid $btn-default-border;
   border-radius: $border-radius-base;
-  background-color: #fff;
-  outline: 0;
-  transition: background 0.1s;
+  background-color: $btn-default-bg;
+  transition: background 0.2s;
   user-select: none;
-  font-size: $font-size-normal;
+  cursor: pointer;
 
   &:hover {
-    background-color: tint($btn-default-border, 80%);
+    background-color: $btn-default-bg-hover;
   }
   &:active {
-    background-color: tint($btn-default-border, 50%);
+    background-color: $btn-default-bg-active;
   }
 
   /* modifier */
@@ -107,15 +107,15 @@ $btn-active-shade-percent: 10%;
     }
   }
   &--large {
-    font-size: $font-size-normal;
-    padding: $btn-padding-lg;
+    font-size: $btn-font-size-md;
+    padding: $btn-padding-md;
   }
   &--small {
-    font-size: $font-size-sm;
+    font-size: $btn-font-size-sm;
     padding: $btn-padding-sm;
   }
   &--smaller {
-    font-size: $font-size-smer;
+    font-size: $btn-font-size-smer;
     padding: $btn-padding-smer;
   }
 }
