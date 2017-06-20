@@ -177,9 +177,11 @@ $btn-warning-border         : $yellow-500;
 $btn-info-bg                : $blue-500;
 $btn-info-border            : $blue-500;
 
-$btn-disabled-color         : $border-color-base;
-$btn-disabled-bg            : #F2F9FF;
-$btn-disabled-border        : #D9EEFF;
+$btn-text-border            : $brand-blue-500;
+
+$btn-disabled-color         : $grey-300;
+$btn-disabled-bg            : $grey-50;
+$btn-disabled-border        : $grey-100;
 
 $btn-font-weight            : 500;
 
@@ -189,11 +191,16 @@ $btn-font-size-base         : 12px;
 $btn-font-size-md           : 14px;
 $btn-font-size-lg           : 16px;
 
-$btn-padding-smer           : 4px 10px;
-$btn-padding-sm             : 6px 12px;
+$btn-padding-smer           : 2px 10px;
+$btn-padding-sm             : 4px 12px;
 $btn-padding-base           : 6px 16px;
 $btn-padding-md             : 8px 16px;
 $btn-padding-lg             : 10px 18px;
+
+$btn-circle-size-smer       : 24px;
+$btn-circle-size-sm         : 28px;
+$btn-circle-size            : 32px;
+$btn-circle-size-lg         : 40px;
 
 /* Input */
 $input-width                : 140px;
