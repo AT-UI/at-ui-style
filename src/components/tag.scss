@@ -11,16 +11,21 @@
 
 .at-tag {
   display: inline-block;
-  line-height: 1;
-  padding: 5px 10px;
+  padding: 1px 8px;
+  color: $color-white;
+  font-size: 0;
+  line-height: 1.5;
   text-align: center;
   white-space: nowrap;
-  border: 1px solid $btn-default-border;
+  border: 1px solid $tag-border-color;
   border-radius: $border-radius-base;
+  background-color: $tag-bg-color;
   outline: 0;
-  background-color: $btn-disabled-bg;
 
-  &__close.icon {
+  &__text {
+    font-size: $font-size-smer;
+  }
+  &__close {
     font-size: 10px;
     padding-left: 4px;
     margin: 0;
@@ -31,7 +36,7 @@
     }
   }
   &--default {
-    @include tag-style($text-color, $btn-default-border, $btn-disabled-bg);
+    @include tag-style($text-color, $tag-border-color, $tag-bg-color);
   }
   &--primary {
     @include tag-style($color-white, $btn-primary-bg, $btn-primary-bg);
