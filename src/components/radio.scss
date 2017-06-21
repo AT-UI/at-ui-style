@@ -8,6 +8,9 @@
   font-size: $font-size;
 }
 
+/**
+ * AtRadio
+ */
 .at-radio {
   position: relative;
   display: inline-block;
@@ -19,6 +22,15 @@
 
   + .at-radio {
     margin-left: 16px;
+  }
+
+  /* modifier */
+  &--checked {
+    .at-radio-button__inner {
+      color: $color-white;
+      border-color: $color-primary;
+      background-color: $color-primary;
+    }
   }
 
   /* element */
@@ -89,44 +101,14 @@
   }
 }
 
+/**
+ * AtRadioButton
+ */
 .at-radio-button {
   position: relative;
   display: inline-block;
   overflow: hidden;
 
-  /* element */
-  &__inner {
-    position: relative;
-    display: inline-block;
-    white-space: nowrap;
-    text-align: center;
-    vertical-align: middle;
-    outline: none;
-    cursor: pointer;
-    background: $btn-default-bg;
-    border: 1px solid $btn-default-border;
-    color: $btn-default-color;
-    margin: 0;
-    transition: all .2s;
-    user-select: none;
-    @include button-size($btn-padding-md, $btn-font-size-md);
-  }
-  &__original {
-    position: absolute;
-    left: -999px;
-    outline: none;
-    opacity: 0;
-    z-index: -1;
-
-    &:disabled {
-      & + .at-radio-button__inner {
-        color: $btn-disabled-color;
-        cursor: not-allowed;
-        background-color: $btn-disabled-bg;
-        border-color: $btn-disabled-border;
-      }
-    }
-  }
   &:not(:last-child) {
     margin-right: -1px;
   }
@@ -143,18 +125,53 @@
 
   /* modifier */
   &--small {
-    & .at-radio-button__inner {
+    .at-radio-button__inner {
       @include button-size($btn-padding-sm, $btn-font-size-sm);
     }
   }
   &--normal {
-    & .at-radio-button__inner {
-      @include button-size($btn-padding-md, $btn-font-size-md);
+    .at-radio-button__inner {
+      @include button-size($btn-padding-base, $btn-font-size-base);
     }
   }
   &--large {
-    & .at-radio-button__inner {
-      @include button-size($btn-padding-lg, $btn-font-size-lg);
+    .at-radio-button__inner {
+      @include button-size($btn-padding-md, $btn-font-size-md);
+    }
+  }
+
+  /* element */
+  &__inner {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    color: $text-color;
+    white-space: nowrap;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.5;
+    border: 1px solid $btn-default-border;
+    background: $btn-default-bg;
+    transition: all .2s;
+    outline: none;
+    user-select: none;
+    cursor: pointer;
+    @include button-size($btn-padding-base, $btn-font-size-base);
+  }
+  &__original {
+    position: absolute;
+    left: -999px;
+    opacity: 0;
+    outline: none;
+    z-index: -1;
+
+    &:disabled {
+      & + .at-radio-button__inner {
+        color: $btn-disabled-color;
+        background-color: $btn-disabled-bg;
+        border-color: $btn-default-border;
+        cursor: $cursor-disabled;
+      }
     }
   }
 }
