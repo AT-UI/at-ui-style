@@ -258,7 +258,7 @@ $input-bg-color-disabled    : tint($border-color-base, 70%);
 $input-icon-color           : $border-color-base;
 $input-icon-font-size       : $font-size-normal;
 
-$input-placeholder-color          : #99a9bf;
+$input-placeholder-color          : $grey-400;
 $input-placeholder-color-disabled : tint($input-placeholder-color, 20%);
 
 $input-group-font-color     : #99a9bf;
@@ -337,30 +337,37 @@ $inputnumber-handler-ele-font-color-disabled: $input-border-color-disabled;
 
 /* Select */
 $select-font-size-sm        : $font-size-smest;
-$select-font-size           : $font-size-smer;
-$select-font-size-lg        : $font-size-sm;
+$select-font-size-base      : $font-size-smer;
+$select-font-size-lg        : $font-size-base;
 
 $select-bg-color            : $color-white;
-$select-font-color          : $input-font-color;
+$select-font-color          : $text-color;
 
-$select-border-radius         : $input-border-radius;
-$select-border-color          : $input-border-color;
-$select-border-color-disabled : tint($border-color-base, 20%);
+$select-border-c-hover       : $brand-blue-400;
+$select-border-c-checked     : $brand-blue-400;
+$select-border-c-disabled    : $grey-100;
+$select-bg-c-disabled        : $grey-50;
 
 $select-selection-bg-color          : $color-white;
 $select-selection-bg-color-disabled : tint($border-color-base, 70%);
+
+$select-padding-sm            : 0 24px 0 8px;
+$select-padding-base          : 4px 24px 4px 8px;
+$select-padding-lg            : 0 24px 0 8px;
 
 $select-selection-height-sm : 24px;
 $select-selection-height    : 26px;
 $select-selection-height-lg : 30px;
 
 /* Select Dropdown */
-$select-dropdown-font-size-sm : $font-size-smest;
-$select-dropdown-font-size    : $font-size-smer;
-$select-dropdown-font-size-lg : $font-size-sm;
+$select-dropdown-font-size-sm   : $font-size-smest;
+$select-dropdown-font-size-base : $font-size-smer;
+$select-dropdown-font-size-lg   : $font-size-sm;
 
 $select-dropdown-bg-color       : $color-white;
-$select-dropdown-border-radius  : $input-border-radius;
+$select-dropdown-height         : 200px;
+
+$dropdown-option-padding-base   : 6px 12px;
 
 /* Slider */
 $slider-height              : 4px;

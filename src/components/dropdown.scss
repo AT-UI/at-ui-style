@@ -18,9 +18,9 @@
   width: inherit;
   max-height: 200px;
   overflow-y: auto;
-  font-size: $select-dropdown-font-size;
+  font-size: $select-dropdown-font-size-base;
   background-color: $select-dropdown-bg-color;
-  border-radius: $select-dropdown-border-radius;
+  border-radius: $border-radius-base;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
   z-index: $zindex-dropdown;
   list-style: none;
@@ -32,7 +32,7 @@
     display: block;
     padding: 8px 16px;
     line-height: 1;
-    font-size: $select-dropdown-font-size;
+    font-size: $select-dropdown-font-size-base;
     white-space: nowrap;
     overflow: hidden;
     transition: all .3s;

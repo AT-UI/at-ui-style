@@ -8,9 +8,10 @@
   position: relative;
   display: inline-block;
   width: 100%;
-  vertical-align: middle;
   color: $select-font-color;
-  font-size: $select-font-size;
+  font-size: $select-font-size-base;
+  line-height: 1.5;
+  vertical-align: middle;
 
   .at-select__input {
     border: none;
@@ -21,17 +22,17 @@
   &__selection {
     position: relative;
     display: block;
+    padding: $select-padding-base;
     outline: none;
-    cursor: pointer;
-    background-color: $select-selection-bg-color;
-    border: 1px solid $select-border-color;
-    border-radius: $select-border-radius;
+    line-height: 1.5;
+    border: 1px solid $border-color-base;
+    border-radius: $border-radius-base;
+    background-color: $color-white;
     transition: all .3s;
-    padding: 0 24px 0 8px;
-    line-height: $select-selection-height;
+    cursor: pointer;
 
     &:hover {
-      border-color: $input-border-color-hover;
+      border-color: $select-border-c-hover;
 
       .at-select__arrow {
         display: inline-block;
@@ -50,8 +51,8 @@
     position: absolute;
     top: 50%;
     right: 8px;
-    margin-top: -4px;
-    font-size: 9px;
+    margin-top: -5px;
+    font-size: 10px;
     cursor: pointer;
     transition: transform .3s;
   }
@@ -60,7 +61,7 @@
     position: absolute;
     top: 50%;
     right: 8px;
-    margin-top: -4px;
+    margin-top: -5px;
     font-size: 10px;
     cursor: pointer;
   }
@@ -70,12 +71,12 @@
   &__dropdown {
     position: absolute;
     width: 100%;
-    max-height: 200px;
-    overflow-y: auto;
-    font-size: $select-dropdown-font-size;
+    max-height: $select-dropdown-height;
+    font-size: $select-dropdown-font-size-base;
+    border-radius: $border-radius-base;
     background-color: $select-dropdown-bg-color;
-    border-radius: $select-dropdown-border-radius;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
     z-index: $zindex-dropdown;
 
     .at-select__list {
@@ -84,15 +85,15 @@
       font-size: 0;
     }
     .at-select__option {
-      @include ellipsis;
-      padding: 8px 16px;
-      line-height: 1;
-      font-size: $select-dropdown-font-size;
-      white-space: nowrap;
-      overflow: hidden;
-      transition: all .3s;
-      cursor: pointer;
+      @include ellipsis();
       width: 100%;
+      padding: $dropdown-option-padding-base;
+      font-size: $select-dropdown-font-size-base;
+      line-height: 1.5;
+      white-space: nowrap;
+      transition: all .3s;
+      overflow: hidden;
+      cursor: pointer;
 
       &:hover,
       &--focus {
@@ -136,7 +137,7 @@
       background-color: $select-selection-bg-color-disabled;
 
       &:hover {
-        border-color: $select-border-color-disabled;
+        border-color: $select-border-c-disabled;
       }
     }
     .at-select__placeholder,
@@ -154,7 +155,7 @@
 
     .at-select__selection {
       height: $select-selection-height-sm;
-      line-height: $select-selection-height-sm;
+      // line-height: $select-selection-height-sm;
     }
     .at-select__dropdown .at-select__option {
       font-size: $select-dropdown-font-size-sm;
@@ -164,7 +165,7 @@
     font-size: $select-font-size-lg;
 
     .at-select__selection {
-      height: $select-selection-height-lg;
+      // height: $select-selection-height-lg;
       line-height: $select-selection-height-lg;
     }
     .at-select__dropdown .at-select__option {
@@ -181,7 +182,7 @@
     padding: 8px;
     line-height: 1;
     color: $roof-color;
-    font-size: $select-dropdown-font-size;
+    font-size: $select-dropdown-font-size-base;
     white-space: nowrap;
     overflow: hidden;
     transition: all .3s;
