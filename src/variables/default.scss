@@ -217,6 +217,17 @@ $radio-border-c-disabled    : $grey-100;
 $radio-bg-c-disabled        : $grey-50;
 $radio-dot-c-disabled       : $grey-300;
 
+/* Checkbox */
+$checkbox-size              : 16px;
+$checkbox-font-size         : $font-size-smer;
+
+$checkbox-border-c          : $border-color-base;
+$checkbox-border-c-hover    : $brand-blue-400;
+$checkbox-border-c-checked  : $brand-blue-400;
+$checkbox-border-c-disabled : $grey-100;
+$checkbox-bg-c-disabled     : $grey-50;
+$checkbox-label-c-disabled  : $grey-700;
+
 /* Input */
 $input-width                : 140px;
 $input-height-sm            : 30px;
