@@ -4,19 +4,20 @@
 @import '../variables/index.scss';
 
 .at-textarea {
+
   /* element */
   &__original {
     display: block;
     width: 100%;
-    padding: 6px 8px;
-    outline: 0;
-    border: 1px solid $input-border-color;
-    border-radius: $border-radius-base;
-    line-height: 1.5;
+    padding: $textarea-padding;
     color: $input-font-color;
     font-size: $input-font-size-base;
+    line-height: 1.5;
+    border: 1px solid $input-border-color;
+    border-radius: $border-radius-base;
     background-color: $input-bg-color;
-    transition: border .2s;
+    transition: border .3s;
+    outline: 0;
 
     &::placeholder {
       color: $input-placeholder-color;

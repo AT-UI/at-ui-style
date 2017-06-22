@@ -328,6 +328,23 @@ $switch-circle-size-lg            : 20px;
 $switch-circle-bg-color           : $color-white;
 $switch-circle-bg-color-disabled  : $grey-400;
 
+/* Slider */
+$slider-height              : 4px;
+$slider-margin              : 16px 0;
+
+$slider-bar-bg-color        : $brand-color-light;
+$slider-track-bg-color      : #e5e9f2;
+$slider-border-radius       : 3px;
+
+$slider-dot-color           : $brand-color-light;
+$slider-dot-color-hover     : shade($brand-color-light, 10%);
+$slider-dot-size            : 12px;
+$slider-dot-wrapper-size    : 12px;
+$slider-dot-wrapper-offset  : -6px;
+
+/* Textarea */
+$textarea-padding           : 6px 8px;
+
 /* Radio */
 $radio-size                 : 16px;
 $radio-dot-size             : 8px;
@@ -387,20 +404,6 @@ $dropdown-option-bg-c-hover     : $brand-blue-50;
 $dropdown-option-bg-c-selected  : $grey-50;
 
 $option-group-font-c        : $grey-500;
-
-/* Slider */
-$slider-height              : 4px;
-$slider-margin              : 16px 0;
-
-$slider-bar-bg-color        : $brand-color-light;
-$slider-track-bg-color      : #e5e9f2;
-$slider-border-radius       : 3px;
-
-$slider-dot-color           : $brand-color-light;
-$slider-dot-color-hover     : shade($brand-color-light, 10%);
-$slider-dot-size            : 12px;
-$slider-dot-wrapper-size    : 12px;
-$slider-dot-wrapper-offset  : -6px;
 
 /* Progress */
 $progress-height            : 10px;
