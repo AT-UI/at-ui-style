@@ -111,6 +111,7 @@
 
   &:not(:last-child) {
     margin-right: -1px;
+    border-collapse: separate;
   }
   &:first-child {
     .at-radio-button__inner {
@@ -183,4 +184,5 @@
   display: inline-block;
   font-size: 0;
   line-height: 1;
+  border-collapse: separate;
 }

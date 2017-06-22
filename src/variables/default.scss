@@ -206,17 +206,6 @@ $btn-circle-size-lg         : 40px;
 $tag-bg-color               : $grey-50;
 $tag-border-color           : $grey-200;
 
-/* Radio */
-$radio-size                 : 16px;
-$radio-dot-size             : 8px;
-$radio-font-size            : $font-size-smer;
-
-$radio-border-c-hover       : $brand-blue-400;
-$radio-border-c-checked     : $brand-blue-400;
-$radio-border-c-disabled    : $grey-100;
-$radio-bg-c-disabled        : $grey-50;
-$radio-dot-c-disabled       : $grey-300;
-
 /* Checkbox */
 $checkbox-size              : 16px;
 $checkbox-font-size         : $font-size-smer;
@@ -229,40 +218,86 @@ $checkbox-bg-c-disabled     : $grey-50;
 $checkbox-label-c-disabled  : $grey-700;
 
 /* Input */
-$input-width                : 140px;
-$input-height-sm            : 30px;
-$input-height               : 36px;
-$input-height-lg            : 42px;
+$input-font-size-sm         : 11px;
+$input-font-size-base       : 12px;
+$input-font-size-lg         : 14px;
 
-$input-font-size-sm         : 13px;
-$input-font-size            : $font-size-base;
-$input-font-size-lg         : 16px;
+$input-padding-sm           : 4px 10px;
+$input-padding-base         : 6px 12px;
+$input-padding-lg           : 8px 14px;
 
 $input-font-color           : $text-color;
-$input-font-color-disabled  : $roof-color;
+$input-font-color-disabled  : $grey-700;
 
 $input-border-color          : $border-color-base;
-$input-border-color-hover    : $brand-color-light;
-$input-border-color-focus    : $brand-color-light;
-$input-border-color-disabled : tint($border-color-base, 20%);
+$input-border-color-hover    : $brand-blue-400;
+$input-border-color-focus    : $brand-blue-400;
+$input-border-color-disabled : $grey-100;
 $input-border-color-success  : $color-success;
 $input-border-color-error    : $color-error;
 $input-border-color-warning  : $color-warning;
 $input-border-color-info     : $color-info;
 
-$input-border-radius        : $border-radius-base;
-
 $input-bg-color             : $color-white;
-$input-bg-color-disabled    : tint($border-color-base, 70%);
+$input-bg-color-disabled    : $grey-50;
 
 $input-icon-color           : $border-color-base;
-$input-icon-font-size       : $font-size-normal;
+$input-icon-font-size       : 15px;
 
 $input-placeholder-color          : $grey-400;
-$input-placeholder-color-disabled : tint($input-placeholder-color, 20%);
+$input-placeholder-color-disabled : $grey-400;
 
-$input-group-font-color     : #99a9bf;
-$input-group-bg-color       : #f9fafc;
+$input-group-font-color      : $grey-900;
+$input-group-bg-color        : $grey-50;
+$input-group-bg-color-hover  : $grey-100;
+$input-group-bg-color-active : $grey-200;
+
+/* InputNumber */
+$inputnumber-width          : 100px;
+$inputnumber-height-smer    : 28px;
+$inputnumber-height-sm      : 32px;
+$inputnumber-height         : 36px;
+
+$inputnumber-font-color     : $input-font-color;
+
+$inputnumber-bg-color           : $input-bg-color;
+$inputnumber-bg-color-disabled  : $input-bg-color-disabled;
+
+$inputnumber-border-radius          : $border-radius-base;
+$inputnumber-border-color           : $input-border-color;
+$inputnumber-border-color-hover     : $input-border-color-hover;
+$inputnumber-border-color-disabled  : $input-border-color-disabled;
+
+$inputnumber-padding        : 0 10px;
+
+$inputnumber-handler-width        : 22px;
+$inputnumber-handler-border-color : #d9d9d9;
+
+$inputnumber-handler-font-color     : #999;
+$inputnumber-handler-font-size-smer : 8px;
+$inputnumber-handler-font-size-sm   : 9px;
+$inputnumber-handler-font-size      : 10px;
+
+$inputnumber-handler-ele-height-smer  : 14px;
+$inputnumber-handler-ele-height-sm    : 16px;
+$inputnumber-handler-ele-height       : 18px;
+
+$inputnumber-handler-ele-height-smer-hover  : 16px;
+$inputnumber-handler-ele-height-sm-hover    : 18px;
+$inputnumber-handler-ele-height-hover       : 20px;
+
+$inputnumber-handler-ele-font-color-disabled: $input-border-color-disabled;
+
+/* Radio */
+$radio-size                 : 16px;
+$radio-dot-size             : 8px;
+$radio-font-size            : $font-size-smer;
+
+$radio-border-c-hover       : $brand-blue-400;
+$radio-border-c-checked     : $brand-blue-400;
+$radio-border-c-disabled    : $grey-100;
+$radio-bg-c-disabled        : $grey-50;
+$radio-dot-c-disabled       : $grey-300;
 
 /* Badge */
 $badge-height               : 18px;
@@ -298,42 +333,6 @@ $switch-circle-size               : 18px;
 $switch-circle-size-sm            : 12px;
 $switch-circle-bg-color           : $color-white;
 $switch-circle-bg-color-disabled  : $border-color-gray;
-
-/* InputNumber */
-$inputnumber-width          : 100px;
-$inputnumber-height-smer    : 28px;
-$inputnumber-height-sm      : 32px;
-$inputnumber-height         : 36px;
-
-$inputnumber-font-color     : $input-font-color;
-
-$inputnumber-bg-color           : $input-bg-color;
-$inputnumber-bg-color-disabled  : $input-bg-color-disabled;
-
-$inputnumber-border-radius          : $input-border-radius;
-$inputnumber-border-color           : $input-border-color;
-$inputnumber-border-color-hover     : $input-border-color-hover;
-$inputnumber-border-color-disabled  : $input-border-color-disabled;
-
-$inputnumber-padding        : 0 10px;
-
-$inputnumber-handler-width        : 22px;
-$inputnumber-handler-border-color : #d9d9d9;
-
-$inputnumber-handler-font-color     : #999;
-$inputnumber-handler-font-size-smer : 8px;
-$inputnumber-handler-font-size-sm   : 9px;
-$inputnumber-handler-font-size      : 10px;
-
-$inputnumber-handler-ele-height-smer  : 14px;
-$inputnumber-handler-ele-height-sm    : 16px;
-$inputnumber-handler-ele-height       : 18px;
-
-$inputnumber-handler-ele-height-smer-hover  : 16px;
-$inputnumber-handler-ele-height-sm-hover    : 18px;
-$inputnumber-handler-ele-height-hover       : 20px;
-
-$inputnumber-handler-ele-font-color-disabled: $input-border-color-disabled;
 
 /* Select */
 $select-font-size-sm        : $font-size-smest;
