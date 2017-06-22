@@ -4,18 +4,27 @@
 @import '../variables/index.scss';
 @import '../mixins/index.scss';
 
+/**
+ * AtSelect
+ */
 .at-select {
   position: relative;
   display: inline-block;
   width: 100%;
+  min-width: 80px;
   color: $select-font-color;
   font-size: $select-font-size-base;
   line-height: 1.5;
   vertical-align: middle;
 
   .at-select__input {
+    width: 100%;
     border: none;
     outline: none;
+
+    &::placeholder {
+      color: $input-placeholder-color;
+    }
   }
 
   /* element */
@@ -24,7 +33,7 @@
     display: block;
     padding: $select-padding-base;
     outline: none;
-    line-height: 1.5;
+    line-height: $select-selection-height-base;
     border: 1px solid $border-color-base;
     border-radius: $border-radius-base;
     background-color: $color-white;
@@ -84,6 +93,9 @@
       padding: 0;
       font-size: 0;
     }
+    .at-select__not-found {
+      padding: $dropdown-option-padding-base;
+    }
     .at-select__option {
       @include ellipsis();
       width: 100%;
@@ -97,11 +109,11 @@
 
       &:hover,
       &--focus {
-        background-color: $bg-color-light;
+        background-color: $dropdown-option-bg-c-hover;
       }
       &--selected {
-        background-color: $bg-color-gray;
         font-weight: bold;
+        background-color: $dropdown-option-bg-c-selected;
       }
     }
     &--bottom {
@@ -127,7 +139,7 @@
   &--show-clear {
     .at-select__selection:hover {
       .at-select__arrow {
-        display: none;
+        opacity: 0;
       }
     }
   }
@@ -147,7 +159,10 @@
   }
   &--multiple {
     .at-tag {
-      margin: 3px 3px 3px 0;
+      margin: 4px 4px 0 0;
+    }
+    .at-tag__text {
+      font-size: 10px;
     }
   }
   &--small {
@@ -155,7 +170,7 @@
 
     .at-select__selection {
       height: $select-selection-height-sm;
-      // line-height: $select-selection-height-sm;
+      line-height: $select-selection-height-sm;
     }
     .at-select__dropdown .at-select__option {
       font-size: $select-dropdown-font-size-sm;
@@ -165,7 +180,7 @@
     font-size: $select-font-size-lg;
 
     .at-select__selection {
-      // height: $select-selection-height-lg;
+      height: $select-selection-height-lg;
       line-height: $select-selection-height-lg;
     }
     .at-select__dropdown .at-select__option {
@@ -174,20 +189,23 @@
   }
 }
 
+/**
+ * AtOptionGroup
+ */
 .at-option-group {
   padding: 0;
 
   &__label {
-    @include ellipsis;
+    @include ellipsis();
+    width: 100%;
     padding: 8px;
-    line-height: 1;
-    color: $roof-color;
+    color: $option-group-font-c;
     font-size: $select-dropdown-font-size-base;
+    line-height: 1;
     white-space: nowrap;
     overflow: hidden;
     transition: all .3s;
     cursor: normal;
-    width: 100%;
   }
   &__list {
     padding: 0;

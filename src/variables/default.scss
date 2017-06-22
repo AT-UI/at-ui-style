@@ -352,12 +352,12 @@ $select-selection-bg-color          : $color-white;
 $select-selection-bg-color-disabled : tint($border-color-base, 70%);
 
 $select-padding-sm            : 0 24px 0 8px;
-$select-padding-base          : 4px 24px 4px 8px;
+$select-padding-base          : 0 24px 0 8px;
 $select-padding-lg            : 0 24px 0 8px;
 
-$select-selection-height-sm : 24px;
-$select-selection-height    : 26px;
-$select-selection-height-lg : 30px;
+$select-selection-height-sm     : 24px;
+$select-selection-height-base   : 26px;
+$select-selection-height-lg     : 30px;
 
 /* Select Dropdown */
 $select-dropdown-font-size-sm   : $font-size-smest;
@@ -368,6 +368,10 @@ $select-dropdown-bg-color       : $color-white;
 $select-dropdown-height         : 200px;
 
 $dropdown-option-padding-base   : 6px 12px;
+$dropdown-option-bg-c-hover     : $brand-blue-50;
+$dropdown-option-bg-c-selected  : $grey-50;
+
+$option-group-font-c        : $grey-500;
 
 /* Slider */
 $slider-height              : 4px;

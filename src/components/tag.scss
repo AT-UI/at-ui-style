@@ -21,6 +21,7 @@
   border-radius: $border-radius-base;
   background-color: $tag-bg-color;
   outline: 0;
+  @include tag-style($text-color, $tag-border-color, $tag-bg-color);
 
   &__text {
     font-size: $font-size-smer;
