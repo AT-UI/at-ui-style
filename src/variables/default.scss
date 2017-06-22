@@ -293,6 +293,41 @@ $inputnumber-handler-ele-height-lg-hover    : 20px;
 
 $inputnumber-handler-ele-font-color-disabled : $grey-100;
 
+/* Switch */
+$switch-min-width-sm        : 32px;
+$switch-min-width-base      : 40px;
+$switch-min-width-lg        : 48px;
+
+$switch-height-sm           : 16px;
+$switch-height-base         : 20px;
+$switch-height-lg           : 24px;
+
+$switch-border-radius-sm      : 16px;
+$switch-border-radius-base    : 20px;
+$switch-border-radius-lg      : 24px;
+
+$switch-border-color          : $grey-500;
+$switch-border-color-checked  : $brand-blue-400;
+$switch-border-color-disabled : $grey-100;
+
+$switch-bg-color            : $grey-500;
+$switch-bg-color-checked    : $brand-blue-400;
+$switch-bg-color-disabled   : $grey-100;
+
+$switch-font-color          : $color-white;
+$switch-font-color-disabled : $grey-300;
+
+$switch-font-size-sm        : $font-size-smest;
+$switch-font-size-base      : $font-size-smer;
+$switch-font-size-lg        : $font-size-sm;
+
+$switch-circle-size-sm            : 12px;
+$switch-circle-size-base          : 16px;
+$switch-circle-size-lg            : 20px;
+
+$switch-circle-bg-color           : $color-white;
+$switch-circle-bg-color-disabled  : $grey-400;
+
 /* Radio */
 $radio-size                 : 16px;
 $radio-dot-size             : 8px;
@@ -314,30 +349,6 @@ $badge-bg-color             : $color-error;
 $badge-bg-color-success     : $color-success;
 $badge-bg-color-warning     : $color-warning;
 $badge-bg-color-info        : $color-info;
-
-/* Switch */
-$switch-min-width-sm        : 28px;
-$switch-min-width           : 44px;
-$switch-height-sm           : 14px;
-$switch-height              : 22px;
-
-$switch-border-radius         : 20px;
-$switch-border-color          : $border-color-gray;
-$switch-border-color-checked  : $brand-color-light;
-$switch-border-color-disabled : tint($border-color-gray, 70%);
-
-$switch-bg-color            : $border-color-gray;
-$switch-bg-color-checked    : $brand-color-light;
-$switch-bg-color-disabled   : tint($border-color-gray, 70%);
-
-$switch-font-color          : $color-white;
-$switch-font-size           : $font-size-smer;
-$switch-font-size-sm        : $font-size-smest;
-
-$switch-circle-size               : 18px;
-$switch-circle-size-sm            : 12px;
-$switch-circle-bg-color           : $color-white;
-$switch-circle-bg-color-disabled  : $border-color-gray;
 
 /* Select */
 $select-font-size-sm        : $font-size-smest;
