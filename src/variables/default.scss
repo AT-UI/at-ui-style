@@ -253,10 +253,10 @@ $input-group-bg-color-hover  : $grey-100;
 $input-group-bg-color-active : $grey-200;
 
 /* InputNumber */
-$inputnumber-width          : 100px;
-$inputnumber-height-smer    : 28px;
-$inputnumber-height-sm      : 32px;
-$inputnumber-height         : 36px;
+$inputnumber-min-width      : 80px;
+$inputnumber-height-sm      : 28px;
+$inputnumber-height-base    : 32px;
+$inputnumber-height-lg      : 36px;
 
 $inputnumber-font-color     : $input-font-color;
 
@@ -268,25 +268,30 @@ $inputnumber-border-color           : $input-border-color;
 $inputnumber-border-color-hover     : $input-border-color-hover;
 $inputnumber-border-color-disabled  : $input-border-color-disabled;
 
-$inputnumber-padding        : 0 10px;
+$inputnumber-padding-sm           : 0 8px;
+$inputnumber-padding-base         : 0 8px;
+$inputnumber-padding-lg           : 0 8px;
 
-$inputnumber-handler-width        : 22px;
-$inputnumber-handler-border-color : #d9d9d9;
+$inputnumber-handler-width            : 22px;
+$inputnumber-handler-border-color     : $grey-200;
+$inputnumber-handler-bg-color-active  : $grey-100;
 
-$inputnumber-handler-font-color     : #999;
-$inputnumber-handler-font-size-smer : 8px;
+$inputnumber-handler-font-color       : $grey-500;
+$inputnumber-handler-font-color-hover : $grey-900;
+
 $inputnumber-handler-font-size-sm   : 9px;
-$inputnumber-handler-font-size      : 10px;
+$inputnumber-handler-font-size-base : 10px;
+$inputnumber-handler-font-size-lg   : 11px;
 
-$inputnumber-handler-ele-height-smer  : 14px;
-$inputnumber-handler-ele-height-sm    : 16px;
-$inputnumber-handler-ele-height       : 18px;
+$inputnumber-handler-ele-height-sm    : 14px;
+$inputnumber-handler-ele-height-base  : 16px;
+$inputnumber-handler-ele-height-lg    : 18px;
 
-$inputnumber-handler-ele-height-smer-hover  : 16px;
-$inputnumber-handler-ele-height-sm-hover    : 18px;
-$inputnumber-handler-ele-height-hover       : 20px;
+$inputnumber-handler-ele-height-sm-hover    : 16px;
+$inputnumber-handler-ele-height-base-hover  : 18px;
+$inputnumber-handler-ele-height-lg-hover    : 20px;
 
-$inputnumber-handler-ele-font-color-disabled: $input-border-color-disabled;
+$inputnumber-handler-ele-font-color-disabled : $grey-100;
 
 /* Radio */
 $radio-size                 : 16px;
