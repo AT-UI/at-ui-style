@@ -13,6 +13,7 @@
   line-height: 1.5;
   border-radius: $border-radius-base;
   transition: opacity .3s;
+  z-index: $zindex-notification;
   opacity: 0.9;
 
   /* element */

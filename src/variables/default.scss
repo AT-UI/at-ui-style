@@ -364,6 +364,20 @@ $alert-bg-color-error       : $red-300;
 $alert-bg-color-warning     : $yellow-300;
 $alert-bg-color-info        : $blue-300;
 
+/* Badge */
+$badge-height               : 18px;
+$badge-padding              : 0 6px;
+$badge-border-radius        : $badge-height / 2;
+$badge-font-size            : $font-size-smer;
+$badge-font-color           : $color-white;
+
+$badge-bg-color             : $red-500;
+$badge-bg-color-success     : $green-500;
+$badge-bg-color-warning     : $yellow-500;
+$badge-bg-color-info        : $blue-500;
+
+$badge-dot-size             : 10px;
+
 /* Radio */
 $radio-size                 : 16px;
 $radio-dot-size             : 8px;
@@ -374,17 +388,6 @@ $radio-border-c-checked     : $brand-blue-400;
 $radio-border-c-disabled    : $grey-100;
 $radio-bg-c-disabled        : $grey-50;
 $radio-dot-c-disabled       : $grey-300;
-
-/* Badge */
-$badge-height               : 18px;
-$badge-font-size            : $font-size-smer;
-$badge-padding              : 6px;
-$badge-border-radius        : 10px;
-
-$badge-bg-color             : $color-error;
-$badge-bg-color-success     : $color-success;
-$badge-bg-color-warning     : $color-warning;
-$badge-bg-color-info        : $color-info;
 
 /* Select */
 $select-font-size-sm        : $font-size-smest;
