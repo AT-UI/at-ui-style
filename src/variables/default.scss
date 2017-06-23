@@ -378,6 +378,21 @@ $badge-bg-color-info        : $blue-500;
 
 $badge-dot-size             : 10px;
 
+/* Loading Bar */
+$loading-bar-bg-color-success   : $color-primary;
+$loading-bar-bg-color-error     : $color-error;
+
+/* Message */
+$message-padding            : 6px 16px;
+$message-font-size          : $font-size-sm;
+$message-bg-color           : $color-white;
+$message-box-shadow         : 0 1px 8px rgba(0, 0, 0, .15);
+
+$message-icon-color-success : $color-success;
+$message-icon-color-error   : $color-error;
+$message-icon-color-warning : $color-warning;
+$message-icon-color-info    : $color-info;
+
 /* Radio */
 $radio-size                 : 16px;
 $radio-dot-size             : 8px;
@@ -476,10 +491,6 @@ $tooltip-bg-color           : #333;
 $tooltip-border-color       : #333;
 $tooltip-padding            : 5px 10px;
 $tooltip-arrow-size         : 6px;
-
-/* Loading Bar */
-$loading-bar-bg-color-success   : $color-primary;
-$loading-bar-bg-color-error     : $color-error;
 
 /* Pagination */
 $pagination-item-size-sm            : 20px;
