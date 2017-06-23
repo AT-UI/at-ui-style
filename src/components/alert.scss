@@ -7,13 +7,13 @@
   position: relative;
   display: flex;
   width: 100%;
-  margin: 0;
   padding: $alert-padding;
+  color: $alert-text-color;
+  line-height: 1.5;
   border-radius: $alert-border-radius;
-  overflow: hidden;
-  color: $color-white;
-  opacity: 1;
   transition: opacity .3s;
+  overflow: hidden;
+  opacity: 1;
 
   /* element */
   &__icon {
@@ -23,29 +23,24 @@
     margin-right: 8px;
   }
   &__content {
-    padding-right: 8px;
     flex: 1;
-
-    p {
-      padding: 0;
-    }
+    padding-right: 8px;
   }
   &__message {
+    color: $alert-text-color;
     font-size: $alert-message-font-size;
-    line-height: 1.2;
-    color: $color-white;
   }
   &__description {
+    margin-top: 4px;
+    color: $alert-text-color;
     font-size: $alert-description-font-size;
-    margin-top: 5px;
-    color: $color-white;
   }
   &__close {
     color: $alert-icon-color;
     font-size: $alert-close-font-size;
+    line-height: 20px;
     opacity: 1;
     cursor: pointer;
-    margin-top: 2px;
   }
 
   /* modifier */
@@ -62,22 +57,13 @@
     background-color: $alert-bg-color-info;
   }
   &--with-description {
-    padding: 14px 16px;
+    padding: $alert-padding-lg;
 
     .at-alert__icon {
       font-size: 24px;
     }
     .at-alert__message {
       font-weight: bold;
-      line-height: 1.3;
     }
-    .at-alert__description {
-      line-height: 1.5;
-    }
-  }
-
-  &.at-alert-fade-enter,
-  &.at-alert-fade-leave-active {
-    opacity: 0;
   }
 }
