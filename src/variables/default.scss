@@ -139,10 +139,10 @@ $line-height-base           : 1.5;
 $line-height-computed       : floor($font-size-base * $line-height-base);
 
 /* Link */
-$link-color                 : $brand-color;
-$link-hover-color           : tint($link-color, 20%);
-$link-active-color          : shade($link-color, 5%);
-$link-disabled-color        : $roof-color;
+$link-color                 : $brand-blue-500;
+$link-hover-color           : $brand-blue-400;
+$link-active-color          : $brand-blue-700;
+$link-disabled-color        : $grey-500;
 $link-hover-decoration      : none;
 
 /* Disabled cursor */
@@ -493,6 +493,10 @@ $tooltip-bg-color           : #333;
 $tooltip-border-color       : #333;
 $tooltip-padding            : 5px 10px;
 $tooltip-arrow-size         : 6px;
+
+/* Breadcrumb */
+$breadcrumb-font-size         : $font-size-base;
+$breadcrumb-separator-color   : $grey-300;
 
 /* Pagination */
 $pagination-item-size-sm            : 20px;

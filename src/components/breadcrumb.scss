@@ -5,18 +5,16 @@
 @import '../mixins/index.scss';
 
 .at-breadcrumb {
-  @include clearfix;
-  font-size: $font-size-base;
-  line-height: 1;
+  @include clearfix();
+  font-size: $breadcrumb-font-size;
+  line-height: 1.5;
 
   /* element */
   &__separator {
     margin: 0 8px;
-    color: $roof-color;
+    color: $breadcrumb-separator-color;
   }
   &__item {
-    float: left;
-
     &:last-child {
       color: $link-disabled-color;
       cursor: text;
@@ -27,11 +25,15 @@
     }
   }
   &__link {
-    transition: color .15s linear;
     color: $link-color;
+    transition: color .3s;
 
     &:hover {
       color: $link-hover-color;
+      cursor: pointer;
+    }
+    &:active {
+      color: $link-active-color;
       cursor: pointer;
     }
   }
