@@ -424,6 +424,39 @@ $dropdown-option-bg-c-selected  : $grey-50;
 
 $option-group-font-c        : $grey-500;
 
+/* Notification */
+$notification-width             : 320px;
+$notification-padding           : 8px 16px;
+$notification-padding-lg        : 12px 16px;
+$notification-shadow            : 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+$notification-text-color        : $color-white;
+
+$notification-font-size-lg      : 28px;
+$notification-title-font-size   : $font-size-sm;
+$notification-message-font-size : $font-size-smer;
+
+$notification-icon-color          : $color-white;
+$notification-icon-font-size      : $font-size-sm;
+$notification-icon-font-size-lg   : 24px;
+$notification-close-font-size     : $font-size-smer;
+$notification-close-font-size-lg  : $font-size-base;
+
+$notification-bg-color-success  : $green-300;
+$notification-bg-color-error    : $red-300;
+$notification-bg-color-warning  : $yellow-300;
+$notification-bg-color-info     : $blue-300;
+
+/* Popover */
+$popover-font-size          : var($font-size-smer);
+$popover-bg-color           : #fff;
+$popover-border-color       : rgba(0,0,0,.1);
+$popover-padding            : 5px 10px;
+
+$popover-arrow-size         : 10px;
+$popover-arrow-bg-color     : #fff;
+$popover-title-padding      : 8px 12px;
+$popover-content-padding    : 10px 12px;
+
 /* Progress */
 $progress-height            : 10px;
 $progress-border-radius     : 50px;
@@ -440,34 +473,6 @@ $tooltip-bg-color           : #333;
 $tooltip-border-color       : #333;
 $tooltip-padding            : 5px 10px;
 $tooltip-arrow-size         : 6px;
-
-/* Popover */
-$popover-font-size          : var($font-size-smer);
-$popover-bg-color           : #fff;
-$popover-border-color       : rgba(0,0,0,.1);
-$popover-padding            : 5px 10px;
-
-$popover-arrow-size         : 10px;
-$popover-arrow-bg-color     : #fff;
-$popover-title-padding      : 8px 12px;
-$popover-content-padding    : 10px 12px;
-
-/* Notification */
-$notification-width             : 330px;
-$notification-padding           : 10px 16px;
-$notification-border-radius     : $border-radius-base;
-$notification-shadow            : 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
-$notification-title-font-size   : $font-size-sm;
-$notification-message-font-size : $font-size-smest;
-$notification-icon-color        : $color-white;
-$notification-icon-font-size    : 16px;
-$notification-close-font-size   : 12px;
-$notification-font-size-lg      : 28px;
-
-$notification-bg-color-success  : tint($color-success, 26%);
-$notification-bg-color-error    : tint($color-error, 26%);
-$notification-bg-color-warning  : tint($color-warning, 26%);
-$notification-bg-color-info     : tint($color-info, 26%);
 
 /* Loading Bar */
 $loading-bar-bg-color-success   : $color-primary;
