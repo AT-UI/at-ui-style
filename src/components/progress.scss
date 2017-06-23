@@ -33,6 +33,7 @@
       background-color: $progress-bar-bg-color;
       line-height: 1;
       text-align: right;
+      transition: width .3s;
     }
   }
   &__text {
@@ -46,24 +47,25 @@
     i {
       display: inline-block;
       vertical-align: middle;
+      line-height: 1;
     }
   }
 
   /* modifier */
   &--success {
     .at-progress-bar__inner {
-      background-color: $color-success;
+      background-color: $progress-bar-bg-color-success;
     }
     .at-progress__text {
-      color: $color-success;
+      color: $progress-bar-bg-color-success;
     }
   }
   &--error {
     .at-progress-bar__inner {
-      background-color: $color-error;
+      background-color: $progress-bar-bg-color-error;
     }
     .at-progress__text {
-      color: $color-error;
+      color: $progress-bar-bg-color-error;
     }
   }
 }

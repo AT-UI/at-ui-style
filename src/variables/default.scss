@@ -481,8 +481,10 @@ $progress-border-radius     : 50px;
 $progress-font-color        : $text-color;
 $progress-font-size         : $font-size-smer;
 
-$progress-bar-bg-color      : $brand-color-light;
-$progress-track-bg-color    : #e5e9f2;
+$progress-track-bg-color       : $grey-200;
+$progress-bar-bg-color         : $brand-color-light;
+$progress-bar-bg-color-success : $color-success;
+$progress-bar-bg-color-error   : $color-error;
 
 /* Tooltip */
 $tooltip-font-color         : $color-white;
