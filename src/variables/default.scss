@@ -499,13 +499,24 @@ $breadcrumb-font-size         : $font-size-base;
 $breadcrumb-separator-color   : $grey-300;
 
 /* Pagination */
-$pagination-item-size-sm            : 20px;
-$pagination-item-size               : 28px;
-$pagination-item-text-color         : tint($text-color, 20%);
-$pagination-item-bg-color           : $color-white;
-$pagination-item-border-radius      : $border-radius-base;
-$pagination-item-border-color       : $border-color-base;
-$pagination-item-border-color-hover : $color-primary;
+$pagination-item-size-sm             : 20px;
+$pagination-item-size                : 28px;
+$pagination-input-width              : 40px;
+$pagination-item-font-size-sm        : $font-size-smest;
+$pagination-item-font-size           : $font-size-smer;
+$pagination-btn-font-size            : $font-size-smer;
+
+$pagination-item-text-color          : $text-color;
+$pagination-item-text-color-hover    : $brand-blue-400;
+$pagination-item-text-color-active   : $color-white;
+$pagination-btn-jump-text-color      : $grey-100;
+
+$pagination-item-bg-color            : $color-white;
+$pagination-item-bg-color-active     : $brand-blue-400;
+
+$pagination-item-border-color        : $border-color-base;
+$pagination-item-border-color-hover  : $brand-blue-400;
+$pagination-item-border-color-active : $brand-blue-400;
 
 /**
  * Media queries
