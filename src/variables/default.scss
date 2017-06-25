@@ -493,12 +493,13 @@ $progress-bar-bg-color-success : $color-success;
 $progress-bar-bg-color-error   : $color-error;
 
 /* Tooltip */
+$tooltip-padding            : 4px 8px;
+$tooltip-arrow-size         : 4px;
+$tooltip-max-width          : 200px;
 $tooltip-font-color         : $color-white;
 $tooltip-font-size          : $font-size-smer;
-$tooltip-bg-color           : #333;
-$tooltip-border-color       : #333;
-$tooltip-padding            : 5px 10px;
-$tooltip-arrow-size         : 6px;
+$tooltip-bg-color           : rgba(0, 0, 0, .75);
+$tooltip-border-color       : rgba(0, 0, 0, .75);;
 
 /* Breadcrumb */
 $breadcrumb-font-size         : $font-size-base;
