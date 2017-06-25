@@ -505,6 +505,19 @@ $tooltip-border-color       : rgba(0, 0, 0, .75);;
 $breadcrumb-font-size         : $font-size-base;
 $breadcrumb-separator-color   : $grey-300;
 
+/* Dropdown */
+$dropdown-max-height             : 200px;
+$dropdown-bg-color               : $color-white;
+$dropdown-box-shadow             : 0 1px 6px rgba(0, 0, 0, 0.2);
+$dropdown-font-size              : $font-size-smer;
+
+$dropdown-item-padding           : 8px 16px;
+$dropdown-item-min-width         : 100px;
+$dropdown-item-bg-color-hover    : $brand-blue-50;
+$dropdown-item-bg-color-disabled : $grey-300;
+
+$dropdown-divided-color          : $brand-blue-50;
+
 /* Pagination */
 $pagination-item-size-sm             : 20px;
 $pagination-item-size                : 28px;
