@@ -465,15 +465,21 @@ $notification-bg-color-warning  : $yellow-300;
 $notification-bg-color-info     : $blue-300;
 
 /* Popover */
-$popover-font-size          : var($font-size-smer);
-$popover-bg-color           : #fff;
-$popover-border-color       : rgba(0,0,0,.1);
-$popover-padding            : 5px 10px;
+$popover-title-font-size    : $font-size-smer;
+$popover-content-font-size  : $font-size-smest;
+$popover-popper-max-width   : 400px;
+
+$popover-bg-color           : $color-white;
+$popover-title-bg-color     : $grey-50;
+$popover-border-color       : $grey-100;
+$popover-title-border-color : $brand-blue-50;
 
 $popover-arrow-size         : 10px;
-$popover-arrow-bg-color     : #fff;
-$popover-title-padding      : 8px 12px;
-$popover-content-padding    : 10px 12px;
+$popover-arrow-bg-color     : $popover-bg-color;
+
+$popover-padding            : 4px 8px;
+$popover-title-padding      : 6px 10px;
+$popover-content-padding    : 8px 12px;
 
 /* Progress */
 $progress-height            : 10px;
