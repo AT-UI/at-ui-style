@@ -5,68 +5,75 @@
 
 .at-modal {
   position: relative;
-  top: 100px;
+  top: $modal-initial-top;
   width: auto;
   margin: 0 auto;
-  outline: none;
   border: none;
-  background-color: $color-white;
   border-radius: $border-radius-base;
+  background-color: $modal-bg-color;
+  outline: none;
 
   /* elements */
-  &__wrapper {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom:0;
-    z-index: $zindex-modal;
-    outline: 0;
-  }
   &__mask {
     position: fixed;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: rgba(55, 55, 55, .6);
     height: 100%;
+    background-color: $modal-mask-bg-color;
     z-index: $zindex-modal;
 
     &--hidden {
       display: none;
     }
   }
+  &__wrapper {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    outline: 0;
+    z-index: $zindex-modal;
+  }
   &__header {
-    border-bottom: 1px solid $border-color-lighter;
-    padding: 14px 16px;
-    line-height: 1;
+    padding: $modal-header-padding;
+    color: $title-color;
+    font-size: $modal-header-font-size;
+    font-weight: bold;
+    line-height: 1.5;
+    border-bottom: 1px solid $modal-section-border-color;
 
     p, .at-modal__title {
-      display: inline-block;
-      width: 100%;
-      height: 20px;
-      color: $title-color;
-      line-height: 20px;
-      font-size: $font-size-base;
-      font-weight: bold;
-      overflow: hidden;
-      text-overflow: ellipse;
-      white-space: nowrap;
+      @include ellipsis();
+      vertical-align: middle;
     }
   }
   &__close {
     position: absolute;
     top: 16px;
     right: 16px;
+    font-size: $modal-close-font-size;
+    line-height: 1;
     overflow: hidden;
     cursor: pointer;
-    font-size: $font-size-base;
   }
   &__body {
-    padding: 16px;
-    font-size: $font-size-sm;
+    padding: $modal-body-padding;
+    font-size: $modal-body-font-size;
     line-height: 1.5;
+
+    p {
+      font-size: $modal-body-font-size;
+    }
+  }
+  &__icon {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    font-size: $modal-icon-font-size;
+    vertical-align: middle;
   }
   &__input {
     .at-input__original {
@@ -75,8 +82,8 @@
     }
   }
   &__footer {
-    border-top: 1px solid $border-color-lighter;
-    padding: 12px 18px;
+    padding: $modal-footer-padding;
+    border-top: 1px solid $modal-section-border-color;
     text-align: right;
 
     .at-btn + .at-btn {
@@ -84,9 +91,42 @@
     }
   }
 
-
   /* modifiers */
   &--hidden {
     display: none !important;
+  }
+  &--confirm {
+    .at-modal__header {
+      padding: 16px 16px 4px 56px;
+      border: none;
+    }
+    .at-modal__body {
+      padding: 8px 16px 8px 56px;
+    }
+    .at-modal__footer {
+      padding: 16px;
+      border: none;
+    }
+
+    &-success {
+      .at-modal__icon {
+        color: $color-success;
+      }
+    }
+    &-error {
+      .at-modal__icon {
+        color: $color-error;
+      }
+    }
+    &-warning {
+      .at-modal__icon {
+        color: $color-warning;
+      }
+    }
+    &-info {
+      .at-modal__icon {
+        color: $color-info;
+      }
+    }
   }
 }

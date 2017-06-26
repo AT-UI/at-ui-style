@@ -384,6 +384,22 @@ $badge-dot-size             : 10px;
 $loading-bar-bg-color-success   : $color-primary;
 $loading-bar-bg-color-error     : $color-error;
 
+/* Modal */
+$modal-initial-top          : 100px;
+$modal-bg-color             : $color-white;
+$modal-mask-bg-color        : rgba(0, 0, 0, .5);
+$modal-section-border-color : $grey-100;
+
+$modal-header-padding       : 12px 16px;
+$modal-header-font-size     : $font-size-base;
+$modal-close-font-size      : $font-size-sm;
+$modal-icon-font-size       : 32px;
+
+$modal-body-padding         : 16px;
+$modal-body-font-size       : $font-size-sm;
+
+$modal-footer-padding       : 12px 16px;
+
 /* Message */
 $message-padding            : 6px 16px;
 $message-font-size          : $font-size-sm;
