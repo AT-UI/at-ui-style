@@ -6,50 +6,52 @@
 .at-switch {
   position: relative;
   display: inline-block;
-  min-width: $switch-min-width;
-  height: $switch-height;
-  border-radius: $switch-border-radius;
+  min-width: $switch-min-width-base;
+  height: $switch-height-base;
   border: 1px solid $switch-border-color;
+  border-radius: $switch-border-radius-base;
   background-color: $switch-bg-color;
   vertical-align: middle;
-  cursor: pointer;
-  user-select: none;
   transition: all .3s;
+  user-select: none;
+  cursor: pointer;
 
   &::after {
     content: '';
     display: block;
     position: absolute;
-    left: 2px;
+    left: 1px;
     top: 1px;
-    width: $switch-circle-size;
-    height: $switch-circle-size;
+    width: $switch-circle-size-base;
+    height: $switch-circle-size-base;
     border-radius: 50%;
     background-color: $switch-circle-bg-color;
-    cursor: pointer;
     transition: all .3s;
+    cursor: pointer;
   }
 
   /* element */
   &__text {
     display: block;
+    padding-left: $switch-circle-size-base + 6;
+    padding-right: 6px;
     color: $switch-font-color;
-    font-size: $switch-font-size;
-    padding-left: $switch-circle-size + 6;
-    padding-right: 7px;
-    line-height: $switch-height;
+    font-size: $switch-font-size-base;
+    line-height: $switch-height-base - 2;
   }
+
+  /* modifier */
   &--checked {
     border-color: $switch-border-color-checked;
     background-color: $switch-bg-color-checked;
 
     &::after {
       left: 100%;
-      margin-left: -$switch-circle-size - 2;
+      margin-left: -$switch-circle-size-base - 1;
     }
     .at-switch__text {
-      padding-left: 7px;
-      padding-right: $switch-circle-size + 6;
+      padding-left: 6px;
+      padding-right: $switch-circle-size-base + 6;
     }
   }
   &--disabled {
@@ -61,9 +63,10 @@
       background-color: $switch-circle-bg-color-disabled;
       cursor: $cursor-disabled;
     }
+    .at-switch__text {
+      color: $switch-font-color-disabled;
+    }
   }
-
-  /* modifier */
   &--small {
     min-width: $switch-min-width-sm;
     height: $switch-height-sm;
@@ -71,8 +74,12 @@
     &::after {
       width: $switch-circle-size-sm;
       height: $switch-circle-size-sm;
-      top: 0;
-      left: 1px;
+    }
+    .at-switch__text {
+      font-size: $switch-font-size-sm;
+      padding-left: $switch-circle-size-sm + 4;
+      padding-right: 4px;
+      line-height: $switch-height-sm - 2;
     }
     &.at-switch--checked {
       &::after {
@@ -80,15 +87,34 @@
         margin-left: -$switch-circle-size-sm - 1;
       }
       .at-switch__text {
-        padding-left: 6px;
-        padding-right: $switch-circle-size-sm + 5;
+        padding-left: 4px;
+        padding-right: $switch-circle-size-sm + 4;
       }
     }
+  }
+  &--large {
+    min-width: $switch-min-width-lg;
+    height: $switch-height-lg;
+
+    &::after {
+      width: $switch-circle-size-lg;
+      height: $switch-circle-size-lg;
+    }
     .at-switch__text {
-      font-size: $switch-font-size-sm;
-      padding-left: $switch-circle-size-sm + 5;
+      font-size: $switch-font-size-lg;
+      padding-left: $switch-circle-size-lg + 6;
       padding-right: 6px;
-      line-height: $switch-height-sm;
+      line-height: $switch-height-lg - 2;
+    }
+    &.at-switch--checked {
+      &::after {
+        left: 100%;
+        margin-left: -$switch-circle-size-lg - 1;
+      }
+      .at-switch__text {
+        padding-left: 6px;
+        padding-right: $switch-circle-size-lg + 6;
+      }
     }
   }
 }

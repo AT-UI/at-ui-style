@@ -7,12 +7,12 @@
 $css-prefix: at;
 
 /* The Color of O2Team Brand */
-$brand-color                : #6180E8;
+$brand-color                : #6190E8;
 $brand-color-light          : #78A4F4;
 $brand-color-dark           : #346FC2;
 
 /* Color */
-$color-normal               : #6180E8;
+$color-normal               : #6190E8;
 $color-primary              : #6190E8;
 $color-success              : #13CE66;
 $color-error                : #FF4949;
@@ -20,15 +20,93 @@ $color-warning              : #FFC82C;
 $color-info                 : #78A4FA;
 $color-white                : #FFF;
 
+/* Color PalettC */
+$brand-blue-50              : #ECF2FC;
+$brand-blue-100             : #D0DEF8;
+$brand-blue-200             : #B0C8F4;
+$brand-blue-300             : #90B1EF;
+$brand-blue-400             : #79A1EB;
+$brand-blue-500             : #6190E8;
+$brand-blue-600             : #5988E5;
+$brand-blue-700             : #4F7DE2;
+$brand-blue-800             : #4573DE;
+$brand-blue-900             : #3361D8;
+
+$green-50                   : #E3F9ED;
+$green-100                  : #B8F0D1;
+$green-200                  : #89E7B3;
+$green-300                  : #5ADD94;
+$green-400                  : #36D57D;
+$green-500                  : #13CE66;
+$green-600                  : #11C95E;
+$green-700                  : #0EC253;
+$green-800                  : #0BBC49;
+$green-900                  : #06B038;
+
+$red-50                     : #FFE9E9;
+$red-100                    : #FFC8C8;
+$red-200                    : #FFA4A4;
+$red-300                    : #FF8080;
+$red-400                    : #FF6464;
+$red-500                    : #FF4949;
+$red-600                    : #FF4242;
+$red-700                    : #FF3939;
+$red-800                    : #FF3131;
+$red-900                    : #FF2121;
+
+$yellow-50                  : #FFF8E6;
+$yellow-100                 : #FFEFC0;
+$yellow-200                 : #FFE496;
+$yellow-300                 : #FFD96B;
+$yellow-400                 : #FFD04C;
+$yellow-500                 : #FFC82C;
+$yellow-600                 : #FFC227;
+$yellow-700                 : #FFBB21;
+$yellow-800                 : #FFB41B;
+$yellow-900                 : #FFA710;
+
+$blue-50                    : #EFF4FE;
+$blue-100                   : #D7E4FE;
+$blue-200                   : #BCD2FD;
+$blue-300                   : #A1BFFC;
+$blue-400                   : #8CB2FB;
+$blue-500                   : #78A4FA;
+$blue-600                   : #709CF9;
+$blue-700                   : #6592F9;
+$blue-800                   : #5B89F8;
+$blue-900                   : #4878F6;
+
+$grey-50                    : #F7F7F7;
+$grey-100                   : #ECECEC;
+$grey-200                   : #DFDFDF;
+$grey-300                   : #D2D2D2;
+$grey-400                   : #C9C9C9;
+$grey-500                   : #BFBFBF;
+$grey-600                   : #B9B9B9;
+$grey-700                   : #B1B1B1;
+$grey-800                   : #A9A9A9;
+$grey-900                   : #9B9B9B;
+
+$black-50                   : #E6E8EB;
+$black-100                  : #C0C6CE;
+$black-200                  : #96A0AD;
+$black-300                  : #6B798C;
+$black-400                  : #4C5D73;
+$black-500                  : #2C405A;
+$black-600                  : #273A52;
+$black-700                  : #213248;
+$black-800                  : #1B2A3F;
+$black-900                  : #101C2E;
+
 $text-color                 : #3F536E;
 $title-color                : #2C405A;
 
 $border-color-gray          : #CCC;
 $border-color-base          : #C5D9E8;
-$border-color-lightest      : tint($border-color-base, 70%);
-$border-color-lighter       : tint($border-color-base, 50%);
-$border-color-light         : tint($border-color-base, 30%);
 $border-color-split         : tint($border-color-base, 20%);
+$border-color-light         : tint($border-color-base, 30%);
+$border-color-lighter       : tint($border-color-base, 50%);
+$border-color-lightest      : tint($border-color-base, 80%);
 
 $bg-color                   : $color-white;
 $bg-color-base              : #FAFBFC;
@@ -46,7 +124,7 @@ $border-radius-base         : 4px;
 $border-radius-sm           : 4px;
 
 /* Font */
-$font-family                : "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial,sans-serif;
+$font-family                : -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
 $code-family                : Consolas, Menlo, Courier, monospace;
 
 $font-size-smest            : 11px;
@@ -61,10 +139,10 @@ $line-height-base           : 1.5;
 $line-height-computed       : floor($font-size-base * $line-height-base);
 
 /* Link */
-$link-color                 : $brand-color;
-$link-hover-color           : tint($link-color, 20%);
-$link-active-color          : shade($link-color, 5%);
-$link-disabled-color        : $roof-color;
+$link-color                 : $brand-blue-500;
+$link-hover-color           : $brand-blue-400;
+$link-active-color          : $brand-blue-700;
+$link-disabled-color        : $grey-500;
 $link-hover-decoration      : none;
 
 /* Disabled cursor */
@@ -80,188 +158,346 @@ $shadow-1px-right           : 1px 0 6px $shadow-color;
 /* Button */
 $btn-default-color          : $text-color;
 $btn-default-bg             : $color-white;
+$btn-default-bg-hover       : $border-color-lightest;
+$btn-default-bg-active      : $border-color-lighter;
 $btn-default-border         : $border-color-base;
 
-$btn-primary-bg             : $color-primary;
-$btn-primary-border         : $color-primary;
+$btn-primary-bg             : $brand-blue-500;
+$btn-primary-border         : $brand-blue-500;
 
-$btn-success-bg             : $color-success;
-$btn-success-border         : $color-success;
+$btn-success-bg             : $green-500;
+$btn-success-border         : $green-500;
 
-$btn-error-bg               : $color-error;
-$btn-error-border           : $color-error;
+$btn-error-bg               : $red-500;
+$btn-error-border           : $red-500;
 
-$btn-warning-bg             : $color-warning;
-$btn-warning-border         : $color-warning;
+$btn-warning-bg             : $yellow-500;
+$btn-warning-border         : $yellow-500;
 
-$btn-info-bg                : $color-info;
-$btn-info-border            : $color-info;
+$btn-info-bg                : $blue-500;
+$btn-info-border            : $blue-500;
 
-$btn-disabled-color         : $border-color-base;
-$btn-disabled-bg            : #F2F9FF;
-$btn-disabled-border        : #D9EEFF;
+$btn-text-border            : $brand-blue-500;
+
+$btn-disabled-color         : $grey-300;
+$btn-disabled-bg            : $grey-50;
+$btn-disabled-border        : $grey-100;
 
 $btn-font-weight            : 500;
 
 $btn-font-size-smer         : 10px;
-$btn-font-size-sm           : 12px;
-$btn-font-size              : 14px;
+$btn-font-size-sm           : 11px;
+$btn-font-size-base         : 12px;
 $btn-font-size-md           : 14px;
 $btn-font-size-lg           : 16px;
 
-$btn-padding-smer           : 6px 10px;
-$btn-padding-sm             : 8px 12px;
-$btn-padding-base           : 4px 16px;
-$btn-padding-md             : 10px 14px;
-$btn-padding-lg             : 12px 16px;
+$btn-padding-smer           : 2px 10px;
+$btn-padding-sm             : 4px 12px;
+$btn-padding-base           : 6px 16px;
+$btn-padding-md             : 8px 16px;
+$btn-padding-lg             : 10px 18px;
+
+$btn-circle-size-smer       : 24px;
+$btn-circle-size-sm         : 28px;
+$btn-circle-size            : 32px;
+$btn-circle-size-lg         : 40px;
+
+/* Tag */
+$tag-bg-color               : $grey-50;
+$tag-border-color           : $grey-200;
+
+/* Checkbox */
+$checkbox-size              : 16px;
+$checkbox-font-size         : $font-size-smer;
+
+$checkbox-border-c          : $border-color-base;
+$checkbox-border-c-hover    : $brand-blue-400;
+$checkbox-border-c-checked  : $brand-blue-400;
+$checkbox-border-c-disabled : $grey-100;
+$checkbox-bg-c-disabled     : $grey-50;
+$checkbox-label-c-disabled  : $grey-700;
 
 /* Input */
-$input-width                : 140px;
-$input-height-sm            : 30px;
-$input-height               : 36px;
-$input-height-lg            : 42px;
+$input-font-size-sm         : 11px;
+$input-font-size-base       : 12px;
+$input-font-size-lg         : 14px;
 
-$input-font-size-sm         : 13px;
-$input-font-size            : $font-size-base;
-$input-font-size-lg         : 16px;
+$input-padding-sm           : 4px 10px;
+$input-padding-base         : 6px 12px;
+$input-padding-lg           : 8px 14px;
 
 $input-font-color           : $text-color;
-$input-font-color-disabled  : $roof-color;
+$input-font-color-disabled  : $grey-700;
 
 $input-border-color          : $border-color-base;
-$input-border-color-hover    : $brand-color-light;
-$input-border-color-focus    : $brand-color-light;
-$input-border-color-disabled : tint($border-color-base, 20%);
+$input-border-color-hover    : $brand-blue-400;
+$input-border-color-focus    : $brand-blue-400;
+$input-border-color-disabled : $grey-100;
 $input-border-color-success  : $color-success;
 $input-border-color-error    : $color-error;
 $input-border-color-warning  : $color-warning;
 $input-border-color-info     : $color-info;
 
-$input-border-radius        : $border-radius-base;
-
 $input-bg-color             : $color-white;
-$input-bg-color-disabled    : tint($border-color-base, 70%);
+$input-bg-color-disabled    : $grey-50;
 
 $input-icon-color           : $border-color-base;
-$input-icon-font-size       : $font-size-normal;
+$input-icon-font-size       : 15px;
 
-$input-placeholder-color          : #99a9bf;
-$input-placeholder-color-disabled : tint($input-placeholder-color, 20%);
+$input-placeholder-color          : $grey-400;
+$input-placeholder-color-disabled : $grey-400;
 
-$input-group-font-color     : #99a9bf;
-$input-group-bg-color       : #f9fafc;
-
-/* Badge */
-$badge-height               : 18px;
-$badge-font-size            : $font-size-smer;
-$badge-padding              : 6px;
-$badge-border-radius        : 10px;
-
-$badge-bg-color             : $color-error;
-$badge-bg-color-success     : $color-success;
-$badge-bg-color-warning     : $color-warning;
-$badge-bg-color-info        : $color-info;
-
-/* Switch */
-$switch-min-width-sm        : 28px;
-$switch-min-width           : 44px;
-$switch-height-sm           : 14px;
-$switch-height              : 22px;
-
-$switch-border-radius         : 20px;
-$switch-border-color          : $border-color-gray;
-$switch-border-color-checked  : $brand-color-light;
-$switch-border-color-disabled : tint($border-color-gray, 70%);
-
-$switch-bg-color            : $border-color-gray;
-$switch-bg-color-checked    : $brand-color-light;
-$switch-bg-color-disabled   : tint($border-color-gray, 70%);
-
-$switch-font-color          : $color-white;
-$switch-font-size           : $font-size-smer;
-$switch-font-size-sm        : $font-size-smest;
-
-$switch-circle-size               : 18px;
-$switch-circle-size-sm            : 12px;
-$switch-circle-bg-color           : $color-white;
-$switch-circle-bg-color-disabled  : $border-color-gray;
+$input-group-font-color      : $grey-900;
+$input-group-bg-color        : $grey-50;
+$input-group-bg-color-hover  : $grey-100;
+$input-group-bg-color-active : $grey-200;
 
 /* InputNumber */
-$inputnumber-width          : 100px;
-$inputnumber-height-smer    : 28px;
-$inputnumber-height-sm      : 32px;
-$inputnumber-height         : 36px;
+$inputnumber-min-width      : 80px;
+$inputnumber-height-sm      : 28px;
+$inputnumber-height-base    : 32px;
+$inputnumber-height-lg      : 36px;
 
 $inputnumber-font-color     : $input-font-color;
 
 $inputnumber-bg-color           : $input-bg-color;
 $inputnumber-bg-color-disabled  : $input-bg-color-disabled;
 
-$inputnumber-border-radius          : $input-border-radius;
+$inputnumber-border-radius          : $border-radius-base;
 $inputnumber-border-color           : $input-border-color;
 $inputnumber-border-color-hover     : $input-border-color-hover;
 $inputnumber-border-color-disabled  : $input-border-color-disabled;
 
-$inputnumber-padding        : 0 10px;
+$inputnumber-padding-sm           : 0 8px;
+$inputnumber-padding-base         : 0 8px;
+$inputnumber-padding-lg           : 0 8px;
 
-$inputnumber-handler-width        : 22px;
-$inputnumber-handler-border-color : #d9d9d9;
+$inputnumber-handler-width            : 22px;
+$inputnumber-handler-border-color     : $grey-200;
+$inputnumber-handler-bg-color-active  : $grey-100;
 
-$inputnumber-handler-font-color     : #999;
-$inputnumber-handler-font-size-smer : 8px;
+$inputnumber-handler-font-color       : $grey-500;
+$inputnumber-handler-font-color-hover : $grey-900;
+
 $inputnumber-handler-font-size-sm   : 9px;
-$inputnumber-handler-font-size      : 10px;
+$inputnumber-handler-font-size-base : 10px;
+$inputnumber-handler-font-size-lg   : 11px;
 
-$inputnumber-handler-ele-height-smer  : 14px;
-$inputnumber-handler-ele-height-sm    : 16px;
-$inputnumber-handler-ele-height       : 18px;
+$inputnumber-handler-ele-height-sm    : 14px;
+$inputnumber-handler-ele-height-base  : 16px;
+$inputnumber-handler-ele-height-lg    : 18px;
 
-$inputnumber-handler-ele-height-smer-hover  : 16px;
-$inputnumber-handler-ele-height-sm-hover    : 18px;
-$inputnumber-handler-ele-height-hover       : 20px;
+$inputnumber-handler-ele-height-sm-hover    : 16px;
+$inputnumber-handler-ele-height-base-hover  : 18px;
+$inputnumber-handler-ele-height-lg-hover    : 20px;
 
-$inputnumber-handler-ele-font-color-disabled: $input-border-color-disabled;
+$inputnumber-handler-ele-font-color-disabled : $grey-100;
+
+/* Switch */
+$switch-min-width-sm        : 32px;
+$switch-min-width-base      : 40px;
+$switch-min-width-lg        : 48px;
+
+$switch-height-sm           : 16px;
+$switch-height-base         : 20px;
+$switch-height-lg           : 24px;
+
+$switch-border-radius-sm      : 16px;
+$switch-border-radius-base    : 20px;
+$switch-border-radius-lg      : 24px;
+
+$switch-border-color          : $grey-500;
+$switch-border-color-checked  : $brand-blue-400;
+$switch-border-color-disabled : $grey-100;
+
+$switch-bg-color            : $grey-500;
+$switch-bg-color-checked    : $brand-blue-400;
+$switch-bg-color-disabled   : $grey-100;
+
+$switch-font-color          : $color-white;
+$switch-font-color-disabled : $grey-300;
+
+$switch-font-size-sm        : $font-size-smest;
+$switch-font-size-base      : $font-size-smer;
+$switch-font-size-lg        : $font-size-sm;
+
+$switch-circle-size-sm            : 12px;
+$switch-circle-size-base          : 16px;
+$switch-circle-size-lg            : 20px;
+
+$switch-circle-bg-color           : $color-white;
+$switch-circle-bg-color-disabled  : $grey-400;
+
+/* Slider */
+$slider-bar-height            : 4px;
+$slider-margin                : 8px 0;
+
+$slider-bar-bg-color          : $brand-blue-400;
+$slider-bar-bg-color-disabled : $grey-400;
+$slider-track-bg-color        : $grey-100;
+$slider-bar-border-radius     : 2px;
+
+$slider-dot-color             : $brand-blue-400;
+$slider-dot-color-hover       : $brand-blue-600;
+$slider-dot-color-disabled    : $grey-300;
+$slider-dot-size              : 12px;
+$slider-dot-wrapper-size      : $slider-dot-size;
+$slider-dot-wrapper-offset    : -6px;
+
+/* Textarea */
+$textarea-padding           : 6px 8px;
+
+/* Alert */
+$alert-padding                : 8px 16px;
+$alert-padding-lg             : 14px 16px;
+$alert-border-radius          : $border-radius-base;
+$alert-text-color             : $color-white;
+
+$alert-message-font-size      : $font-size-sm;
+$alert-description-font-size  : $font-size-smer;
+$alert-close-font-size        : $font-size-smer;
+
+$alert-icon-color             : $color-white;
+$alert-icon-font-size         : 15px;
+$alert-icon-font-size-lg      : 28px;
+
+$alert-bg-color-success     : $green-300;
+$alert-bg-color-error       : $red-300;
+$alert-bg-color-warning     : $yellow-300;
+$alert-bg-color-info        : $blue-300;
+
+/* Badge */
+$badge-height               : 18px;
+$badge-padding              : 0 6px;
+$badge-border-radius        : $badge-height / 2;
+$badge-font-size            : $font-size-smer;
+$badge-font-color           : $color-white;
+
+$badge-bg-color             : $red-500;
+$badge-bg-color-success     : $green-500;
+$badge-bg-color-warning     : $yellow-500;
+$badge-bg-color-info        : $blue-500;
+
+$badge-dot-size             : 10px;
+
+/* Loading Bar */
+$loading-bar-bg-color-success   : $color-primary;
+$loading-bar-bg-color-error     : $color-error;
+
+/* Modal */
+$modal-initial-top          : 100px;
+$modal-bg-color             : $color-white;
+$modal-mask-bg-color        : rgba(0, 0, 0, .5);
+$modal-section-border-color : $grey-100;
+
+$modal-header-padding       : 12px 16px;
+$modal-header-font-size     : $font-size-base;
+$modal-close-font-size      : $font-size-sm;
+$modal-icon-font-size       : 32px;
+
+$modal-body-padding         : 16px;
+$modal-body-font-size       : $font-size-sm;
+
+$modal-footer-padding       : 12px 16px;
+
+/* Message */
+$message-padding            : 6px 16px;
+$message-font-size          : $font-size-sm;
+$message-bg-color           : $color-white;
+$message-box-shadow         : 0 1px 8px rgba(0, 0, 0, .15);
+
+$message-icon-color-success : $color-success;
+$message-icon-color-error   : $color-error;
+$message-icon-color-warning : $color-warning;
+$message-icon-color-info    : $color-info;
+
+/* Radio */
+$radio-size                 : 16px;
+$radio-dot-size             : 8px;
+$radio-font-size            : $font-size-smer;
+
+$radio-border-c-hover       : $brand-blue-400;
+$radio-border-c-checked     : $brand-blue-400;
+$radio-border-c-disabled    : $grey-100;
+$radio-bg-c-disabled        : $grey-50;
+$radio-dot-c-disabled       : $grey-300;
 
 /* Select */
 $select-font-size-sm        : $font-size-smest;
-$select-font-size           : $font-size-smer;
-$select-font-size-lg        : $font-size-sm;
+$select-font-size-base      : $font-size-smer;
+$select-font-size-lg        : $font-size-base;
 
 $select-bg-color            : $color-white;
-$select-font-color          : $input-font-color;
+$select-font-color          : $text-color;
 
-$select-border-radius         : $input-border-radius;
-$select-border-color          : $input-border-color;
-$select-border-color-disabled : tint($border-color-base, 20%);
+$select-border-c-hover       : $brand-blue-400;
+$select-border-c-checked     : $brand-blue-400;
+$select-border-c-disabled    : $grey-100;
+$select-bg-c-disabled        : $grey-50;
 
 $select-selection-bg-color          : $color-white;
 $select-selection-bg-color-disabled : tint($border-color-base, 70%);
 
-$select-selection-height-sm : 24px;
-$select-selection-height    : 26px;
-$select-selection-height-lg : 30px;
+$select-padding-sm            : 0 24px 0 8px;
+$select-padding-base          : 0 24px 0 8px;
+$select-padding-lg            : 0 24px 0 8px;
+
+$select-selection-height-sm     : 24px;
+$select-selection-height-base   : 26px;
+$select-selection-height-lg     : 30px;
 
 /* Select Dropdown */
-$select-dropdown-font-size-sm : $font-size-smest;
-$select-dropdown-font-size    : $font-size-smer;
-$select-dropdown-font-size-lg : $font-size-sm;
+$select-dropdown-font-size-sm   : $font-size-smest;
+$select-dropdown-font-size-base : $font-size-smer;
+$select-dropdown-font-size-lg   : $font-size-sm;
 
 $select-dropdown-bg-color       : $color-white;
-$select-dropdown-border-radius  : $input-border-radius;
+$select-dropdown-height         : 200px;
 
-/* Slider */
-$slider-height              : 4px;
-$slider-margin              : 16px 0;
+$dropdown-option-padding-base   : 6px 12px;
+$dropdown-option-bg-c-hover     : $brand-blue-50;
+$dropdown-option-bg-c-selected  : $grey-50;
 
-$slider-bar-bg-color        : $brand-color-light;
-$slider-track-bg-color      : #e5e9f2;
-$slider-border-radius       : 3px;
+$option-group-font-c        : $grey-500;
 
-$slider-dot-color           : $brand-color-light;
-$slider-dot-color-hover     : shade($brand-color-light, 10%);
-$slider-dot-size            : 12px;
-$slider-dot-wrapper-size    : 12px;
-$slider-dot-wrapper-offset  : -6px;
+/* Notification */
+$notification-width             : 320px;
+$notification-padding           : 8px 16px;
+$notification-padding-lg        : 12px 16px;
+$notification-shadow            : 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+$notification-text-color        : $color-white;
+
+$notification-font-size-lg      : 28px;
+$notification-title-font-size   : $font-size-sm;
+$notification-message-font-size : $font-size-smer;
+
+$notification-icon-color          : $color-white;
+$notification-icon-font-size      : $font-size-sm;
+$notification-icon-font-size-lg   : 24px;
+$notification-close-font-size     : $font-size-smer;
+$notification-close-font-size-lg  : $font-size-base;
+
+$notification-bg-color-success  : $green-300;
+$notification-bg-color-error    : $red-300;
+$notification-bg-color-warning  : $yellow-300;
+$notification-bg-color-info     : $blue-300;
+
+/* Popover */
+$popover-title-font-size    : $font-size-smer;
+$popover-content-font-size  : $font-size-smest;
+$popover-popper-max-width   : 400px;
+
+$popover-bg-color           : $color-white;
+$popover-title-bg-color     : $grey-50;
+$popover-border-color       : $grey-100;
+$popover-title-border-color : $brand-blue-50;
+
+$popover-arrow-size         : 10px;
+$popover-arrow-bg-color     : $popover-bg-color;
+
+$popover-padding            : 4px 8px;
+$popover-title-padding      : 6px 10px;
+$popover-content-padding    : 8px 12px;
 
 /* Progress */
 $progress-height            : 10px;
@@ -269,73 +505,56 @@ $progress-border-radius     : 50px;
 $progress-font-color        : $text-color;
 $progress-font-size         : $font-size-smer;
 
-$progress-bar-bg-color      : $brand-color-light;
-$progress-track-bg-color    : #e5e9f2;
+$progress-track-bg-color       : $grey-200;
+$progress-bar-bg-color         : $brand-color-light;
+$progress-bar-bg-color-success : $color-success;
+$progress-bar-bg-color-error   : $color-error;
 
 /* Tooltip */
+$tooltip-padding            : 4px 8px;
+$tooltip-arrow-size         : 4px;
+$tooltip-max-width          : 200px;
 $tooltip-font-color         : $color-white;
 $tooltip-font-size          : $font-size-smer;
-$tooltip-bg-color           : #333;
-$tooltip-border-color       : #333;
-$tooltip-padding            : 5px 10px;
-$tooltip-arrow-size         : 6px;
+$tooltip-bg-color           : rgba(0, 0, 0, .75);
+$tooltip-border-color       : rgba(0, 0, 0, .75);;
 
-/* Popover */
-$popover-font-size          : var($font-size-smer);
-$popover-bg-color           : #fff;
-$popover-border-color       : rgba(0,0,0,.1);
-$popover-padding            : 5px 10px;
+/* Breadcrumb */
+$breadcrumb-font-size         : $font-size-base;
+$breadcrumb-separator-color   : $grey-300;
 
-$popover-arrow-size         : 10px;
-$popover-arrow-bg-color     : #fff;
-$popover-title-padding      : 8px 12px;
-$popover-content-padding    : 10px 12px;
+/* Dropdown */
+$dropdown-max-height             : 200px;
+$dropdown-bg-color               : $color-white;
+$dropdown-box-shadow             : 0 1px 6px rgba(0, 0, 0, 0.2);
+$dropdown-font-size              : $font-size-smer;
 
-/* Alert */
-$alert-padding                : 10px 16px;
-$alert-border-radius          : $border-radius-base;
-$alert-message-font-size      : $font-size-sm;
-$alert-description-font-size  : $font-size-smer;
-$alert-close-font-size        : $font-size-smest;
+$dropdown-item-padding           : 8px 16px;
+$dropdown-item-min-width         : 100px;
+$dropdown-item-bg-color-hover    : $brand-blue-50;
+$dropdown-item-bg-color-disabled : $grey-300;
 
-$alert-icon-color             : $color-white;
-$alert-icon-font-size         : 16px;
-$alert-icon-font-size-lg      : 28px;
-
-$alert-bg-color-success     : tint($color-success, 26%);
-$alert-bg-color-error       : tint($color-error, 26%);
-$alert-bg-color-warning     : tint($color-warning, 26%);
-$alert-bg-color-info        : tint($color-info, 26%);
-
-/* Notification */
-$notification-width             : 330px;
-$notification-padding           : 10px 16px;
-$notification-border-radius     : $border-radius-base;
-$notification-shadow            : 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
-$notification-title-font-size   : $font-size-sm;
-$notification-message-font-size : $font-size-smest;
-$notification-icon-color        : $color-white;
-$notification-icon-font-size    : 16px;
-$notification-close-font-size   : 12px;
-$notification-font-size-lg      : 28px;
-
-$notification-bg-color-success  : tint($color-success, 26%);
-$notification-bg-color-error    : tint($color-error, 26%);
-$notification-bg-color-warning  : tint($color-warning, 26%);
-$notification-bg-color-info     : tint($color-info, 26%);
-
-/* Loading Bar */
-$loading-bar-bg-color-success   : $color-primary;
-$loading-bar-bg-color-error     : $color-error;
+$dropdown-divided-color          : $brand-blue-50;
 
 /* Pagination */
-$pagination-item-size-sm            : 20px;
-$pagination-item-size               : 28px;
-$pagination-item-text-color         : tint($text-color, 20%);
-$pagination-item-bg-color           : $color-white;
-$pagination-item-border-radius      : $border-radius-base;
-$pagination-item-border-color       : $border-color-base;
-$pagination-item-border-color-hover : $color-primary;
+$pagination-item-size-sm             : 20px;
+$pagination-item-size                : 28px;
+$pagination-input-width              : 40px;
+$pagination-item-font-size-sm        : $font-size-smest;
+$pagination-item-font-size           : $font-size-smer;
+$pagination-btn-font-size            : $font-size-smer;
+
+$pagination-item-text-color          : $text-color;
+$pagination-item-text-color-hover    : $brand-blue-400;
+$pagination-item-text-color-active   : $color-white;
+$pagination-btn-jump-text-color      : $grey-100;
+
+$pagination-item-bg-color            : $color-white;
+$pagination-item-bg-color-active     : $brand-blue-400;
+
+$pagination-item-border-color        : $border-color-base;
+$pagination-item-border-color-hover  : $brand-blue-400;
+$pagination-item-border-color-active : $brand-blue-400;
 
 /**
  * Media queries

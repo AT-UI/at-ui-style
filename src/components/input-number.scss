@@ -5,15 +5,17 @@
 
 .at-input-number {
   display: inline-block;
-  overflow: hidden;
   position: relative;
-  width: $inputnumber-width;
+  width: 100%;
+  height: $inputnumber-height-base;
+  min-width: $inputnumber-min-width;
   border: 1px solid $inputnumber-border-color;
   border-radius: $inputnumber-border-radius;
   transition: border .2s;
+  overflow: hidden;
 
   /* status */
-  &:hover {
+  &:hover:not(&--disabled) {
     border-color: $inputnumber-border-color-hover;
 
     .at-input-number__handler {
@@ -24,17 +26,19 @@
   /* element */
   &__input {
     width: 100%;
+    height: 100%;
   }
   &__original {
     display: block;
     width: 100%;
-    height: $inputnumber-height;
-    outline: none;
+    height: 100%;
+    padding: $inputnumber-padding-base;
     color: $inputnumber-font-color;
-    background-color: $inputnumber-bg-color;
-    padding: $inputnumber-padding;
-    border: 1px solid transparent;
+    line-height: 1.5;
+    border: none;
     border-radius: $inputnumber-border-radius;
+    background-color: $inputnumber-bg-color;
+    outline: none;
   }
   input[type=number] {
     -moz-appearance: textfield;
@@ -55,29 +59,32 @@
     border-left: 1px solid $inputnumber-handler-border-color;
     border-radius: 0 $inputnumber-border-radius $inputnumber-border-radius 0;
     transition: opacity .3s;;
-
-    opacity: 0
+    opacity: 0;
   }
   &__up,
   &__down {
     position: relative;
     display: flex;
+    width: 100%;
+    height: $inputnumber-handler-ele-height-base;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: $inputnumber-handler-ele-height;
-    text-align: center;
     color: $inputnumber-handler-font-color;
-    font-size: $inputnumber-handler-font-size;
+    font-size: $inputnumber-handler-font-size-base;
+    text-align: center;
     transition: all .3s;
     cursor: pointer;
 
-    &:hover {
-      height: $inputnumber-handler-ele-height-hover;
+    &:hover:not(.at-input-number__up--disabled):not(.at-input-number__down--disabled) {
+      height: $inputnumber-handler-ele-height-base-hover;
+      color: $inputnumber-handler-font-color-hover;
+    }
+    &:active:not(.at-input-number__up--disabled):not(.at-input-number__down--disabled) {
+      background-color: $inputnumber-handler-bg-color-active;
     }
     &--disabled {
-      cursor: $cursor-disabled;
       color: $inputnumber-handler-ele-font-color-disabled;
+      cursor: $cursor-disabled;
     }
   }
   &__down {
@@ -90,14 +97,11 @@
 
   /* modifier */
   &--disabled {
-    background-color: $inputnumber-bg-color-disabled;
-    border-color: $inputnumber-border-color-disabled;
     color: $input-font-color-disabled;
+    border-color: $inputnumber-border-color-disabled;
+    background-color: $inputnumber-bg-color-disabled;
     cursor: $cursor-disabled;
 
-    &:hover {
-      border-color: $inputnumber-border-color-disabled;
-    }
     .at-input-number__original {
       color: $input-font-color-disabled;
       cursor: $cursor-disabled;
@@ -107,30 +111,28 @@
     }
   }
   &--small {
-    .at-input-number__original {
-      height: $inputnumber-height-sm;
-    }
+    height: $inputnumber-height-sm;
+
     .at-input-number__up,
     .at-input-number__down {
       height: $inputnumber-handler-ele-height-sm;
       font-size: $inputnumber-handler-font-size-sm;
 
       &:hover {
-        height: $inputnumber-handler-ele-height-sm-hover;
+        height: $inputnumber-handler-ele-height-sm-hover !important;
       }
     }
   }
-  &--smaller {
-    .at-input-number__original {
-      height: $inputnumber-height-smer;
-    }
+  &--large {
+    height: $inputnumber-height-lg;
+
     .at-input-number__up,
     .at-input-number__down {
-      height: $inputnumber-handler-ele-height-smer;
-      font-size: $inputnumber-handler-font-size-smer;
+      height: $inputnumber-handler-ele-height-lg;
+      font-size: $inputnumber-handler-font-size-lg;
 
       &:hover {
-        height: $inputnumber-handler-ele-height-smer-hover;
+        height: $inputnumber-handler-ele-height-lg-hover !important;
       }
     }
   }

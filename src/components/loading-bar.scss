@@ -8,8 +8,8 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: $zindex-loading-bar;
   width: 100%;
+  z-index: $zindex-loading-bar;
 
   /* element */
   &__inner {

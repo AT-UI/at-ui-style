@@ -3,7 +3,7 @@
  */
 @import '../variables/index.scss';
 
-$btn-hover-tint-percent: 20%;
+$btn-hover-tint-percent: 15%;
 $btn-active-shade-percent: 10%;
 
 @mixin button-status($border-color, $background-color) {
@@ -38,24 +38,32 @@ $btn-active-shade-percent: 10%;
 
 .at-btn {
   display: inline-block;
-  line-height: 1;
-  padding: $btn-padding-md;
+  padding: $btn-padding-base;
+  font-size: 0;
+  outline: 0;
+  line-height: 1.5;
   text-align: center;
   white-space: nowrap;
-  cursor: pointer;
   border: 1px solid $btn-default-border;
   border-radius: $border-radius-base;
-  background-color: #fff;
-  outline: 0;
-  transition: background 0.1s;
+  background-color: $btn-default-bg;
+  transition: background 0.2s;
   user-select: none;
-  font-size: $font-size-normal;
+  cursor: pointer;
 
   &:hover {
-    background-color: tint($btn-default-border, 80%);
+    background-color: $btn-default-bg-hover;
   }
   &:active {
-    background-color: tint($btn-default-border, 50%);
+    background-color: $btn-default-bg-active;
+  }
+  &:disabled,
+  &:disabled:hover,
+  &:disabled:active, {
+    cursor: not-allowed;
+    color: $btn-disabled-color;
+    border-color: $btn-disabled-border;
+    background-color: $btn-disabled-bg;
   }
 
   /* modifier */
@@ -106,17 +114,106 @@ $btn-active-shade-percent: 10%;
       @include button-hollow-status($color-info, $btn-info-border);
     }
   }
+  &--text {
+    @include button-hollow-status($btn-text-border, transparent);
+    color: $text-color;
+    border: none;
+
+    &:disabled,
+    &:disabled:hover,
+    &:disabled:active, {
+      background: none;
+    }
+  }
+  &--default,
+  &--primary,
+  &--success,
+  &--error,
+  &--warning,
+  &--info,
+  &--text {
+    &--hollow {
+      &:disabled,
+      &:disabled:hover,
+      &:disabled:active, {
+        background: none;
+      }
+    }
+  }
   &--large {
-    font-size: $font-size-normal;
-    padding: $btn-padding-lg;
+    font-size: $btn-font-size-md;
+    padding: $btn-padding-md;
+
+    &.at-btn--circle {
+      width: $btn-circle-size-lg;
+      height: $btn-circle-size-lg;
+
+      .at-btn__icon {
+        font-size: $btn-font-size-lg;
+      }
+    }
+    .at-btn__text {
+      font-size: $btn-font-size-md;
+    }
   }
   &--small {
-    font-size: $font-size-sm;
+    font-size: $btn-font-size-sm;
     padding: $btn-padding-sm;
+
+    &.at-btn--circle {
+      width: $btn-circle-size-sm;
+      height: $btn-circle-size-sm;
+
+      .at-btn__icon {
+        font-size: $btn-font-size-sm;
+      }
+    }
+    .at-btn__text {
+      font-size: $btn-font-size-sm;
+    }
   }
   &--smaller {
-    font-size: $font-size-smer;
+    font-size: $btn-font-size-smer;
     padding: $btn-padding-smer;
+
+    &.at-btn--circle {
+      width: $btn-circle-size-smer;
+      height: $btn-circle-size-smer;
+
+      .at-btn__icon {
+        font-size: $btn-font-size-smer;
+      }
+    }
+    .at-btn__text {
+      font-size: $btn-font-size-smer;
+    }
+  }
+  &--circle {
+    width: $btn-circle-size;
+    height: $btn-circle-size;
+    padding: 0;
+    border-radius: 50%;
+
+    .at-btn__icon {
+      font-size: 14px;
+    }
+  }
+
+  /* element */
+  &__icon,
+  &__loading {
+    font-size: $btn-font-size-base;
+    line-height: 1.5;
+
+    + span {
+      margin-left: 4px;
+    }
+  }
+  &__loading {
+    animation: loadingCircle 1s infinite;
+  }
+  &__text {
+    font-size: $btn-font-size-base;
   }
 }
 
@@ -124,7 +221,7 @@ $btn-active-shade-percent: 10%;
   font-size: 0;
   display: inline-block;
 
-  > .at-btn {
+  .at-btn {
     border-radius: 0;
 
     &:not(:last-child) {
@@ -136,5 +233,14 @@ $btn-active-shade-percent: 10%;
     &:last-child {
       border-radius: 0 $border-radius-base $border-radius-base 0;
     }
+  }
+}
+
+@keyframes loadingCircle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(1turn);
   }
 }

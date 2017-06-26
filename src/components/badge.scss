@@ -12,15 +12,15 @@
   &__content {
     display: inline-block;
     height: $badge-height;
-    padding: 0 $badge-padding;
-    color: $color-white;
+    padding: $badge-padding;
+    color: $badge-font-color;
     font-size: $badge-font-size;
     text-align: center;
-    white-space: nowrap;
     line-height: $badge-height;
-    background-color: $badge-bg-color;
+    white-space: nowrap;
     border: 1px solid $color-white;
     border-radius: $badge-border-radius;
+    background-color: $badge-bg-color;
   }
 
   /* modifier */
@@ -31,15 +31,15 @@
   }
   &--corner {
     position: absolute;
-    top: $badge-height / 2 + 1;
+    top: (-$badge-height / 2) + 1;
     right: 0;
     transform: translateX(50%);
   }
   &--dot {
-    width: 10px;
-    height: 10px;
     padding: 0;
-    top: -5px;
+    width: $badge-dot-size;
+    height: $badge-dot-size;
+    top: (-$badge-dot-size / 2) + 1;
   }
   &--success {
     .at-badge__content {
