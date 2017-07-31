@@ -39,6 +39,7 @@
     background-color: $color-white;
     transition: all .3s;
     cursor: pointer;
+    overflow: hidden;
 
     &:hover {
       border-color: $select-border-c-hover;
@@ -181,7 +182,7 @@
 
     .at-select__selection {
       height: $select-selection-height-lg;
-      line-height: $select-selection-height-lg;
+      line-height: $select-selection-height-lg - 2;
     }
     .at-select__dropdown .at-select__option {
       font-size: $select-dropdown-font-size-lg;

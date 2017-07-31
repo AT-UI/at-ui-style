@@ -410,6 +410,7 @@ $message-icon-color-success : $color-success;
 $message-icon-color-error   : $color-error;
 $message-icon-color-warning : $color-warning;
 $message-icon-color-info    : $color-info;
+$message-icon-color-loading : $color-info;
 
 /* Radio */
 $radio-size                 : 16px;
@@ -591,13 +592,10 @@ $container-md               : 940px + $grid-gutter-width;
 $container-lg               : 1140px + $grid-gutter-width;
 
 /* z-index list */
-$zindex-affix               : 10;
-$zindex-modal-mask          : 1000;
 $zindex-modal               : 1000;
 $zindex-notification        : 1010;
 $zindex-message             : 1010;
-$zindex-popover             : 1030;
-$zindex-picker              : 1050;
+$zindex-popover             : 1020;
 $zindex-dropdown            : 1050;
-$zindex-tooltip             : 1060;
-$zindex-loading-bar         : 1070;
+$zindex-tooltip             : 1050;
+$zindex-loading-bar         : 1080;
