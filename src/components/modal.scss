@@ -110,22 +110,22 @@
 
     &-success {
       .at-modal__icon {
-        color: $color-success;
+        color: $modal-icon-color-success;
       }
     }
     &-error {
       .at-modal__icon {
-        color: $color-error;
+        color: $modal-icon-color-error;
       }
     }
     &-warning {
       .at-modal__icon {
-        color: $color-warning;
+        color: $modal-icon-color-warning;
       }
     }
     &-info {
       .at-modal__icon {
-        color: $color-info;
+        color: $modal-icon-color-info;
       }
     }
   }

@@ -21,6 +21,11 @@
     width: 100%;
     border: none;
     outline: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0 24px 0 8px;
+    background-color: transparent;
 
     &::placeholder {
       color: $input-placeholder-color;
@@ -108,13 +113,16 @@
       overflow: hidden;
       cursor: pointer;
 
+      &--selected {
+        font-weight: bold;
+        background-color: $dropdown-option-bg-c-selected;
+      }
       &:hover,
       &--focus {
         background-color: $dropdown-option-bg-c-hover;
       }
-      &--selected {
-        font-weight: bold;
-        background-color: $dropdown-option-bg-c-selected;
+      &--disabled {
+        color: $input-placeholder-color-disabled;
       }
     }
     &--bottom {
