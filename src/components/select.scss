@@ -21,6 +21,11 @@
     width: 100%;
     border: none;
     outline: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0 24px 0 8px;
+    background-color: transparent;
 
     &::placeholder {
       color: $input-placeholder-color;
@@ -39,6 +44,7 @@
     background-color: $color-white;
     transition: all .3s;
     cursor: pointer;
+    overflow: hidden;
 
     &:hover {
       border-color: $select-border-c-hover;
@@ -107,13 +113,16 @@
       overflow: hidden;
       cursor: pointer;
 
+      &--selected {
+        font-weight: bold;
+        background-color: $dropdown-option-bg-c-selected;
+      }
       &:hover,
       &--focus {
         background-color: $dropdown-option-bg-c-hover;
       }
-      &--selected {
-        font-weight: bold;
-        background-color: $dropdown-option-bg-c-selected;
+      &--disabled {
+        color: $input-placeholder-color-disabled;
       }
     }
     &--bottom {
@@ -181,7 +190,7 @@
 
     .at-select__selection {
       height: $select-selection-height-lg;
-      line-height: $select-selection-height-lg;
+      line-height: $select-selection-height-lg - 2;
     }
     .at-select__dropdown .at-select__option {
       font-size: $select-dropdown-font-size-lg;

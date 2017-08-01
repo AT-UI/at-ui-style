@@ -21,8 +21,10 @@
     width: 100%;
     text-align: center;
     transition: opacity .3s, transform .3s, top .4s;
+    pointer-events: none;
   }
   &__icon {
+    display: inline-block;
     margin-right: 4px;
     vertical-align: middle;
   }
@@ -39,5 +41,9 @@
   }
   &--info .at-message__icon {
     color: $message-icon-color-info;
+  }
+  &--loading .at-message__icon {
+    color: $message-icon-color-loading;
+    animation: icon-loading 2s linear infinite both;
   }
 }

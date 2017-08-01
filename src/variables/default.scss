@@ -351,20 +351,33 @@ $textarea-padding           : 6px 8px;
 $alert-padding                : 8px 16px;
 $alert-padding-lg             : 14px 16px;
 $alert-border-radius          : $border-radius-base;
-$alert-text-color             : $color-white;
+
+$alert-text-color-success     : #53664A;
+$alert-text-color-error       : #AD3430;
+$alert-text-color-warning     : #7F6128;
+$alert-text-color-info        : #3B688C;
 
 $alert-message-font-size      : $font-size-sm;
 $alert-description-font-size  : $font-size-smer;
 $alert-close-font-size        : $font-size-smer;
 
-$alert-icon-color             : $color-white;
 $alert-icon-font-size         : 15px;
 $alert-icon-font-size-lg      : 28px;
 
-$alert-bg-color-success     : $green-300;
-$alert-bg-color-error       : $red-300;
-$alert-bg-color-warning     : $yellow-300;
-$alert-bg-color-info        : $blue-300;
+$alert-icon-color-success     : #7D9970;
+$alert-icon-color-error       : #FA4C46;
+$alert-icon-color-warning     : #CC9B3F;
+$alert-icon-color-info        : #66B3F3;
+
+$alert-bg-color-success     : $green-50;
+$alert-bg-color-error       : $red-50;
+$alert-bg-color-warning     : $yellow-50;
+$alert-bg-color-info        : $blue-50;
+
+$alert-border-color-success : $green-100;
+$alert-border-color-error   : $red-100;
+$alert-border-color-warning : $yellow-100;
+$alert-border-color-info    : $blue-100;
 
 /* Badge */
 $badge-height               : 18px;
@@ -400,16 +413,22 @@ $modal-body-font-size       : $font-size-sm;
 
 $modal-footer-padding       : 12px 16px;
 
+$modal-icon-color-success  : $green-300;
+$modal-icon-color-error    : $red-300;
+$modal-icon-color-warning  : $yellow-300;
+$modal-icon-color-info     : $blue-300;
+
 /* Message */
 $message-padding            : 6px 16px;
 $message-font-size          : $font-size-sm;
 $message-bg-color           : $color-white;
 $message-box-shadow         : 0 1px 8px rgba(0, 0, 0, .15);
 
-$message-icon-color-success : $color-success;
-$message-icon-color-error   : $color-error;
-$message-icon-color-warning : $color-warning;
-$message-icon-color-info    : $color-info;
+$message-icon-color-success  : $green-300;
+$message-icon-color-error    : $red-300;
+$message-icon-color-warning  : $yellow-300;
+$message-icon-color-info     : $blue-300;
+$message-icon-color-loading  : $blue-300;
 
 /* Radio */
 $radio-size                 : 16px;
@@ -465,22 +484,27 @@ $notification-width             : 320px;
 $notification-padding           : 8px 16px;
 $notification-padding-lg        : 12px 16px;
 $notification-shadow            : 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
-$notification-text-color        : $color-white;
+// $notification-shadow            : 0 2px 8px rgba(0,0,0,.2);
+// $notification-text-color        : $color-white;
+$notification-text-color        : $text-color;
+$notification-bg-color          : $color-white;
 
 $notification-font-size-lg      : 28px;
 $notification-title-font-size   : $font-size-sm;
 $notification-message-font-size : $font-size-smer;
 
-$notification-icon-color          : $color-white;
+$notification-icon-color          : $text-color;
 $notification-icon-font-size      : $font-size-sm;
 $notification-icon-font-size-lg   : 24px;
+$notification-close-color         : $grey-300;
+$notification-close-color-focus   : $grey-700;
 $notification-close-font-size     : $font-size-smer;
 $notification-close-font-size-lg  : $font-size-base;
 
-$notification-bg-color-success  : $green-300;
-$notification-bg-color-error    : $red-300;
-$notification-bg-color-warning  : $yellow-300;
-$notification-bg-color-info     : $blue-300;
+$notification-icon-color-success  : $green-300;
+$notification-icon-color-error    : $red-300;
+$notification-icon-color-warning  : $yellow-300;
+$notification-icon-color-info     : $blue-300;
 
 /* Popover */
 $popover-title-font-size    : $font-size-smer;
@@ -591,13 +615,10 @@ $container-md               : 940px + $grid-gutter-width;
 $container-lg               : 1140px + $grid-gutter-width;
 
 /* z-index list */
-$zindex-affix               : 10;
-$zindex-modal-mask          : 1000;
 $zindex-modal               : 1000;
 $zindex-notification        : 1010;
 $zindex-message             : 1010;
-$zindex-popover             : 1030;
-$zindex-picker              : 1050;
+$zindex-popover             : 1020;
 $zindex-dropdown            : 1050;
-$zindex-tooltip             : 1060;
-$zindex-loading-bar         : 1070;
+$zindex-tooltip             : 1050;
+$zindex-loading-bar         : 1080;

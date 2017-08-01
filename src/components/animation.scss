@@ -103,3 +103,17 @@
 @include vue-anim(move-up, moveUp);
 @include vue-anim(fade, fade);
 @include vue-anim(notification-fade, notificationFade);
+
+
+/**
+ * Element Animation
+ */
+
+@keyframes icon-loading {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
