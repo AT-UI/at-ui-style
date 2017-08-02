@@ -6,7 +6,7 @@
 .at-badge {
   position: relative;
   display: inline-block;
-  vertical-align: middle;
+  // vertical-align: middle;
 
   /* element */
   &__content {
@@ -16,7 +16,7 @@
     color: $badge-font-color;
     font-size: $badge-font-size;
     text-align: center;
-    line-height: $badge-height;
+    line-height: $badge-height - 2;
     white-space: nowrap;
     border: 1px solid $color-white;
     border-radius: $badge-border-radius;
