@@ -615,6 +615,7 @@ $container-md               : 940px + $grid-gutter-width;
 $container-lg               : 1140px + $grid-gutter-width;
 
 /* z-index list */
+$zindex-menu                : 900;
 $zindex-modal               : 1000;
 $zindex-notification        : 1010;
 $zindex-message             : 1010;
