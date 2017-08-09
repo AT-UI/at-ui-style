@@ -560,6 +560,25 @@ $dropdown-item-bg-color-disabled : $grey-300;
 
 $dropdown-divided-color          : $brand-blue-50;
 
+/* Menu */
+$menu-text-color                     : $text-color;
+$menu-bg-color-light                 : $color-white;
+
+$menu-font-size                      : $font-size-base;
+
+$menu-item-active-text-color         : $brand-blue-500;
+$menu-item-active-bg-color           : $brand-blue-50;
+
+$menu-group-title-padding            : 12px;
+$menu-group-title-text-color         : $grey-500;
+$menu-group-title-font-size          : $font-size-smer;
+$menu-group-item-padding             : 12px 16px;
+
+$menu-dropdown-item-padding          : 12px 16px;
+$menu-dropdown-item-font-size        : $font-size-smer;
+
+$menu-height-horizontal              : 48px;
+
 /* Pagination */
 $pagination-item-size-sm             : 20px;
 $pagination-item-size                : 28px;

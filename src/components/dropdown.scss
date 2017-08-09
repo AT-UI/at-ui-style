@@ -10,6 +10,7 @@
   &__popover {
     position: absolute;
     overflow: visible;
+    z-index: $zindex-dropdown;
   }
 }
 
@@ -23,7 +24,7 @@
   background-color: $dropdown-bg-color;
   box-shadow: $dropdown-box-shadow;
   list-style: none;
-  overflow-y: auto;
+  // overflow-y: auto;
   z-index: $zindex-dropdown;
 
   &__item {
