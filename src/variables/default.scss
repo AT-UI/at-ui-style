@@ -484,8 +484,6 @@ $notification-width             : 320px;
 $notification-padding           : 8px 16px;
 $notification-padding-lg        : 12px 16px;
 $notification-shadow            : 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
-// $notification-shadow            : 0 2px 8px rgba(0,0,0,.2);
-// $notification-text-color        : $color-white;
 $notification-text-color        : $text-color;
 $notification-bg-color          : $color-white;
 
@@ -560,6 +558,38 @@ $dropdown-item-bg-color-disabled : $grey-300;
 
 $dropdown-divided-color          : $brand-blue-50;
 
+/* Menu */
+$menu-text-color                     : $text-color;
+$menu-text-color-disabled            : $grey-400;
+$menu-text-color-dark                : $grey-200;
+$menu-text-color-dark-hover          : $color-white;
+$menu-bg-color-light                 : $color-white;
+$menu-bg-color-dark                  : $black-500;
+$menu-bg-color-dark-hover            : $black-600;
+$menu-font-size                      : $font-size-base;
+$menu-icon-size                      : $font-size-base;
+
+$menu-item-text-color-active         : $brand-blue-500;
+$menu-item-bg-color-active           : $brand-blue-50;
+$menu-item-bg-color-active-inline    : rgba(236, 242, 252, 0.2);
+
+$menu-submenu-padding                : 12px 16px;
+$menu-item-padding-inline            : 12px 16px;
+
+$menu-group-title-padding            : 12px;
+$menu-group-title-text-color         : $grey-500;
+$menu-group-title-font-size          : $font-size-smer;
+$menu-group-item-padding             : 12px 16px;
+
+$menu-dropdown-item-padding          : 12px 16px;
+$menu-dropdown-item-font-size        : $font-size-smer;
+
+$menu-height-horizontal              : 48px;
+$menu-border-color                   : $border-color-lighter;
+$menu-prefix-bg-color                : $brand-blue-500;
+$menu-prefix-bg-color-dark           : $brand-blue-500;
+$menu-icon-color-inline              : $border-color-base;
+
 /* Pagination */
 $pagination-item-size-sm             : 20px;
 $pagination-item-size                : 28px;
@@ -615,6 +645,7 @@ $container-md               : 940px + $grid-gutter-width;
 $container-lg               : 1140px + $grid-gutter-width;
 
 /* z-index list */
+$zindex-menu                : 900;
 $zindex-modal               : 1000;
 $zindex-notification        : 1010;
 $zindex-message             : 1010;

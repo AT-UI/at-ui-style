@@ -117,3 +117,7 @@
     transform: rotate(360deg);
   }
 }
+
+.collapse-transition {
+  transition: height .3s linear;
+}
