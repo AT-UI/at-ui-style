@@ -8,7 +8,8 @@
   overflow: hidden;
   color: $text-color;
   font-size: $font-size-base;
-  border-radius: $border-radius-base $border-radius-base 0 0;
+  border: 1px solid $grey-200;
+  border-bottom: 0;
 
   table {
     min-width: 100%;
@@ -16,7 +17,6 @@
     border-collapse: separate;
     border-spacing: 0;
     text-align: left;
-    border-radius: $border-radius-base $border-radius-base 0 0;
     overflow: hidden;
 
     th, td {
@@ -30,9 +30,10 @@
 
   &__thead {
     & > tr > th {
-      background-color: $bg-color-light;
+      padding: 0 16px;
       font-weight: bold;
       text-align: left;
+      background-color: $grey-50;
       white-space: nowrap;
     }
   }
@@ -45,6 +46,7 @@
       }
     }
     & > tr > td {
+      padding: 0 16px;
       border-bottom: 1px solid $border-color-lighter;
     }
   }
