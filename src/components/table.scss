@@ -5,36 +5,69 @@
 
 .at-table {
   position: relative;
-  overflow: hidden;
-  color: $text-color;
-  font-size: $font-size-base;
-  border: 1px solid $grey-200;
-  border-bottom: 0;
+  color: $table-text-color;
+  font-size: $table-font-size;
 
   table {
-    min-width: 100%;
-    width: auto;
+    width: 100%;
     border-collapse: separate;
     border-spacing: 0;
     text-align: left;
     overflow: hidden;
 
     th, td {
-      min-width: 0;
-      height: 48px;
+      height: 40px;
       text-align: left;
       text-overflow: ellipsis;
       vertical-align: middle;
+      border-bottom: 1px solid $table-border-color;
     }
   }
 
+  &__cell {
+    padding: 0 16px;
+    border-bottom: 1px solid $table-border-color;
+  }
+  &__content {
+    border: 1px solid $table-border-color;
+    border-bottom-width: 0;
+  }
   &__thead {
     & > tr > th {
-      padding: 0 16px;
       font-weight: bold;
       text-align: left;
-      background-color: $grey-50;
+      background-color: $table-thead-bg-color;
       white-space: nowrap;
+    }
+
+    .at-table__column-sorter {
+      display: inline-block;
+      vertical-align: middle;
+      height: 18px;
+      width: 9px;
+
+      &-up,
+      &-down {
+        display: block;
+        color: $grey-400;
+        font-size: 9px;
+        line-height: 1;
+        transition: color .3s;
+
+        &:hover {
+          color: $table-text-color;
+        }
+      }
+      &.sort-desc {
+        .at-table__column-sorter-down {
+          color: $table-text-color;
+        }
+      }
+      &.sort-asc {
+        .at-table__column-sorter-up {
+          color: $table-text-color;
+        }
+      }
     }
   }
   &__tbody {
@@ -42,15 +75,72 @@
       transition: all .3s;
 
       &:hover {
-        background-color: $bg-color-base;
+        background-color: $table-tr-bg-color-hover;
       }
     }
-    & > tr > td {
-      padding: 0 16px;
-      border-bottom: 1px solid $border-color-lighter;
+  }
+  &__footer {
+    position: relative;
+    margin: 16px 0;
+    height: $table-footer-height;
+
+    .at-pagination {
+      float: right;
+
+      &__total {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
     }
   }
-  &__cell {
-    padding: 0 18px;
+
+  /* modifier */
+  &--fixHeight {
+    .at-table__content {
+      border-bottom-width: 1px;
+    }
+    .at-table__header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+
+      table {
+        border: 1px solid $table-border-color;
+        border-bottom: none;
+      }
+    }
+    .at-table__body {
+      overflow: scroll;
+    }
+    .at-table__tbody {
+      > tr:last-child td {
+        border-bottom: none;
+      }
+    }
+  }
+  &--stripe {
+    .at-table__tbody {
+      & > tr {
+        &:nth-child(2n) {
+          background-color: $table-tr-bg-color-stripe;
+        }
+        &:hover {
+          background-color: $table-tr-bg-color-hover;
+        }
+      }
+    }
+  }
+  &--border {
+    .at-table__content {
+      border-right: none;
+    }
+    .at-table__thead,
+    .at-table__tbody {
+      th, td {
+        border-right: 1px solid $table-border-color;
+      }
+    }
   }
 }
