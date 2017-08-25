@@ -21,6 +21,10 @@
       text-overflow: ellipsis;
       vertical-align: middle;
       border-bottom: 1px solid $table-border-color;
+
+      &.at-table__cell--nodata {
+        text-align: center;
+      }
     }
   }
 

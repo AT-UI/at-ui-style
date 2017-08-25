@@ -210,7 +210,9 @@ $btn-active-shade-percent: 10%;
     }
   }
   &__loading {
-    animation: loadingCircle 1s infinite;
+    display: inline-block;
+    line-height: 1;
+    animation: loadingCircle 1s linear infinite;
   }
   &__text {
     font-size: $btn-font-size-base;
