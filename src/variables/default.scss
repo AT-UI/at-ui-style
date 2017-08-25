@@ -543,13 +543,28 @@ $tooltip-bg-color           : rgba(0, 0, 0, .75);
 $tooltip-border-color       : rgba(0, 0, 0, .75);
 
 /* Table */
-$table-text-color           : $text-color;
+$table-font-size-small      : $font-size-smest;
 $table-font-size            : $font-size-smer;
+$table-font-size-large      : $font-size-sm;
+
+$table-text-color           : $text-color;
 $table-border-color         : $grey-100;
 $table-thead-bg-color       : $grey-50;
 $table-tr-bg-color-hover    : $bg-color-lighter;
 $table-tr-bg-color-stripe   : tint($grey-50, 50%);
 $table-footer-height        : 28px;
+
+$table-cell-height-small    : 32px;
+$table-cell-height          : 40px;
+$table-cell-height-large    : 56px;
+$table-cell-padding         : 0 16px;
+
+$table-sorter-width           : 9px;
+$table-sorter-width-small     : 7px;
+$table-sorter-height          : 18px;
+$table-sorter-height-small    : 14px;
+$table-sorter-icon-size       : 9px;
+$table-sorter-icon-size-small : 7px;
 
 /* Breadcrumb */
 $breadcrumb-font-size         : $font-size-base;
