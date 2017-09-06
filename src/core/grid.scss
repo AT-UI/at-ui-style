@@ -60,8 +60,8 @@ $baseWidth: 4.166667%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  // margin-left: $gutter-compensation;
-  // margin-right: $gutter-compensation;
+  margin-left: $gutter-compensation * -1;
+  margin-right: $gutter-compensation * -1;
 
   &.reverse {
     flex-direction: row-reverse;
