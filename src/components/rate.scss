@@ -1,0 +1,80 @@
+/**
+ * Rate Style
+ */
+@import '../variables/index.scss';
+
+.at-rate {
+  font-size: 0;
+
+  &--disabled {
+    .at-rate__item {
+      cursor: not-allowed;
+    }
+
+    .at-rate__icon:hover {
+      transform: none;
+    }
+  }
+
+  &__list {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__item {
+    display: inline-block;
+    margin-right: 6px;
+    font-size: 0;
+    vertical-align: top;
+    cursor: pointer;
+
+    &--disabled {
+      cursor: auto;
+    }
+  }
+
+
+  &__icon {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 18px;
+    transition: all .3s;
+
+    &:hover {
+      transform: scale(1.15);
+      // color: #f2b74c;
+    }
+
+    &--on {
+      color: $color-warning;
+    }
+
+    &--off {
+
+    }
+
+    &--half {
+      .at-rate__left {
+        color: $color-warning;
+      }
+    }
+  }
+
+  &__left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    color: transparent;
+  }
+
+  &__text {
+    margin-left: 8px;
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 12px;
+  }
+}
