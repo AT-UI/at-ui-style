@@ -2,3 +2,61 @@
  * Card Style
  */
 
+.at-card {
+  position: relative;
+  background-color: #fff;
+  border-radius: 4px;
+  transition: all .3s;
+
+  &:not(.at-card--nohovering):hover {
+    box-shadow: 1px 0 12px 0 $shadow-color;
+    border-color: #eee;
+  }
+
+  &--bordered {
+    border: 1px solid #e9e9e9;
+  }
+
+  &__head {
+    height: 48px;
+    line-height: 48px;
+    padding: 0 24px;
+    margin-bottom: -1px;
+    border-bottom: 1px solid #e9e9e9;
+  }
+
+  &__body {
+    padding: 24px;
+
+    &--loading {
+      span {
+        display: inline-block;
+        height: 14px;
+        margin: 5px 1%;
+        background: linear-gradient(90deg,
+          rgba(192, 198, 206, .12),
+          rgba(192, 198, 206, .2),
+          rgba(192, 198, 206, .12));
+        background-size: 600% 600%;
+        border-radius: 2px;
+        animation: card-loading 1.4s ease infinite;
+      }
+      @keyframes card-loading {
+          0%, to{
+            background-position:0 50%
+          }
+          50%{
+            background-position:100% 50%
+          }
+      }
+    }
+  }
+
+  &__title {
+    display: inline-block;
+  }
+
+  &__extra {
+    float: right;
+  }
+}
