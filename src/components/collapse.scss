@@ -14,8 +14,10 @@
     border-bottom: 1px solid $grey-200;
 
     &--active {
-      .at-collapse__icon {
-        transform: rotate(90deg)
+      >.at-collapse__header {
+        .at-collapse__icon {
+          transform: rotate(90deg)
+        }
       }
     }
 
