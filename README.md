@@ -1,23 +1,35 @@
+<p align="center">
+  <a href="https://at.aotu.io/">
+    <img width="200" src="http://storage.360buyimg.com/mtd/home/logo-at1502718221686.svg">
+  </a>
+</p>
 
 # AT-UI Style
 
-[![npm version](https://badge.fury.io/js/at-ui-style.svg)](https://badge.fury.io/js/at-ui-style)
+[![NPM][npm-version-image]][npm-version-url]
 
-[![NPM](https://nodei.co/npm/at-ui-style.png)](https://npmjs.org/package/at-ui-style)
+`AT-UI Style` is an ui component library based on `Flexbox`, be used for [AT-UI](https://at.aotu.io/)
 
+## Install
 
-`AT-UI Style` 是一套基于 `Flexbox` 的 Web 基础样式库，用于 [凹凸实验室](https://aotu.io/) 出品的 Web UI 框架 —— [AT-UI](https://at.aotu.io/)
-
-## 安装
-
-```sh
+```bash
 npm install at-ui-style
 ```
 
-## 使用方法
+## Usage
 
 ```js
 import 'at-ui-style'
 ```
 
-## [License](LICENSE)
+## Contribution
+
+Finding bugs, sending pull requests or improving our docs - any contribution is welcome and highly appreciated. To get started, head over to our [contribution guidelines](https://github.com/at-ui/at-ui-style/blob/master/CONTRIBUTING.md). Thanks!
+
+## License
+
+MIT
+
+
+[npm-version-image]: https://img.shields.io/npm/v/at-ui-style.svg?style=flat-square
+[npm-version-url]: https://www.npmjs.com/package/at-ui-style
