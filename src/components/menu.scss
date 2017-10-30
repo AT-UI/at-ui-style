@@ -121,7 +121,7 @@
       .at-menu__item-link.router-link-active {
         color: $menu-item-text-color-active;
         font-weight: bold;
-        background-color: $menu-item-bg-color-active;
+        // background-color: $menu-item-bg-color-active;
 
         &::after {
           display: none;
@@ -190,6 +190,17 @@
         }
       }
     }
+    > .at-menu__submenu {
+      &:hover,
+      &.at-menu__submenu--active {
+        > .at-menu__submenu-title {
+          color: $menu-item-text-color-active;
+        }
+        &::after {
+          transform: scaleX(1);
+        }
+      }
+    }
     .at-menu__submenu {
       &::after {
         content: '';
@@ -238,15 +249,17 @@
             transform: rotate(-90deg);
           }
         }
+        &.at-menu__submenu--active {
+          &::after {
+            transform: scaleX(0);
+          }
+        }
       }
 
       &:hover,
       &.at-menu__submenu--active {
-        .at-menu__submenu-title {
+        > .at-menu__submenu-title {
           color: $menu-item-text-color-active;
-        }
-        &::after {
-          transform: scaleX(1);
         }
       }
       &--disabled {
@@ -274,9 +287,25 @@
       position: relative;
       display: block;
     }
-    > .at-menu__item.at-menu__item--active,
-    > .at-menu__submenu.at-menu__submenu--active {
+    > .at-menu__item.at-menu__item--active {
       > .at-menu__item-link {
+        background-color: $menu-item-bg-color-active-inline;
+
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+    > .at-menu__submenu {
+      &:hover {
+        &::after {
+          opacity: 1;
+        }
+        > .at-menu__submenu-title {
+          color: $menu-item-text-color-active;
+        }
+      }
+      &.at-menu__submenu--active {
         background-color: $menu-item-bg-color-active-inline;
 
         &::after {
@@ -426,9 +455,16 @@
       position: relative;
       display: block;
       padding-left: 0;
-      transition: all .3s;
+      transition: all .3s, color 0s;
     }
     .at-menu__item {
+      &:hover {
+        color: $menu-item-text-color-active;
+
+        > .at-menu__item-link {
+          color: $menu-item-text-color-active;
+        }
+      }
       &.at-menu__item--active {
         .at-menu__item-link {
           color: $menu-item-text-color-active;
@@ -455,7 +491,6 @@
     .at-menu__submenu {
       font-size: $menu-font-size;
 
-      &:hover,
       &.at-menu__submenu--active {
         > .at-menu__submenu-title {
           color: $menu-item-text-color-active;
@@ -480,6 +515,11 @@
         }
       }
 
+      > .at-menu__submenu-title {
+        &:hover {
+          color: $menu-item-text-color-active;
+        }
+      }
       .at-menu__submenu-title {
         padding: $menu-item-padding-inline;
         padding-left: 32px;
