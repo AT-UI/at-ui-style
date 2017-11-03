@@ -30,6 +30,9 @@
     &::placeholder {
       color: $input-placeholder-color;
     }
+    &:disabled {
+      cursor: $cursor-disabled;
+    }
   }
 
   /* element */
@@ -38,6 +41,7 @@
     display: block;
     padding: $select-padding-base;
     outline: none;
+    min-height: $select-selection-height-base;
     line-height: $select-selection-height-base;
     border: 1px solid $border-color-base;
     border-radius: $border-radius-base;
@@ -108,6 +112,7 @@
       padding: $dropdown-option-padding-base;
       font-size: $select-dropdown-font-size-base;
       line-height: 1.5;
+      text-align: left;
       white-space: nowrap;
       transition: all .3s;
       overflow: hidden;
@@ -155,6 +160,7 @@
   &--disabled {
     .at-select__selection {
       cursor: $cursor-disabled;
+      border-color: $select-border-c-disabled;
       background-color: $select-selection-bg-color-disabled;
 
       &:hover {
