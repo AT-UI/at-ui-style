@@ -41,7 +41,7 @@
     display: block;
     padding: $select-padding-base;
     outline: none;
-    height: $select-selection-height-base;
+    min-height: $select-selection-height-base;
     line-height: $select-selection-height-base;
     border: 1px solid $border-color-base;
     border-radius: $border-radius-base;
