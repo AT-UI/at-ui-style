@@ -1,0 +1,229 @@
+/**
+ * Tabs Style
+ */
+
+.at-tabs {
+  overflow: hidden;
+
+  &--small {
+    .at-tabs-nav__item {
+      font-size: 12px;
+      margin-right: 0;
+      padding: 8px 16px;
+    }
+
+    .at-tabs__extra {
+      margin-top: 3px;
+    }
+  }
+
+  &--card {
+    .at-tabs-nav__item {
+      padding: 5px 16px 4px;
+      margin: 0 2px 0 0;
+      background: $color-white;
+      border: 1px solid $border-color-lighter;
+      border-bottom: 0;
+      border-radius: 4px 4px 0 0;
+      transition: background-color .3s;
+
+      &::after {
+        content: normal
+      }
+
+      &--active {
+        padding-bottom: 5px;
+        background-color: $color-white;
+      }
+    }
+
+    .at-tabs__extra {
+      margin-top: 3px;
+    }
+  }
+
+  &--card.at-tabs--small {
+    .at-tabs__extra {
+      margin-top: 0px;
+    }
+  }
+
+  &__header {
+    margin-bottom: 16px;
+    border-bottom: 1px solid $border-color-lighter;
+  }
+
+  &__nav {
+    position: relative;
+    margin-bottom: -1px;
+    overflow: hidden;
+  }
+
+  &--scroll {
+    .at-tabs__nav {
+      padding: 0 32px;
+    }
+  }
+
+  &__prev, &__next {
+    position: absolute;
+    top: 0;
+    width: 32px;
+    height: 100%;
+    cursor: pointer;
+    transition: color .2s;
+
+    &:hover {
+      color: $menu-item-text-color-active;;
+    }
+
+    &--disabled {
+      cursor: not-allowed;
+      color: $grey-400;
+
+      &:hover {
+        color: $grey-400;
+      }
+    }
+
+    .icon {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%)
+    }
+  }
+
+  &__prev {
+    left: 0;
+  }
+
+  &__next {
+    right: 0;
+  }
+
+  &__nav-wrap {
+    overflow: hidden;
+  }
+
+  &__body {
+    white-space: nowrap;
+    transition: all .3s;
+  }
+
+  &__extra {
+    float: right;
+    margin-top: 5px;
+  }
+}
+
+.at-tabs__header {
+  font-size: 0;
+}
+
+.at-tabs__nav {
+  height: 37px;
+  font-size: 14px;
+}
+
+.at-tabs--small {
+  .at-tabs__nav {
+    height: 34px;
+  }
+}
+
+.at-tabs--card {
+  .at-tabs__nav {
+    height: 32px;
+  }
+}
+
+.at-tabs--card.at-tabs--small {
+  .at-tabs__nav {
+    height: 29px;
+  }
+}
+
+
+.at-tabs-nav {
+  display: inline-block;
+  white-space: nowrap;
+  transition: transform .3s;
+
+  &__icon {
+    margin-right: 8px;
+  }
+
+  &__close {
+    position: absolute;
+    margin-left: 2px;
+    color: $text-color;
+    opacity: 0;
+    transform: translateX(30%) rotate(90deg);
+    transition: all .3s;
+
+    &:hover {
+      color: #79879a;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: inline-block;
+    margin-right: 24px;
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: color .3s;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &::after {
+      content: '\20';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      background-color: $menu-item-text-color-active;
+      transform: scaleX(0);
+      transition: all .15s;
+    }
+
+    &:not(&--disabled):hover {
+      color: $menu-item-text-color-active;
+
+      &::after {
+        transform: scaleX(1)
+      }
+    }
+
+    &--active {
+      color: $menu-item-text-color-active;
+
+      &::after {
+        transform: scaleX(1)
+      }
+    }
+
+    &--disabled {
+      cursor: not-allowed;
+      color: $grey-400;
+    }
+
+    &--closable {
+      &:hover {
+        .at-tabs-nav__close {
+          opacity: 1;
+          transform: translateX(0) rotate(0);
+        }
+      }
+    }
+  }
+}
+
+.at-tab__pane {
+  display: inline-block;
+  width: 100%;
+}
