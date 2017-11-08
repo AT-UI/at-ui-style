@@ -637,6 +637,24 @@ $pagination-item-border-color        : $border-color-base;
 $pagination-item-border-color-hover  : $brand-blue-400;
 $pagination-item-border-color-active : $brand-blue-400;
 
+/* Tabs */
+$tabs-border-color                   : $grey-100;
+$tabs-nav-height                     : 36px;
+$tabs-nav-height-sm                  : 32px;
+$tabs-nav-font-size                  : $font-size-base;
+$tabs-nav-font-size-sm               : $font-size-smer;
+$tabs-navigation-btn-width           : 32px;
+$tabs-navigation-color               : $text-color;
+$tabs-navigation-color-hover         : $brand-blue-500;
+$tabs-navigation-color-disabled      : $grey-400;
+
+$tabs-nav-item-padding               : 0 20px;
+$tabs-nav-item-padding-sm            : 0 16px;
+$tabs-nav-item-bg-color              : $color-white;
+$tabs-nav-item-bg-color-card         : $grey-50;
+$tabs-nav-item-icon-color            : tint($text-color, 30%);
+$tabs-nav-item-icon-color-hover      : $text-color;
+
 /**
  * Media queries
  */

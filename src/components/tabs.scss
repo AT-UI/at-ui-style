@@ -1,88 +1,46 @@
 /**
  * Tabs Style
  */
+@import '../variables/index.scss';
 
 .at-tabs {
   overflow: hidden;
 
-  &--small {
-    .at-tabs-nav__item {
-      font-size: 12px;
-      margin-right: 0;
-      padding: 8px 16px;
-    }
-
-    .at-tabs__extra {
-      margin-top: 3px;
-    }
-  }
-
-  &--card {
-    .at-tabs-nav__item {
-      padding: 5px 16px 4px;
-      margin: 0 2px 0 0;
-      background: $color-white;
-      border: 1px solid $border-color-lighter;
-      border-bottom: 0;
-      border-radius: 4px 4px 0 0;
-      transition: background-color .3s;
-
-      &::after {
-        content: normal
-      }
-
-      &--active {
-        padding-bottom: 5px;
-        background-color: $color-white;
-      }
-    }
-
-    .at-tabs__extra {
-      margin-top: 3px;
-    }
-  }
-
-  &--card.at-tabs--small {
-    .at-tabs__extra {
-      margin-top: 0px;
-    }
-  }
-
+  /* element */
   &__header {
     margin-bottom: 16px;
-    border-bottom: 1px solid $border-color-lighter;
+    font-size: 0;
+    border-bottom: 1px solid $tabs-border-color;
   }
-
   &__nav {
     position: relative;
     margin-bottom: -1px;
+    height: $tabs-nav-height;
+    color: $tabs-navigation-color;
+    font-size: $tabs-nav-font-size;
     overflow: hidden;
   }
-
-  &--scroll {
-    .at-tabs__nav {
-      padding: 0 32px;
-    }
+  &__nav-wrap {
+    overflow: hidden;
   }
-
   &__prev, &__next {
     position: absolute;
     top: 0;
-    width: 32px;
+    width: $tabs-navigation-btn-width;
     height: 100%;
+    transition: color .3s;
     cursor: pointer;
-    transition: color .2s;
 
     &:hover {
-      color: $menu-item-text-color-active;;
+      color: $tabs-navigation-color-hover;;
     }
 
     &--disabled {
-      cursor: not-allowed;
-      color: $grey-400;
+      color: $tabs-navigation-color-disabled;
+      cursor: default;
 
       &:hover {
-        color: $grey-400;
+        color: $tabs-navigation-color-disabled;
       }
     }
 
@@ -93,94 +51,112 @@
       transform: translate(-50%, -50%)
     }
   }
-
   &__prev {
     left: 0;
   }
-
   &__next {
     right: 0;
   }
-
-  &__nav-wrap {
-    overflow: hidden;
-  }
-
   &__body {
+    font-size: 0;
     white-space: nowrap;
     transition: all .3s;
   }
-
   &__extra {
     float: right;
-    margin-top: 5px;
+    margin-top: 6px;
+  }
+  &__pane {
+    display: inline-block;
+    width: 100%;
+    white-space: initial;
+    vertical-align: top;
+  }
+
+  /* modifier */
+  &--small {
+    .at-tabs__header {
+      margin-bottom: 12px;
+    }
+    .at-tabs__nav {
+      height: $tabs-nav-height-sm;
+    }
+    .at-tabs-nav__item {
+      margin-right: 16px;
+      padding: $tabs-nav-item-padding-sm;
+      line-height: $tabs-nav-height-sm;
+      font-size: $tabs-nav-font-size-sm;
+    }
+    .at-tabs__extra {
+      margin-top: 3px;
+    }
+  }
+  &--card {
+    &.at-tabs--small {
+      .at-tabs-nav__item {
+        line-height: $tabs-nav-height-sm - 2;
+      }
+    }
+
+    .at-tabs-nav__item {
+      margin: 0 2px 0 0;
+      line-height: $tabs-nav-height - 2;
+      border: 1px solid $tabs-border-color;
+      border-radius: 4px 4px 0 0;
+      background-color: $tabs-nav-item-bg-color-card;
+      transition: background-color .3s;
+
+      &::after {
+        content: normal
+      }
+
+      &--active {
+        border-bottom-color: transparent;
+        background-color: $tabs-nav-item-bg-color;
+      }
+    }
+  }
+  &--scroll {
+    .at-tabs__nav {
+      padding: 0 $tabs-navigation-btn-width;
+    }
   }
 }
-
-.at-tabs__header {
-  font-size: 0;
-}
-
-.at-tabs__nav {
-  height: 37px;
-  font-size: 14px;
-}
-
-.at-tabs--small {
-  .at-tabs__nav {
-    height: 34px;
-  }
-}
-
-.at-tabs--card {
-  .at-tabs__nav {
-    height: 32px;
-  }
-}
-
-.at-tabs--card.at-tabs--small {
-  .at-tabs__nav {
-    height: 29px;
-  }
-}
-
 
 .at-tabs-nav {
   display: inline-block;
   white-space: nowrap;
   transition: transform .3s;
 
+  /* element */
   &__icon {
     margin-right: 8px;
   }
-
   &__close {
     position: absolute;
     margin-left: 2px;
-    color: $text-color;
+    color: $tabs-nav-item-icon-color;
     opacity: 0;
-    transform: translateX(30%) rotate(90deg);
     transition: all .3s;
 
     &:hover {
-      color: #79879a;
+      color: $tabs-nav-item-icon-color-hover;
     }
   }
-
   &__item {
     position: relative;
     display: inline-block;
     margin-right: 24px;
-    padding: 8px 20px;
-    cursor: pointer;
+    padding: $tabs-nav-item-padding;
+    line-height: $tabs-nav-height;
     transition: color .3s;
+    cursor: pointer;
 
     &:last-of-type {
       margin-right: 0;
     }
-
     &::after {
-      content: '\20';
+      content: '';
       position: absolute;
       left: 0;
       width: 100%;
@@ -190,13 +166,8 @@
       transform: scaleX(0);
       transition: all .15s;
     }
-
     &:not(&--disabled):hover {
       color: $menu-item-text-color-active;
-
-      &::after {
-        transform: scaleX(1)
-      }
     }
 
     &--active {
@@ -206,24 +177,16 @@
         transform: scaleX(1)
       }
     }
-
     &--disabled {
-      cursor: not-allowed;
-      color: $grey-400;
+      color: $tabs-navigation-color-disabled;
+      cursor: default;
     }
-
     &--closable {
       &:hover {
         .at-tabs-nav__close {
           opacity: 1;
-          transform: translateX(0) rotate(0);
         }
       }
     }
   }
-}
-
-.at-tab__pane {
-  display: inline-block;
-  width: 100%;
 }
