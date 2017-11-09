@@ -394,6 +394,20 @@ $badge-bg-color-info        : $blue-500;
 
 $badge-dot-size             : 10px;
 
+/* Collapse */
+$collapse-border-color               : $grey-200;
+$collapse-border-radius              : $border-radius-base;
+
+$collapse-header-bg-color            : $grey-50;
+$collapse-header-text-color          : $title-color;
+$collapse-header-text-color-disabled : $grey-400;
+
+$collapse-icon-size                  : $font-size-smer;
+$collapse-icon-color                 : tint($title-color, 50%);
+
+$collapse-body-text-color            : $text-color;
+$collapse-body-bg-color              : $color-white;
+
 /* Loading Bar */
 $loading-bar-bg-color-success   : $color-primary;
 $loading-bar-bg-color-error     : $color-error;
