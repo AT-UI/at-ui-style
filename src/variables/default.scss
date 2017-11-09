@@ -560,6 +560,22 @@ $progress-bar-bg-color         : $brand-color-light;
 $progress-bar-bg-color-success : $color-success;
 $progress-bar-bg-color-error   : $color-error;
 
+/* Timeline */
+$timeline-dot-color            : $blue-500;
+$timeline-dot-color-success    : $green-500;
+$timeline-dot-color-error      : $red-500;
+$timeline-dot-color-warning    : $yellow-500;
+
+$timeline-dot-bg-color         : $color-white;
+
+$timeline-dot-size             : 12px;
+$timeline-custom-dot-size      : 20px;
+$timeline-custom-dot-font-size : $font-size-normal;
+
+$timeline-line-color           : $grey-100;
+$timeline-item-last-min-height : 48px;
+$timeline-text-font-size       : $font-size-smer;
+
 /* Tooltip */
 $tooltip-padding            : 4px 8px;
 $tooltip-arrow-size         : 4px;
