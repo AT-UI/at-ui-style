@@ -1,0 +1,62 @@
+/**
+ * Card Style
+ */
+@import '../variables/index.scss';
+
+.at-card {
+  position: relative;
+  border-radius: $card-border-radius;
+  background-color: $card-bg-color;
+  transition: all .3s;
+
+  &:not(.at-card--no-hover):hover {
+    border-color: $card-border-color-hover;
+    box-shadow: 1px 0 16px 0 $shadow-color;
+  }
+
+  /* element */
+  &__head {
+    padding: 0 24px;
+    height: $card-head-height;
+    line-height: $card-head-height;
+    border-bottom: 1px solid $card-border-color;
+  }
+  &__title {
+    display: inline-block;
+  }
+  &__extra {
+    float: right;
+  }
+  &__body {
+    padding: 24px;
+
+    &--loading {
+      span {
+        display: inline-block;
+        margin: 5px 1%;
+        height: 14px;
+        border-radius: 2px;
+        background: linear-gradient(90deg,
+          rgba(192, 198, 206, .12),
+          rgba(192, 198, 206, .2),
+          rgba(192, 198, 206, .12));
+        background-size: 600% 600%;
+        animation: card-loading 1.4s ease infinite;
+      }
+    }
+  }
+
+  /* modifier */
+  &--bordered {
+    border: 1px solid $card-border-color;
+  }
+}
+
+@keyframes card-loading {
+  0%, to {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}

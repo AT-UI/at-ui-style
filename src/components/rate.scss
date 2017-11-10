@@ -1,0 +1,78 @@
+/**
+ * Rate Style
+ */
+@import '../variables/index.scss';
+
+.at-rate {
+  font-size: 0;
+
+  /* element */
+  &__list {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  &__item {
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 0;
+    vertical-align: top;
+    transition: all .3s;
+    cursor: pointer;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &--on {
+      .at-rate__icon {
+        color: $rate-icon-color-on;
+      }
+    }
+    &--half {
+      .at-rate__left {
+        color: $rate-icon-color-on;
+      }
+    }
+  }
+  &__icon {
+    position: relative;
+    display: inline-block;
+    color: $rate-icon-color;
+    font-size: $rate-icon-font-size;
+    vertical-align: top;
+    transition: color .3s;
+  }
+  &__left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    color: transparent;
+    overflow: hidden;
+  }
+  &__text {
+    display: inline-block;
+    margin-left: 8px;
+    font-size: $rate-text-font-size;
+    vertical-align: middle;
+  }
+
+  /* modifier */
+  &--disabled {
+    &.at-rate__list {
+      cursor: initial;
+    }
+    .at-rate__item {
+      cursor: initial;
+
+      &:hover {
+        transform: none;
+      }
+    }
+  }
+}
