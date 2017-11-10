@@ -637,6 +637,41 @@ $pagination-item-border-color        : $border-color-base;
 $pagination-item-border-color-hover  : $brand-blue-400;
 $pagination-item-border-color-active : $brand-blue-400;
 
+
+/* Time Picker */
+$time-picker-font-size-base: 12px;
+$time-picker-font-size-sm: $font-size-smest;
+$time-picker-font-size-lg: $font-size-base;
+$time-picker-icon-font-size: 15px;
+
+$time-picker-font-color: $text-color;
+$time-picker-bg-color: $color-white;
+$time-picker-placeholder-color: $grey-400;
+$time-picker-icon-color: $border-color-base;
+$time-picker-selection-bg-color-disabled: tint($border-color-base, 70%);
+
+$time-picker-border-color-hover: $brand-blue-400;
+$time-picker-border-color-focus: $brand-blue-400;
+$time-picker-border-c-disabled: $grey-100;
+
+$time-picker-padding-base: 6px 12px;
+
+/* Time Picker Dropdown */
+$time-picker-dropdown-font-size-base: $font-size-smer;
+$time-picker-dropdown-font-size-sm: $font-size-smest;
+$time-picker-dropdown-font-size-lg: $font-size-sm;
+
+$time-picker-dropdown-bg-color: $color-white;
+$time-picker-addon-border-color: $grey-100;
+$time-picker-dropdown-option-bg-c-selected: $grey-50;
+$time-picker-dropdown-option-bg-c-hover: $brand-blue-50;
+
+$time-picker-option-padding-base: 6px 12px;
+
+$time-picker-dropdown-height: 180px;
+$time-picker-select-padding-bottom: 150px;
+
+
 /**
  * Media queries
  */
