@@ -1,14 +1,6 @@
 {
   "name": "at-ui-style",
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "version": "1.3.4",
-=======
-  "version": "1.4.0",
->>>>>>> Squashed commit of the following:
-=======
   "version": "1.5.0",
->>>>>>> chore: update package.json
   "description": "The StyleSheet for AT-UI",
   "scss": "src/index.scss",
   "main": "css/at.css",
