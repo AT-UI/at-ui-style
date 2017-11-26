@@ -731,6 +731,50 @@ $step-line-color-active              : $brand-blue-500;
 $step-main-height-vertical           : 64px;
 $step-main-height-vertical-sm        : 48px;
 
+
+/* Date Picker */
+$date-picker-font-size-base: 12px;
+$date-picker-font-size-sm: $font-size-smest;
+$date-picker-font-size-lg: $font-size-base;
+
+$date-picker-icon-font-size: 15px;
+$date-picker-icon-color: $border-color-base;
+
+$date-picker-font-color: $text-color;
+$date-picker-bg-color: $color-white;
+$date-picker-placeholder-color: $grey-400;
+$date-picker-selection-bg-color-disabled: tint($border-color-base, 70%);
+
+$date-picker-border-color-hover: $brand-blue-400;
+$date-picker-border-color-focus: $brand-blue-400;
+$date-picker-border-color-disabled: #ececec;
+$date-picker-bg-color-disabled: #eef4f8;
+$date-picker-color-disabled: #c9c9c9;
+
+$date-picker-padding-base: 6px 12px;
+$date-picker-padding-lg: 8px 14px;
+
+/* Date Picker Dropdown */
+$date-picker-dropdown-font-size-base: $font-size-smer;
+$date-picker-dropdown-font-size-sm: $font-size-smest;
+$date-picker-dropdown-font-size-lg: $font-size-sm;
+
+$date-picker-dropdown-bg-color: $color-white;
+$date-picker-dropdown-border-color: $grey-100;
+
+$date-picker-dropdown-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
+
+$date-picker-header-margin: 12px;
+$date-picler-content-margin: 12px;
+$date-picker-aside-width: 110px;
+
+$date-picker-cell-color: $brand-blue-400;
+$date-picker-cell-bg-color-disabled: #f5f7fa;
+$date-picker-cell-color-disabled: #b4bccc;
+$date-picker-cell-prev-next-color: #b4bccc;
+$date-picker-cell-month-font-size: 12px;
+$date-picker-cell-year-font-size: 12px;
+
 /**
  * Media queries
  */
