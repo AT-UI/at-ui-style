@@ -80,12 +80,18 @@
     overflow: hidden;
     border-radius: 4px;
     box-shadow: $date-picker-dropdown-box-shadow;
+    z-index: 2;
   }
 
   &__header {
     margin: $date-picker-header-margin;
     text-align: center;
     line-height: 30px;
+  }
+
+  &__extra {
+    border-top: 1px solid #e6ebf5;
+    padding: 8px 12px;
   }
 
   &__aside {
@@ -251,22 +257,14 @@
         }
       }
     }
-
-    .at-date-picker__month-panel,
-    .at-date-picker__year-panel {
-
-      td {
-        width: 25%;
-        height: 32px;
-        padding: 20px 3px;
-        color: $date-picker-font-color;
-      }
-    }
   }
-
 
   &__month-cell,
   &__year-cell {
+    width: 25%;
+    height: 32px;
+    padding: 20px 3px;
+    color: $date-picker-font-color;
     cursor: pointer;
 
     &--current {
@@ -339,28 +337,37 @@
   &__range-input {
     position: relative;
     display: inline-block;
-    height: 40px;
+    padding: $date-picker-padding-base;
     line-height: 1;
-    color: #5a5e66;
+    color: $date-picker-font-color;
     background-color: $date-picker-bg-color;
-    border: 1px solid #d8dce5;
-    border-radius: 4px;
+    border: 1px solid $border-color-base;
+    border-radius: $border-radius-base;
     outline: none;
     overflow: hidden;
+    vertical-align: top;
+    transition: border .2s;
+  }
+
+  &:not(&--disabled) &__range-input:hover {
+    border-color: $date-picker-border-color-hover;
   }
 
   &__original-range {
-    appearance: none;
     display: inline-block;
-    width: 39%;
-    height: 100%;
+    width: 38%;
     margin: 0;
     padding: 0;
-    font-size: 14px;
-    color: #5a5e66;
+    line-height: 18px;
+    font-size: $date-picker-font-size-base;
+    color: $date-picker-font-color;
     text-align: center;
     border: none;
     outline: none;
+
+    &::placeholder {
+      color: $date-picker-placeholder-color;
+    }
   }
 
   &--disabled {
@@ -376,7 +383,12 @@
     .at-date-picker__original-range {
       color: $date-picker-color-disabled;
       background-color: $date-picker-bg-color-disabled;
+      border-color: $date-picker-border-color-disabled;
       cursor: not-allowed;
+    }
+
+    .at-date-picker__range-separator {
+      color: $date-picker-color-disabled;
     }
   }
 
@@ -390,16 +402,36 @@
         font-size: $input-font-size-sm;
       }
     }
+
+    .at-date-picker__range-input {
+      padding: $input-padding-sm;
+
+      .at-date-picker__original-range {
+        &::placeholder {
+          font-size: $input-font-size-sm;
+        }
+      }
+    }
   }
 
   &--large {
+    font-size: $input-font-size-lg;
 
     .at-date-picker__original {
-      font-size: $input-font-size-lg;
       padding: $date-picker-padding-lg;
 
       &::placeholder {
         font-size: $input-font-size-lg;
+      }
+    }
+
+    .at-date-picker__range-input {
+      padding: $date-picker-padding-lg;
+
+      .at-date-picker__original-range {
+        &::placeholder {
+          font-size: $input-font-size-lg;
+        }
       }
     }
   }
