@@ -18,6 +18,7 @@
     background-color: $input-bg-color;
     transition: border .3s;
     outline: 0;
+    resize: vertical;
 
     &::placeholder {
       color: $input-placeholder-color;
