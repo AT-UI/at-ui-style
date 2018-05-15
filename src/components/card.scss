@@ -20,6 +20,8 @@
     height: $card-head-height;
     line-height: $card-head-height;
     border-bottom: 1px solid $card-border-color;
+    display: flex;
+    justify-content: space-between;
   }
   &__title {
     display: inline-block;
