@@ -68,4 +68,24 @@
       color: $progress-bar-bg-color-error;
     }
   }
+  &--indeterminate {
+    animation: indeterminate 1.200s ease infinite;
+    will-change: left, width;
+    background-color: $progress-bar-bg-color;
+  }
+}
+
+@keyframes indeterminate {
+  0% {
+    width: 30%;
+    left: 0%;
+  }
+  60% {
+    width: 65%;
+    left: 25%;
+  }
+  100% {
+    left: 100%;
+    width: 0%;
+  }
 }
