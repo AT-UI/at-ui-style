@@ -3,787 +3,774 @@
  */
 @import '../mixins/index.scss';
 
-/* Prefix */
-$css-prefix: at !default;
+ /* Prefix */
+$css-prefix: at;
 
 /* The Color of O2Team Brand */
-$brand-color : #6190E8 !default;
-$brand-color-light : #78A4F4 !default;
-$brand-color-dark : #346FC2 !default;
+$brand-color                : #6190E8;
+$brand-color-light          : #78A4F4;
+$brand-color-dark           : #346FC2;
 
 /* Color */
-$color-normal : #6190E8 !default;
-$color-primary : #6190E8 !default;
-$color-success : #13CE66 !default;
-$color-error : #FF4949 !default;
-$color-warning : #FFC82C !default;
-$color-info : #78A4FA !default;
-$color-white : #FFF !default;
+$color-normal               : #6190E8;
+$color-primary              : #6190E8;
+$color-success              : #13CE66;
+$color-error                : #FF4949;
+$color-warning              : #FFC82C;
+$color-info                 : #78A4FA;
+$color-white                : #FFF;
 
 /* Color PalettC */
-$brand-blue-50 : #ECF2FC !default;
-$brand-blue-100 : #D0DEF8 !default;
-$brand-blue-200 : #B0C8F4 !default;
-$brand-blue-300 : #90B1EF !default;
-$brand-blue-400 : #79A1EB !default;
-$brand-blue-500 : #6190E8 !default;
-$brand-blue-600 : #5988E5 !default;
-$brand-blue-700 : #4F7DE2 !default;
-$brand-blue-800 : #4573DE !default;
-$brand-blue-900 : #3361D8 !default;
+$brand-blue-50              : #ECF2FC;
+$brand-blue-100             : #D0DEF8;
+$brand-blue-200             : #B0C8F4;
+$brand-blue-300             : #90B1EF;
+$brand-blue-400             : #79A1EB;
+$brand-blue-500             : #6190E8;
+$brand-blue-600             : #5988E5;
+$brand-blue-700             : #4F7DE2;
+$brand-blue-800             : #4573DE;
+$brand-blue-900             : #3361D8;
 
-$green-50 : #E3F9ED !default;
-$green-100 : #B8F0D1 !default;
-$green-200 : #89E7B3 !default;
-$green-300 : #5ADD94 !default;
-$green-400 : #36D57D !default;
-$green-500 : #13CE66 !default;
-$green-600 : #11C95E !default;
-$green-700 : #0EC253 !default;
-$green-800 : #0BBC49 !default;
-$green-900 : #06B038 !default;
+$green-50                   : #E3F9ED;
+$green-100                  : #B8F0D1;
+$green-200                  : #89E7B3;
+$green-300                  : #5ADD94;
+$green-400                  : #36D57D;
+$green-500                  : #13CE66;
+$green-600                  : #11C95E;
+$green-700                  : #0EC253;
+$green-800                  : #0BBC49;
+$green-900                  : #06B038;
 
-$red-50 : #FFE9E9 !default;
-$red-100 : #FFC8C8 !default;
-$red-200 : #FFA4A4 !default;
-$red-300 : #FF8080 !default;
-$red-400 : #FF6464 !default;
-$red-500 : #FF4949 !default;
-$red-600 : #FF4242 !default;
-$red-700 : #FF3939 !default;
-$red-800 : #FF3131 !default;
-$red-900 : #FF2121 !default;
+$red-50                     : #FFE9E9;
+$red-100                    : #FFC8C8;
+$red-200                    : #FFA4A4;
+$red-300                    : #FF8080;
+$red-400                    : #FF6464;
+$red-500                    : #FF4949;
+$red-600                    : #FF4242;
+$red-700                    : #FF3939;
+$red-800                    : #FF3131;
+$red-900                    : #FF2121;
 
-$yellow-50 : #FFF8E6 !default;
-$yellow-100 : #FFEFC0 !default;
-$yellow-200 : #FFE496 !default;
-$yellow-300 : #FFD96B !default;
-$yellow-400 : #FFD04C !default;
-$yellow-500 : #FFC82C !default;
-$yellow-600 : #FFC227 !default;
-$yellow-700 : #FFBB21 !default;
-$yellow-800 : #FFB41B !default;
-$yellow-900 : #FFA710 !default;
+$yellow-50                  : #FFF8E6;
+$yellow-100                 : #FFEFC0;
+$yellow-200                 : #FFE496;
+$yellow-300                 : #FFD96B;
+$yellow-400                 : #FFD04C;
+$yellow-500                 : #FFC82C;
+$yellow-600                 : #FFC227;
+$yellow-700                 : #FFBB21;
+$yellow-800                 : #FFB41B;
+$yellow-900                 : #FFA710;
 
-$blue-50 : #EFF4FE !default;
-$blue-100 : #D7E4FE !default;
-$blue-200 : #BCD2FD !default;
-$blue-300 : #A1BFFC !default;
-$blue-400 : #8CB2FB !default;
-$blue-500 : #78A4FA !default;
-$blue-600 : #709CF9 !default;
-$blue-700 : #6592F9 !default;
-$blue-800 : #5B89F8 !default;
-$blue-900 : #4878F6 !default;
+$blue-50                    : #EFF4FE;
+$blue-100                   : #D7E4FE;
+$blue-200                   : #BCD2FD;
+$blue-300                   : #A1BFFC;
+$blue-400                   : #8CB2FB;
+$blue-500                   : #78A4FA;
+$blue-600                   : #709CF9;
+$blue-700                   : #6592F9;
+$blue-800                   : #5B89F8;
+$blue-900                   : #4878F6;
 
-$grey-50 : #F7F7F7 !default;
-$grey-100 : #ECECEC !default;
-$grey-200 : #DFDFDF !default;
-$grey-300 : #D2D2D2 !default;
-$grey-400 : #C9C9C9 !default;
-$grey-500 : #BFBFBF !default;
-$grey-600 : #B9B9B9 !default;
-$grey-700 : #B1B1B1 !default;
-$grey-800 : #A9A9A9 !default;
-$grey-900 : #9B9B9B !default;
+$grey-50                    : #F7F7F7;
+$grey-100                   : #ECECEC;
+$grey-200                   : #DFDFDF;
+$grey-300                   : #D2D2D2;
+$grey-400                   : #C9C9C9;
+$grey-500                   : #BFBFBF;
+$grey-600                   : #B9B9B9;
+$grey-700                   : #B1B1B1;
+$grey-800                   : #A9A9A9;
+$grey-900                   : #9B9B9B;
 
-$black-50 : #E6E8EB !default;
-$black-100 : #C0C6CE !default;
-$black-200 : #96A0AD !default;
-$black-300 : #6B798C !default;
-$black-400 : #4C5D73 !default;
-$black-500 : #2C405A !default;
-$black-600 : #273A52 !default;
-$black-700 : #213248 !default;
-$black-800 : #1B2A3F !default;
-$black-900 : #101C2E !default;
+$black-50                   : #E6E8EB;
+$black-100                  : #C0C6CE;
+$black-200                  : #96A0AD;
+$black-300                  : #6B798C;
+$black-400                  : #4C5D73;
+$black-500                  : #2C405A;
+$black-600                  : #273A52;
+$black-700                  : #213248;
+$black-800                  : #1B2A3F;
+$black-900                  : #101C2E;
 
-$text-color : #3F536E !default;
-$title-color : #2C405A !default;
+$text-color                 : #3F536E;
+$title-color                : #2C405A;
 
-$border-color-gray : #CCC !default;
-$border-color-base : #C5D9E8 !default;
-$border-color-split : tint($border-color-base, 20%) !default;
-$border-color-light : tint($border-color-base, 30%) !default;
-$border-color-lighter : tint($border-color-base, 50%) !default;
-$border-color-lightest : tint($border-color-base, 80%) !default;
+$border-color-gray          : #CCC;
+$border-color-base          : #C5D9E8;
+$border-color-split         : tint($border-color-base, 20%);
+$border-color-light         : tint($border-color-base, 30%);
+$border-color-lighter       : tint($border-color-base, 50%);
+$border-color-lightest      : tint($border-color-base, 80%);
 
-$bg-color : $color-white !default;
-$bg-color-base : #FAFBFC !default;
-$bg-color-light : #ECF5FD !default;
-$bg-color-lighter : tint($bg-color-light, 50%) !default;
-$bg-color-gray : #f7f7f7 !default;
+$bg-color                   : $color-white;
+$bg-color-base              : #FAFBFC;
+$bg-color-light             : #ECF5FD;
+$bg-color-lighter           : tint($bg-color-light, 50%);
+$bg-color-gray              : #f7f7f7;
 
 /* Assistant Color */
-$roof-color : #C2ABC7 !default;
-$curtain-color : #F0D0D5 !default;
-$door-color : #F1E4ED !default;
-$wall-color : #EEF0F0 !default;
+$roof-color                 : #C2ABC7;
+$curtain-color              : #F0D0D5;
+$door-color                 : #F1E4ED;
+$wall-color                 : #EEF0F0;
 
 /* Border */
-$border-radius-base : 4px !default;
-$border-radius-sm : 4px !default;
+$border-radius-base         : 4px;
+$border-radius-sm           : 4px;
 
 /* Font */
-$font-family : -apple-system,
-BlinkMacSystemFont,
-"Helvetica Neue",
-Helvetica,
-"PingFang SC",
-"Hiragino Sans GB",
-"Microsoft YaHei",
-"微软雅黑",
-Arial,
-sans-serif !default;
-$code-family : Consolas,
-Menlo,
-Courier,
-monospace !default;
+$font-family                : -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+$code-family                : Consolas, Menlo, Courier, monospace;
 
-$font-size-smest : 11px !default;
-$font-size-smer : 12px !default;
-$font-size-sm : 13px !default;
-$font-size-base : 14px !default;
-$font-size-normal : 16px !default;
-$font-size-lg : 18px !default;
-$font-size-lger : 20px !default;
+$font-size-smest            : 11px;
+$font-size-smer             : 12px;
+$font-size-sm               : 13px;
+$font-size-base             : 14px;
+$font-size-normal           : 16px;
+$font-size-lg               : 18px;
+$font-size-lger             : 20px;
 
-$line-height-base : 1.5 !default;
-$line-height-computed : floor($font-size-base * $line-height-base) !default;
+$line-height-base           : 1.5;
+$line-height-computed       : floor($font-size-base * $line-height-base);
 
 /* Link */
-$link-color : $brand-blue-500 !default;
-$link-hover-color : $brand-blue-400 !default;
-$link-active-color : $brand-blue-700 !default;
-$link-disabled-color : $grey-500 !default;
-$link-hover-decoration : none !default;
+$link-color                 : $brand-blue-500;
+$link-hover-color           : $brand-blue-400;
+$link-active-color          : $brand-blue-700;
+$link-disabled-color        : $grey-500;
+$link-hover-decoration      : none;
 
 /* Disabled cursor */
-$cursor-disabled : not-allowed !default;
+$cursor-disabled            : not-allowed;
 
 /* Shadow */
-$shadow-color : rgba(100, 100, 100, .2) !default;
-$shadow-1px-up : 0 -1px 6px $shadow-color !default;
-$shadow-1px-down : 0 1px 6px $shadow-color !default;
-$shadow-1px-left : -1px 0 6px $shadow-color !default;
-$shadow-1px-right : 1px 0 6px $shadow-color !default;
+$shadow-color               : rgba(100, 100, 100, .2);
+$shadow-1px-up              : 0 -1px 6px $shadow-color;
+$shadow-1px-down            : 0 1px 6px $shadow-color;
+$shadow-1px-left            : -1px 0 6px $shadow-color;
+$shadow-1px-right           : 1px 0 6px $shadow-color;
 
 /* Button */
-$btn-default-color : $text-color !default;
-$btn-default-bg : $color-white !default;
-$btn-default-bg-hover : $border-color-lightest !default;
-$btn-default-bg-active : $border-color-lighter !default;
-$btn-default-border : $border-color-base !default;
+$btn-default-color          : $text-color;
+$btn-default-bg             : $color-white;
+$btn-default-bg-hover       : $border-color-lightest;
+$btn-default-bg-active      : $border-color-lighter;
+$btn-default-border         : $border-color-base;
 
-$btn-primary-bg : $brand-blue-500 !default;
-$btn-primary-border : $brand-blue-500 !default;
+$btn-primary-bg             : $brand-blue-500;
+$btn-primary-border         : $brand-blue-500;
 
-$btn-success-bg : $green-500 !default;
-$btn-success-border : $green-500 !default;
+$btn-success-bg             : $green-500;
+$btn-success-border         : $green-500;
 
-$btn-error-bg : $red-500 !default;
-$btn-error-border : $red-500 !default;
+$btn-error-bg               : $red-500;
+$btn-error-border           : $red-500;
 
-$btn-warning-bg : $yellow-500 !default;
-$btn-warning-border : $yellow-500 !default;
+$btn-warning-bg             : $yellow-500;
+$btn-warning-border         : $yellow-500;
 
-$btn-info-bg : $blue-500 !default;
-$btn-info-border : $blue-500 !default;
+$btn-info-bg                : $blue-500;
+$btn-info-border            : $blue-500;
 
-$btn-text-border : $brand-blue-500 !default;
+$btn-text-border            : $brand-blue-500;
 
-$btn-disabled-color : $grey-300 !default;
-$btn-disabled-bg : $grey-50 !default;
-$btn-disabled-border : $grey-100 !default;
+$btn-disabled-color         : $grey-300;
+$btn-disabled-bg            : $grey-50;
+$btn-disabled-border        : $grey-100;
 
-$btn-font-weight : 500 !default;
+$btn-font-weight            : 500;
 
-$btn-font-size-smer : 10px !default;
-$btn-font-size-sm : 11px !default;
-$btn-font-size-base : 12px !default;
-$btn-font-size-md : 14px !default;
-$btn-font-size-lg : 16px !default;
+$btn-font-size-smer         : 10px;
+$btn-font-size-sm           : 11px;
+$btn-font-size-base         : 12px;
+$btn-font-size-md           : 14px;
+$btn-font-size-lg           : 16px;
 
-$btn-padding-smer : 2px 10px !default;
-$btn-padding-sm : 4px 12px !default;
-$btn-padding-base : 6px 16px !default;
-$btn-padding-md : 8px 16px !default;
-$btn-padding-lg : 10px 18px !default;
+$btn-padding-smer           : 2px 10px;
+$btn-padding-sm             : 4px 12px;
+$btn-padding-base           : 6px 16px;
+$btn-padding-md             : 8px 16px;
+$btn-padding-lg             : 10px 18px;
 
-$btn-circle-size-smer : 24px !default;
-$btn-circle-size-sm : 28px !default;
-$btn-circle-size : 32px !default;
-$btn-circle-size-lg : 40px !default;
+$btn-circle-size-smer       : 24px;
+$btn-circle-size-sm         : 28px;
+$btn-circle-size            : 32px;
+$btn-circle-size-lg         : 40px;
 
 /* Tag */
-$tag-bg-color : $grey-50 !default;
-$tag-border-color : $grey-200 !default;
+$tag-bg-color               : $grey-50;
+$tag-border-color           : $grey-200;
 
 /* Checkbox */
-$checkbox-size : 16px !default;
-$checkbox-font-size : $font-size-smer !default;
+$checkbox-size              : 16px;
+$checkbox-font-size         : $font-size-smer;
 
-$checkbox-border-c : $border-color-base !default;
-$checkbox-border-c-hover : $brand-blue-400 !default;
-$checkbox-border-c-checked : $brand-blue-400 !default;
-$checkbox-border-c-disabled : $grey-100 !default;
-$checkbox-bg-c-disabled : $grey-50 !default;
-$checkbox-label-c-disabled : $grey-700 !default;
+$checkbox-border-c          : $border-color-base;
+$checkbox-border-c-hover    : $brand-blue-400;
+$checkbox-border-c-checked  : $brand-blue-400;
+$checkbox-border-c-disabled : $grey-100;
+$checkbox-bg-c-disabled     : $grey-50;
+$checkbox-label-c-disabled  : $grey-700;
 
 /* Input */
-$input-font-size-sm : 11px !default;
-$input-font-size-base : 12px !default;
-$input-font-size-lg : 14px !default;
+$input-font-size-sm         : 11px;
+$input-font-size-base       : 12px;
+$input-font-size-lg         : 14px;
 
-$input-padding-sm : 4px 10px !default;
-$input-padding-base : 6px 12px !default;
-$input-padding-lg : 8px 14px !default;
+$input-padding-sm           : 4px 10px;
+$input-padding-base         : 6px 12px;
+$input-padding-lg           : 8px 14px;
 
-$input-font-color : $text-color !default;
-$input-font-color-disabled : $grey-700 !default;
+$input-font-color           : $text-color;
+$input-font-color-disabled  : $grey-700;
 
-$input-border-color : $border-color-base !default;
-$input-border-color-hover : $brand-blue-400 !default;
-$input-border-color-focus : $brand-blue-400 !default;
-$input-border-color-disabled : $grey-100 !default;
-$input-border-color-success : $color-success !default;
-$input-border-color-error : $color-error !default;
-$input-border-color-warning : $color-warning !default;
-$input-border-color-info : $color-info !default;
+$input-border-color          : $border-color-base;
+$input-border-color-hover    : $brand-blue-400;
+$input-border-color-focus    : $brand-blue-400;
+$input-border-color-disabled : $grey-100;
+$input-border-color-success  : $color-success;
+$input-border-color-error    : $color-error;
+$input-border-color-warning  : $color-warning;
+$input-border-color-info     : $color-info;
 
-$input-bg-color : $color-white !default;
-$input-bg-color-disabled : $grey-50 !default;
+$input-bg-color             : $color-white;
+$input-bg-color-disabled    : $grey-50;
 
-$input-icon-color : $border-color-base !default;
-$input-icon-font-size : 15px !default;
+$input-icon-color           : $border-color-base;
+$input-icon-font-size       : 15px;
 
-$input-placeholder-color : $grey-400 !default;
-$input-placeholder-color-disabled : $grey-400 !default;
+$input-placeholder-color          : $grey-400;
+$input-placeholder-color-disabled : $grey-400;
 
-$input-group-font-color : $grey-900 !default;
-$input-group-bg-color : $grey-50 !default;
-$input-group-bg-color-hover : $grey-100 !default;
-$input-group-bg-color-active : $grey-200 !default;
+$input-group-font-color      : $grey-900;
+$input-group-bg-color        : $grey-50;
+$input-group-bg-color-hover  : $grey-100;
+$input-group-bg-color-active : $grey-200;
 
 /* InputNumber */
-$inputnumber-min-width : 80px !default;
-$inputnumber-height-sm : 28px !default;
-$inputnumber-height-base : 32px !default;
-$inputnumber-height-lg : 36px !default;
+$inputnumber-min-width      : 80px;
+$inputnumber-height-sm      : 28px;
+$inputnumber-height-base    : 32px;
+$inputnumber-height-lg      : 36px;
 
-$inputnumber-font-color : $input-font-color !default;
+$inputnumber-font-color     : $input-font-color;
 
-$inputnumber-bg-color : $input-bg-color !default;
-$inputnumber-bg-color-disabled : $input-bg-color-disabled !default;
+$inputnumber-bg-color           : $input-bg-color;
+$inputnumber-bg-color-disabled  : $input-bg-color-disabled;
 
-$inputnumber-border-radius : $border-radius-base !default;
-$inputnumber-border-color : $input-border-color !default;
-$inputnumber-border-color-hover : $input-border-color-hover !default;
-$inputnumber-border-color-disabled : $input-border-color-disabled !default;
+$inputnumber-border-radius          : $border-radius-base;
+$inputnumber-border-color           : $input-border-color;
+$inputnumber-border-color-hover     : $input-border-color-hover;
+$inputnumber-border-color-disabled  : $input-border-color-disabled;
 
-$inputnumber-padding-sm : 0 8px !default;
-$inputnumber-padding-base : 0 8px !default;
-$inputnumber-padding-lg : 0 8px !default;
+$inputnumber-padding-sm           : 0 8px;
+$inputnumber-padding-base         : 0 8px;
+$inputnumber-padding-lg           : 0 8px;
 
-$inputnumber-handler-width : 22px !default;
-$inputnumber-handler-border-color : $grey-200 !default;
-$inputnumber-handler-bg-color-active : $grey-100 !default;
+$inputnumber-handler-width            : 22px;
+$inputnumber-handler-border-color     : $grey-200;
+$inputnumber-handler-bg-color-active  : $grey-100;
 
-$inputnumber-handler-font-color : $grey-500 !default;
-$inputnumber-handler-font-color-hover : $grey-900 !default;
+$inputnumber-handler-font-color       : $grey-500;
+$inputnumber-handler-font-color-hover : $grey-900;
 
-$inputnumber-handler-font-size-sm : 9px !default;
-$inputnumber-handler-font-size-base : 10px !default;
-$inputnumber-handler-font-size-lg : 11px !default;
+$inputnumber-handler-font-size-sm   : 9px;
+$inputnumber-handler-font-size-base : 10px;
+$inputnumber-handler-font-size-lg   : 11px;
 
-$inputnumber-handler-ele-height-sm : 14px !default;
-$inputnumber-handler-ele-height-base : 16px !default;
-$inputnumber-handler-ele-height-lg : 18px !default;
+$inputnumber-handler-ele-height-sm    : 14px;
+$inputnumber-handler-ele-height-base  : 16px;
+$inputnumber-handler-ele-height-lg    : 18px;
 
-$inputnumber-handler-ele-height-sm-hover : 16px !default;
-$inputnumber-handler-ele-height-base-hover : 18px !default;
-$inputnumber-handler-ele-height-lg-hover : 20px !default;
+$inputnumber-handler-ele-height-sm-hover    : 16px;
+$inputnumber-handler-ele-height-base-hover  : 18px;
+$inputnumber-handler-ele-height-lg-hover    : 20px;
 
-$inputnumber-handler-ele-font-color-disabled : $grey-100 !default;
+$inputnumber-handler-ele-font-color-disabled : $grey-100;
 
 /* Switch */
-$switch-min-width-sm : 32px !default;
-$switch-min-width-base : 40px !default;
-$switch-min-width-lg : 48px !default;
+$switch-min-width-sm        : 32px;
+$switch-min-width-base      : 40px;
+$switch-min-width-lg        : 48px;
 
-$switch-height-sm : 16px !default;
-$switch-height-base : 20px !default;
-$switch-height-lg : 24px !default;
+$switch-height-sm           : 16px;
+$switch-height-base         : 20px;
+$switch-height-lg           : 24px;
 
-$switch-border-radius-sm : 16px !default;
-$switch-border-radius-base : 20px !default;
-$switch-border-radius-lg : 24px !default;
+$switch-border-radius-sm      : 16px;
+$switch-border-radius-base    : 20px;
+$switch-border-radius-lg      : 24px;
 
-$switch-border-color : $grey-500 !default;
-$switch-border-color-checked : $brand-blue-400 !default;
-$switch-border-color-disabled : $grey-100 !default;
+$switch-border-color          : $grey-500;
+$switch-border-color-checked  : $brand-blue-400;
+$switch-border-color-disabled : $grey-100;
 
-$switch-bg-color : $grey-500 !default;
-$switch-bg-color-checked : $brand-blue-400 !default;
-$switch-bg-color-disabled : $grey-100 !default;
+$switch-bg-color            : $grey-500;
+$switch-bg-color-checked    : $brand-blue-400;
+$switch-bg-color-disabled   : $grey-100;
 
-$switch-font-color : $color-white !default;
-$switch-font-color-disabled : $grey-300 !default;
+$switch-font-color          : $color-white;
+$switch-font-color-disabled : $grey-300;
 
-$switch-font-size-sm : $font-size-smest !default;
-$switch-font-size-base : $font-size-smer !default;
-$switch-font-size-lg : $font-size-sm !default;
+$switch-font-size-sm        : $font-size-smest;
+$switch-font-size-base      : $font-size-smer;
+$switch-font-size-lg        : $font-size-sm;
 
-$switch-circle-size-sm : 12px !default;
-$switch-circle-size-base : 16px !default;
-$switch-circle-size-lg : 20px !default;
+$switch-circle-size-sm            : 12px;
+$switch-circle-size-base          : 16px;
+$switch-circle-size-lg            : 20px;
 
-$switch-circle-bg-color : $color-white !default;
-$switch-circle-bg-color-disabled : $grey-400 !default;
+$switch-circle-bg-color           : $color-white;
+$switch-circle-bg-color-disabled  : $grey-400;
 
 /* Slider */
-$slider-bar-height : 4px !default;
-$slider-margin : 8px 0 !default;
+$slider-bar-height            : 4px;
+$slider-margin                : 8px 0;
 
-$slider-bar-bg-color : $brand-blue-400 !default;
-$slider-bar-bg-color-disabled : $grey-400 !default;
-$slider-track-bg-color : $grey-100 !default;
-$slider-bar-border-radius : 2px !default;
+$slider-bar-bg-color          : $brand-blue-400;
+$slider-bar-bg-color-disabled : $grey-400;
+$slider-track-bg-color        : $grey-100;
+$slider-bar-border-radius     : 2px;
 
-$slider-dot-color : $brand-blue-400 !default;
-$slider-dot-color-hover : $brand-blue-600 !default;
-$slider-dot-color-disabled : $grey-300 !default;
-$slider-dot-size : 12px !default;
-$slider-dot-wrapper-size : $slider-dot-size !default;
-$slider-dot-wrapper-offset : -6px !default;
+$slider-dot-color             : $brand-blue-400;
+$slider-dot-color-hover       : $brand-blue-600;
+$slider-dot-color-disabled    : $grey-300;
+$slider-dot-size              : 12px;
+$slider-dot-wrapper-size      : $slider-dot-size;
+$slider-dot-wrapper-offset    : -6px;
 
 /* Textarea */
-$textarea-padding : 6px 8px !default;
+$textarea-padding           : 6px 8px;
 
 /* Alert */
-$alert-padding : 8px 16px !default;
-$alert-padding-lg : 14px 16px !default;
-$alert-border-radius : $border-radius-base !default;
+$alert-padding                : 8px 16px;
+$alert-padding-lg             : 14px 16px;
+$alert-border-radius          : $border-radius-base;
 
-$alert-text-color-success : #53664A !default;
-$alert-text-color-error : #AD3430 !default;
-$alert-text-color-warning : #7F6128 !default;
-$alert-text-color-info : #3B688C !default;
+$alert-text-color-success     : #53664A;
+$alert-text-color-error       : #AD3430;
+$alert-text-color-warning     : #7F6128;
+$alert-text-color-info        : #3B688C;
 
-$alert-message-font-size : $font-size-sm !default;
-$alert-description-font-size : $font-size-smer !default;
-$alert-close-font-size : $font-size-smer !default;
+$alert-message-font-size      : $font-size-sm;
+$alert-description-font-size  : $font-size-smer;
+$alert-close-font-size        : $font-size-smer;
 
-$alert-icon-font-size : 15px !default;
-$alert-icon-font-size-lg : 28px !default;
+$alert-icon-font-size         : 15px;
+$alert-icon-font-size-lg      : 28px;
 
-$alert-icon-color-success : #7D9970 !default;
-$alert-icon-color-error : #FA4C46 !default;
-$alert-icon-color-warning : #CC9B3F !default;
-$alert-icon-color-info : #66B3F3 !default;
+$alert-icon-color-success     : #7D9970;
+$alert-icon-color-error       : #FA4C46;
+$alert-icon-color-warning     : #CC9B3F;
+$alert-icon-color-info        : #66B3F3;
 
-$alert-bg-color-success : $green-50 !default;
-$alert-bg-color-error : $red-50 !default;
-$alert-bg-color-warning : $yellow-50 !default;
-$alert-bg-color-info : $blue-50 !default;
+$alert-bg-color-success     : $green-50;
+$alert-bg-color-error       : $red-50;
+$alert-bg-color-warning     : $yellow-50;
+$alert-bg-color-info        : $blue-50;
 
-$alert-border-color-success : $green-100 !default;
-$alert-border-color-error : $red-100 !default;
-$alert-border-color-warning : $yellow-100 !default;
-$alert-border-color-info : $blue-100 !default;
+$alert-border-color-success : $green-100;
+$alert-border-color-error   : $red-100;
+$alert-border-color-warning : $yellow-100;
+$alert-border-color-info    : $blue-100;
 
 /* Badge */
-$badge-height : 18px !default;
-$badge-padding : 0 6px !default;
-$badge-border-radius : $badge-height / 2 !default;
-$badge-font-size : $font-size-smer !default;
-$badge-font-color : $color-white !default;
+$badge-height               : 18px;
+$badge-padding              : 0 6px;
+$badge-border-radius        : $badge-height / 2;
+$badge-font-size            : $font-size-smer;
+$badge-font-color           : $color-white;
 
-$badge-bg-color : $red-500 !default;
-$badge-bg-color-success : $green-500 !default;
-$badge-bg-color-warning : $yellow-500 !default;
-$badge-bg-color-info : $blue-500 !default;
+$badge-bg-color             : $red-500;
+$badge-bg-color-success     : $green-500;
+$badge-bg-color-warning     : $yellow-500;
+$badge-bg-color-info        : $blue-500;
 
-$badge-dot-size : 10px !default;
+$badge-dot-size             : 10px;
 
 /* Card */
-$card-bg-color : $color-white !default;
-$card-border-color : $grey-100 !default;
-$card-border-color-hover : $grey-50 !default;
-$card-border-radius : $border-radius-base !default;
-$card-head-height : 48px !default;
+$card-bg-color              : $color-white;
+$card-border-color          : $grey-100;
+$card-border-color-hover    : $grey-50;
+$card-border-radius         : $border-radius-base;
+$card-head-height           : 48px;
 
 /* Collapse */
-$collapse-border-color : $grey-200 !default;
-$collapse-border-radius : $border-radius-base !default;
+$collapse-border-color               : $grey-200;
+$collapse-border-radius              : $border-radius-base;
 
-$collapse-header-bg-color : $grey-50 !default;
-$collapse-header-text-color : $title-color !default;
-$collapse-header-text-color-disabled : $grey-400 !default;
+$collapse-header-bg-color            : $grey-50;
+$collapse-header-text-color          : $title-color;
+$collapse-header-text-color-disabled : $grey-400;
 
-$collapse-icon-size : $font-size-smer !default;
-$collapse-icon-color : tint($title-color, 50%) !default;
+$collapse-icon-size                  : $font-size-smer;
+$collapse-icon-color                 : tint($title-color, 50%);
 
-$collapse-body-text-color : $text-color !default;
-$collapse-body-bg-color : $color-white !default;
+$collapse-body-text-color            : $text-color;
+$collapse-body-bg-color              : $color-white;
 
 /* Loading Bar */
-$loading-bar-bg-color-success : $color-primary !default;
-$loading-bar-bg-color-error : $color-error !default;
+$loading-bar-bg-color-success   : $color-primary;
+$loading-bar-bg-color-error     : $color-error;
 
 /* Modal */
-$modal-initial-top : 100px !default;
-$modal-bg-color : $color-white !default;
-$modal-mask-bg-color : rgba(0, 0, 0, .5) !default;
-$modal-section-border-color : $grey-100 !default;
+$modal-initial-top          : 100px;
+$modal-bg-color             : $color-white;
+$modal-mask-bg-color        : rgba(0, 0, 0, .5);
+$modal-section-border-color : $grey-100;
 
-$modal-header-padding : 12px 16px !default;
-$modal-header-font-size : $font-size-base !default;
-$modal-close-font-size : $font-size-sm !default;
-$modal-icon-font-size : 32px !default;
+$modal-header-padding       : 12px 16px;
+$modal-header-font-size     : $font-size-base;
+$modal-close-font-size      : $font-size-sm;
+$modal-icon-font-size       : 32px;
 
-$modal-body-padding : 16px !default;
-$modal-body-font-size : $font-size-sm !default;
+$modal-body-padding         : 16px;
+$modal-body-font-size       : $font-size-sm;
 
-$modal-footer-padding : 12px 16px !default;
+$modal-footer-padding       : 12px 16px;
 
-$modal-icon-color-success : $green-300 !default;
-$modal-icon-color-error : $red-300 !default;
-$modal-icon-color-warning : $yellow-300 !default;
-$modal-icon-color-info : $blue-300 !default;
+$modal-icon-color-success  : $green-300;
+$modal-icon-color-error    : $red-300;
+$modal-icon-color-warning  : $yellow-300;
+$modal-icon-color-info     : $blue-300;
 
 /* Message */
-$message-padding : 6px 16px !default;
-$message-font-size : $font-size-sm !default;
-$message-bg-color : $color-white !default;
-$message-box-shadow : 0 1px 8px rgba(0, 0, 0, .15) !default;
+$message-padding            : 6px 16px;
+$message-font-size          : $font-size-sm;
+$message-bg-color           : $color-white;
+$message-box-shadow         : 0 1px 8px rgba(0, 0, 0, .15);
 
-$message-icon-color-success : $green-300 !default;
-$message-icon-color-error : $red-300 !default;
-$message-icon-color-warning : $yellow-300 !default;
-$message-icon-color-info : $blue-300 !default;
-$message-icon-color-loading : $blue-300 !default;
+$message-icon-color-success  : $green-300;
+$message-icon-color-error    : $red-300;
+$message-icon-color-warning  : $yellow-300;
+$message-icon-color-info     : $blue-300;
+$message-icon-color-loading  : $blue-300;
 
 /* Radio */
-$radio-size : 16px !default;
-$radio-dot-size : 8px !default;
-$radio-font-size : $font-size-smer !default;
+$radio-size                 : 16px;
+$radio-dot-size             : 8px;
+$radio-font-size            : $font-size-smer;
 
-$radio-border-c-hover : $brand-blue-400 !default;
-$radio-border-c-checked : $brand-blue-400 !default;
-$radio-border-c-disabled : $grey-100 !default;
-$radio-bg-c-disabled : $grey-50 !default;
-$radio-dot-c-disabled : $grey-300 !default;
+$radio-border-c-hover       : $brand-blue-400;
+$radio-border-c-checked     : $brand-blue-400;
+$radio-border-c-disabled    : $grey-100;
+$radio-bg-c-disabled        : $grey-50;
+$radio-dot-c-disabled       : $grey-300;
 
 /* Rate */
-$rate-icon-font-size : 20px !default;
-$rate-icon-color : $grey-100 !default;
-$rate-icon-color-on : $yellow-500 !default;
-$rate-text-font-size : $font-size-smer !default;
+$rate-icon-font-size        : 20px;
+$rate-icon-color            : $grey-100;
+$rate-icon-color-on         : $yellow-500;
+$rate-text-font-size        : $font-size-smer;
 
 /* Select */
-$select-font-size-sm : $font-size-smest !default;
-$select-font-size-base : $font-size-smer !default;
-$select-font-size-lg : $font-size-base !default;
+$select-font-size-sm        : $font-size-smest;
+$select-font-size-base      : $font-size-smer;
+$select-font-size-lg        : $font-size-base;
 
-$select-bg-color : $color-white !default;
-$select-font-color : $text-color !default;
+$select-bg-color            : $color-white;
+$select-font-color          : $text-color;
 
-$select-border-c-hover : $brand-blue-400 !default;
-$select-border-c-checked : $brand-blue-400 !default;
-$select-border-c-disabled : $grey-100 !default;
-$select-bg-c-disabled : $grey-50 !default;
+$select-border-c-hover       : $brand-blue-400;
+$select-border-c-checked     : $brand-blue-400;
+$select-border-c-disabled    : $grey-100;
+$select-bg-c-disabled        : $grey-50;
 
-$select-selection-bg-color : $color-white !default;
-$select-selection-bg-color-disabled : tint($border-color-base, 70%) !default;
+$select-selection-bg-color          : $color-white;
+$select-selection-bg-color-disabled : tint($border-color-base, 70%);
 
-$select-padding-sm : 0 24px 0 8px !default;
-$select-padding-base : 0 24px 0 8px !default;
-$select-padding-lg : 0 24px 0 8px !default;
+$select-padding-sm            : 0 24px 0 8px;
+$select-padding-base          : 0 24px 0 8px;
+$select-padding-lg            : 0 24px 0 8px;
 
-$select-selection-height-sm : 24px !default;
-$select-selection-height-base : 26px !default;
-$select-selection-height-lg : 30px !default;
+$select-selection-height-sm     : 24px;
+$select-selection-height-base   : 26px;
+$select-selection-height-lg     : 30px;
 
 /* Select Dropdown */
-$select-dropdown-font-size-sm : $font-size-smest !default;
-$select-dropdown-font-size-base : $font-size-smer !default;
-$select-dropdown-font-size-lg : $font-size-sm !default;
+$select-dropdown-font-size-sm   : $font-size-smest;
+$select-dropdown-font-size-base : $font-size-smer;
+$select-dropdown-font-size-lg   : $font-size-sm;
 
-$select-dropdown-bg-color : $color-white !default;
-$select-dropdown-height : 200px !default;
+$select-dropdown-bg-color       : $color-white;
+$select-dropdown-height         : 200px;
 
-$dropdown-option-padding-base : 6px 12px !default;
-$dropdown-option-bg-c-hover : $brand-blue-50 !default;
-$dropdown-option-bg-c-selected : $grey-50 !default;
+$dropdown-option-padding-base   : 6px 12px;
+$dropdown-option-bg-c-hover     : $brand-blue-50;
+$dropdown-option-bg-c-selected  : $grey-50;
 
-$option-group-font-c : $grey-500 !default;
+$option-group-font-c        : $grey-500;
 
 /* Notification */
-$notification-width : 320px !default;
-$notification-padding : 8px 16px !default;
-$notification-padding-lg : 12px 16px !default;
-$notification-shadow : 0 2px 4px rgba(0, 0, 0, .12),
-0 0 6px rgba(0, 0, 0, .04) !default;
-$notification-text-color : $text-color !default;
-$notification-bg-color : $color-white !default;
+$notification-width             : 320px;
+$notification-padding           : 8px 16px;
+$notification-padding-lg        : 12px 16px;
+$notification-shadow            : 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+$notification-text-color        : $text-color;
+$notification-bg-color          : $color-white;
 
-$notification-font-size-lg : 28px !default;
-$notification-title-font-size : $font-size-sm !default;
-$notification-message-font-size : $font-size-smer !default;
+$notification-font-size-lg      : 28px;
+$notification-title-font-size   : $font-size-sm;
+$notification-message-font-size : $font-size-smer;
 
-$notification-icon-color : $text-color !default;
-$notification-icon-font-size : $font-size-sm !default;
-$notification-icon-font-size-lg : 24px !default;
-$notification-close-color : $grey-300 !default;
-$notification-close-color-focus : $grey-700 !default;
-$notification-close-font-size : $font-size-smer !default;
-$notification-close-font-size-lg : $font-size-base !default;
+$notification-icon-color          : $text-color;
+$notification-icon-font-size      : $font-size-sm;
+$notification-icon-font-size-lg   : 24px;
+$notification-close-color         : $grey-300;
+$notification-close-color-focus   : $grey-700;
+$notification-close-font-size     : $font-size-smer;
+$notification-close-font-size-lg  : $font-size-base;
 
-$notification-icon-color-success : $green-300 !default;
-$notification-icon-color-error : $red-300 !default;
-$notification-icon-color-warning : $yellow-300 !default;
-$notification-icon-color-info : $blue-300 !default;
+$notification-icon-color-success  : $green-300;
+$notification-icon-color-error    : $red-300;
+$notification-icon-color-warning  : $yellow-300;
+$notification-icon-color-info     : $blue-300;
 
 /* Popover */
-$popover-title-font-size : $font-size-smer !default;
-$popover-content-font-size : $font-size-smest !default;
-$popover-popper-max-width : 400px !default;
+$popover-title-font-size    : $font-size-smer;
+$popover-content-font-size  : $font-size-smest;
+$popover-popper-max-width   : 400px;
 
-$popover-bg-color : $color-white !default;
-$popover-title-bg-color : $grey-50 !default;
-$popover-border-color : $grey-100 !default;
-$popover-title-border-color : $brand-blue-50 !default;
+$popover-bg-color           : $color-white;
+$popover-title-bg-color     : $grey-50;
+$popover-border-color       : $grey-100;
+$popover-title-border-color : $brand-blue-50;
 
-$popover-arrow-size : 10px !default;
-$popover-arrow-bg-color : $popover-bg-color !default;
+$popover-arrow-size         : 10px;
+$popover-arrow-bg-color     : $popover-bg-color;
 
-$popover-padding : 4px 8px !default;
-$popover-title-padding : 6px 10px !default;
-$popover-content-padding : 8px 12px !default;
+$popover-padding            : 4px 8px;
+$popover-title-padding      : 6px 10px;
+$popover-content-padding    : 8px 12px;
 
 /* Progress */
-$progress-height : 10px !default;
-$progress-border-radius : 50px !default;
-$progress-font-color : $text-color !default;
-$progress-font-size : $font-size-smer !default;
+$progress-height            : 10px;
+$progress-border-radius     : 50px;
+$progress-font-color        : $text-color;
+$progress-font-size         : $font-size-smer;
 
-$progress-track-bg-color : $grey-200 !default;
-$progress-bar-bg-color : $brand-color-light !default;
-$progress-bar-bg-color-success : $color-success !default;
-$progress-bar-bg-color-error : $color-error !default;
+$progress-track-bg-color       : $grey-200;
+$progress-bar-bg-color         : $brand-color-light;
+$progress-bar-bg-color-success : $color-success;
+$progress-bar-bg-color-error   : $color-error;
 
 /* Timeline */
-$timeline-dot-color : $blue-500 !default;
-$timeline-dot-color-success : $green-500 !default;
-$timeline-dot-color-error : $red-500 !default;
-$timeline-dot-color-warning : $yellow-500 !default;
+$timeline-dot-color            : $blue-500;
+$timeline-dot-color-success    : $green-500;
+$timeline-dot-color-error      : $red-500;
+$timeline-dot-color-warning    : $yellow-500;
 
-$timeline-dot-bg-color : $color-white !default;
+$timeline-dot-bg-color         : $color-white;
 
-$timeline-dot-size : 12px !default;
-$timeline-custom-dot-size : 20px !default;
-$timeline-custom-dot-font-size : $font-size-normal !default;
+$timeline-dot-size             : 12px;
+$timeline-custom-dot-size      : 20px;
+$timeline-custom-dot-font-size : $font-size-normal;
 
-$timeline-line-color : $grey-100 !default;
-$timeline-item-last-min-height : 48px !default;
-$timeline-text-font-size : $font-size-smer !default;
+$timeline-line-color           : $grey-100;
+$timeline-item-last-min-height : 48px;
+$timeline-text-font-size       : $font-size-smer;
 
 /* Tooltip */
-$tooltip-padding : 4px 8px !default;
-$tooltip-arrow-size : 4px !default;
-$tooltip-max-width : 200px !default;
-$tooltip-font-color : $color-white !default;
-$tooltip-font-size : $font-size-smer !default;
-$tooltip-bg-color : rgba(0, 0, 0, .75) !default;
-$tooltip-border-color : rgba(0, 0, 0, .75) !default;
+$tooltip-padding            : 4px 8px;
+$tooltip-arrow-size         : 4px;
+$tooltip-max-width          : 200px;
+$tooltip-font-color         : $color-white;
+$tooltip-font-size          : $font-size-smer;
+$tooltip-bg-color           : rgba(0, 0, 0, .75);
+$tooltip-border-color       : rgba(0, 0, 0, .75);
 
 /* Table */
-$table-font-size-small : $font-size-smest !default;
-$table-font-size : $font-size-smer !default;
-$table-font-size-large : $font-size-sm !default;
+$table-font-size-small      : $font-size-smest;
+$table-font-size            : $font-size-smer;
+$table-font-size-large      : $font-size-sm;
 
-$table-text-color : $text-color !default;
-$table-border-color : $grey-100 !default;
-$table-thead-bg-color : $grey-50 !default;
-$table-tr-bg-color-hover : $bg-color-lighter !default;
-$table-tr-bg-color-stripe : tint($grey-50, 50%) !default;
-$table-footer-height : 28px !default;
+$table-text-color           : $text-color;
+$table-border-color         : $grey-100;
+$table-thead-bg-color       : $grey-50;
+$table-tr-bg-color-hover    : $bg-color-lighter;
+$table-tr-bg-color-stripe   : tint($grey-50, 50%);
+$table-footer-height        : 28px;
 
-$table-cell-height-small : 32px !default;
-$table-cell-height : 40px !default;
-$table-cell-height-large : 56px !default;
-$table-cell-padding : 0 16px !default;
+$table-cell-height-small    : 32px;
+$table-cell-height          : 40px;
+$table-cell-height-large    : 56px;
+$table-cell-padding         : 0 16px;
 
-$table-sorter-width : 9px !default;
-$table-sorter-width-small : 7px !default;
-$table-sorter-height : 18px !default;
-$table-sorter-height-small : 14px !default;
-$table-sorter-icon-size : 9px !default;
-$table-sorter-icon-size-small : 7px !default;
+$table-sorter-width           : 9px;
+$table-sorter-width-small     : 7px;
+$table-sorter-height          : 18px;
+$table-sorter-height-small    : 14px;
+$table-sorter-icon-size       : 9px;
+$table-sorter-icon-size-small : 7px;
 
 /* Breadcrumb */
-$breadcrumb-font-size : $font-size-base !default;
-$breadcrumb-separator-color : $grey-300 !default;
+$breadcrumb-font-size         : $font-size-base;
+$breadcrumb-separator-color   : $grey-300;
 
 /* Dropdown */
-$dropdown-max-height : 200px !default;
-$dropdown-bg-color : $color-white !default;
-$dropdown-box-shadow : 0 1px 6px rgba(0, 0, 0, 0.2) !default;
-$dropdown-font-size : $font-size-smer !default;
+$dropdown-max-height             : 200px;
+$dropdown-bg-color               : $color-white;
+$dropdown-box-shadow             : 0 1px 6px rgba(0, 0, 0, 0.2);
+$dropdown-font-size              : $font-size-smer;
 
-$dropdown-item-padding : 8px 16px !default;
-$dropdown-item-min-width : 100px !default;
-$dropdown-item-bg-color-hover : $brand-blue-50 !default;
-$dropdown-item-bg-color-disabled : $grey-300 !default;
+$dropdown-item-padding           : 8px 16px;
+$dropdown-item-min-width         : 100px;
+$dropdown-item-bg-color-hover    : $brand-blue-50;
+$dropdown-item-bg-color-disabled : $grey-300;
 
-$dropdown-divided-color : $brand-blue-50 !default;
+$dropdown-divided-color          : $brand-blue-50;
 
 /* Menu */
-$menu-text-color : $text-color !default;
-$menu-text-color-disabled : $grey-400 !default;
-$menu-text-color-dark : $grey-200 !default;
-$menu-text-color-dark-hover : $color-white !default;
-$menu-bg-color-light : $color-white !default;
-$menu-bg-color-dark : $black-500 !default;
-$menu-bg-color-dark-hover : $black-600 !default;
-$menu-font-size : $font-size-base !default;
-$menu-icon-size : $font-size-base !default;
+$menu-text-color                     : $text-color;
+$menu-text-color-disabled            : $grey-400;
+$menu-text-color-dark                : $grey-200;
+$menu-text-color-dark-hover          : $color-white;
+$menu-bg-color-light                 : $color-white;
+$menu-bg-color-dark                  : $black-500;
+$menu-bg-color-dark-hover            : $black-600;
+$menu-font-size                      : $font-size-base;
+$menu-icon-size                      : $font-size-base;
 
-$menu-item-text-color-active : $brand-blue-500 !default;
-$menu-item-bg-color-active : $brand-blue-50 !default;
-$menu-item-bg-color-active-inline : rgba(236, 242, 252, 0.2) !default;
+$menu-item-text-color-active         : $brand-blue-500;
+$menu-item-bg-color-active           : $brand-blue-50;
+$menu-item-bg-color-active-inline    : rgba(236, 242, 252, 0.2);
 
-$menu-submenu-padding : 12px 16px !default;
-$menu-item-padding : 12px 16px !default;
-$menu-item-padding-inline : 12px 16px !default;
-$menu-item-padding-base : 0 16px !default;
+$menu-submenu-padding                : 12px 16px;
+$menu-item-padding                   : 12px 16px;
+$menu-item-padding-inline            : 12px 16px;
+$menu-item-padding-base              : 0 16px;
 
-$menu-group-title-padding : 12px !default;
-$menu-group-title-text-color : $grey-500 !default;
-$menu-group-title-font-size : $font-size-smer !default;
-$menu-group-item-padding : 12px 16px !default;
+$menu-group-title-padding            : 12px;
+$menu-group-title-text-color         : $grey-500;
+$menu-group-title-font-size          : $font-size-smer;
+$menu-group-item-padding             : 12px 16px;
 
-$menu-dropdown-item-padding : 12px 16px !default;
-$menu-dropdown-item-font-size : $font-size-smer !default;
+$menu-dropdown-item-padding          : 12px 16px;
+$menu-dropdown-item-font-size        : $font-size-smer;
 
-$menu-height-horizontal : 48px !default;
-$menu-border-color : $border-color-lighter !default;
-$menu-prefix-bg-color : $brand-blue-500 !default;
-$menu-prefix-bg-color-dark : $brand-blue-500 !default;
-$menu-icon-color-inline : $border-color-base !default;
+$menu-height-horizontal              : 48px;
+$menu-border-color                   : $border-color-lighter;
+$menu-prefix-bg-color                : $brand-blue-500;
+$menu-prefix-bg-color-dark           : $brand-blue-500;
+$menu-icon-color-inline              : $border-color-base;
 
 /* Pagination */
-$pagination-item-size-sm : 20px !default;
-$pagination-item-size : 28px !default;
-$pagination-input-width : 40px !default;
-$pagination-item-font-size-sm : $font-size-smest !default;
-$pagination-item-font-size : $font-size-smer !default;
-$pagination-btn-font-size : $font-size-smer !default;
+$pagination-item-size-sm             : 20px;
+$pagination-item-size                : 28px;
+$pagination-input-width              : 40px;
+$pagination-item-font-size-sm        : $font-size-smest;
+$pagination-item-font-size           : $font-size-smer;
+$pagination-btn-font-size            : $font-size-smer;
 
-$pagination-item-text-color : $text-color !default;
-$pagination-item-text-color-hover : $brand-blue-400 !default;
-$pagination-item-text-color-active : $color-white !default;
-$pagination-btn-jump-text-color : $grey-100 !default;
+$pagination-item-text-color          : $text-color;
+$pagination-item-text-color-hover    : $brand-blue-400;
+$pagination-item-text-color-active   : $color-white;
+$pagination-btn-jump-text-color      : $grey-100;
 
-$pagination-item-bg-color : $color-white !default;
-$pagination-item-bg-color-active : $brand-blue-400 !default;
+$pagination-item-bg-color            : $color-white;
+$pagination-item-bg-color-active     : $brand-blue-400;
 
-$pagination-item-border-color : $border-color-base !default;
-$pagination-item-border-color-hover : $brand-blue-400 !default;
-$pagination-item-border-color-active : $brand-blue-400 !default;
+$pagination-item-border-color        : $border-color-base;
+$pagination-item-border-color-hover  : $brand-blue-400;
+$pagination-item-border-color-active : $brand-blue-400;
 
 /* Tabs */
-$tabs-border-color : $grey-100 !default;
-$tabs-nav-height : 36px !default;
-$tabs-nav-height-sm : 32px !default;
-$tabs-nav-font-size : $font-size-base !default;
-$tabs-nav-font-size-sm : $font-size-smer !default;
-$tabs-navigation-btn-width : 32px !default;
-$tabs-navigation-color : $text-color !default;
-$tabs-navigation-color-hover : $brand-blue-500 !default;
-$tabs-navigation-color-disabled : $grey-400 !default;
+$tabs-border-color                   : $grey-100;
+$tabs-nav-height                     : 36px;
+$tabs-nav-height-sm                  : 32px;
+$tabs-nav-font-size                  : $font-size-base;
+$tabs-nav-font-size-sm               : $font-size-smer;
+$tabs-navigation-btn-width           : 32px;
+$tabs-navigation-color               : $text-color;
+$tabs-navigation-color-hover         : $brand-blue-500;
+$tabs-navigation-color-disabled      : $grey-400;
 
-$tabs-nav-item-padding : 0 20px !default;
-$tabs-nav-item-padding-sm : 0 16px !default;
-$tabs-nav-item-bg-color : $color-white !default;
-$tabs-nav-item-bg-color-card : $grey-50 !default;
-$tabs-nav-item-icon-color : tint($text-color, 30%) !default;
-$tabs-nav-item-icon-color-hover : $text-color !default;
+$tabs-nav-item-padding               : 0 20px;
+$tabs-nav-item-padding-sm            : 0 16px;
+$tabs-nav-item-bg-color              : $color-white;
+$tabs-nav-item-bg-color-card         : $grey-50;
+$tabs-nav-item-icon-color            : tint($text-color, 30%);
+$tabs-nav-item-icon-color-hover      : $text-color;
 
 /* Steps */
-$step-font-size : $font-size-base !default;
-$step-font-size-sm : $font-size-smer !default;
-$step-description-font-size : $font-size-smer !default;
-$step-description-font-size-sm : $font-size-smest !default;
+$step-font-size                      : $font-size-base;
+$step-font-size-sm                   : $font-size-smer;
+$step-description-font-size          : $font-size-smer;
+$step-description-font-size-sm       : $font-size-smest;
 
-$step-color : $grey-600 !default;
-$step-color-active : $color-white !default;
-$step-color-process : $text-color !default;
-$step-color-error : $red-500 !default;
-$step-text-color : $black-200 !default;
+$step-color                          : $grey-600;
+$step-color-active                   : $color-white;
+$step-color-process                  : $text-color;
+$step-color-error                    : $red-500;
+$step-text-color                     : $black-200;
 
-$step-bg-color : $color-white !default;
-$step-bg-color-active : $brand-blue-500 !default;
-$step-bg-color-error : $red-500 !default;
+$step-bg-color                       : $color-white;
+$step-bg-color-active                : $brand-blue-500;
+$step-bg-color-error                 : $red-500;
 
-$step-border-color : $grey-600 !default;
-$step-border-color-active : $brand-blue-500 !default;
-$step-border-color-error : $red-500 !default;
+$step-border-color                   : $grey-600;
+$step-border-color-active            : $brand-blue-500;
+$step-border-color-error             : $red-500;
 
-$step-icon-color : $grey-600 !default;
-$step-icon-color-active : $brand-blue-500 !default;
-$step-icon-color-error : $red-500 !default;
+$step-icon-color                     : $grey-600;
+$step-icon-color-active              : $brand-blue-500;
+$step-icon-color-error               : $red-500;
 
-$step-label-size : 30px !default;
-$step-label-size-sm : 18px !default;
+$step-label-size                     : 30px;
+$step-label-size-sm                  : 18px;
 
-$step-line-color : $grey-600 !default;
-$step-line-color-active : $brand-blue-500 !default;
+$step-line-color                     : $grey-600;
+$step-line-color-active              : $brand-blue-500;
 
-$step-main-height-vertical : 64px !default;
-$step-main-height-vertical-sm : 48px !default;
+$step-main-height-vertical           : 64px;
+$step-main-height-vertical-sm        : 48px;
 
 /**
  * Media queries
  */
 /* Extra small screen / Mobile */
-$screen-xs : 480px !default;
-$screen-xs-min : $screen-xs !default;
-$screen-xs-max : $screen-xs-min - 1 !default;
+$screen-xs                  : 480px;
+$screen-xs-min              : $screen-xs;
+$screen-xs-max              : $screen-xs-min - 1;
 
 /* Small screen / Tablet */
-$screen-sm : 768px !default;
-$screen-sm-min : $screen-sm !default;
-$screen-sm-max : $screen-sm-min - 1 !default;
+$screen-sm                  : 768px;
+$screen-sm-min              : $screen-sm;
+$screen-sm-max              : $screen-sm-min - 1;
 
 /* Medium screen / Desktop */
-$screen-md : 992px !default;
-$screen-md-min : $screen-md !default;
-$screen-md-max : $screen-md-min - 1 !default;
+$screen-md                  : 992px;
+$screen-md-min              : $screen-md;
+$screen-md-max              : $screen-md-min - 1;
 
 /* Large screen / Wide Desktop */
-$screen-lg : 1200px !default;
-$screen-lg-min : $screen-lg !default;
-$screen-lg-max : $screen-lg-min - 1 !default;
+$screen-lg                  : 1200px;
+$screen-lg-min              : $screen-lg;
+$screen-lg-max              : $screen-lg-min - 1;
 
 /**
  * Grid system
  */
-$grid-columns : 24 !default;
-$grid-gutter-width : 0 !default;
+$grid-columns               : 24;
+$grid-gutter-width          : 0;
 
 /* Container sizes */
-$container-sm : 720px+$grid-gutter-width !default;
-$container-md : 940px+$grid-gutter-width !default;
-$container-lg : 1140px+$grid-gutter-width !default;
+$container-sm               : 720px + $grid-gutter-width;
+$container-md               : 940px + $grid-gutter-width;
+$container-lg               : 1140px + $grid-gutter-width;
 
 /* z-index list */
-$zindex-menu : 900 !default;
-$zindex-modal : 1000 !default;
-$zindex-notification : 1010 !default;
-$zindex-message : 1010 !default;
-$zindex-popover : 1020 !default;
-$zindex-dropdown : 1050 !default;
-$zindex-tooltip : 1050 !default;
-$zindex-loading-bar : 1080 !default;
+$zindex-menu                : 900;
+$zindex-modal               : 1000;
+$zindex-notification        : 1010;
+$zindex-message             : 1010;
+$zindex-popover             : 1020;
+$zindex-dropdown            : 1050;
+$zindex-tooltip             : 1050;
+$zindex-loading-bar         : 1080;
